@@ -1,0 +1,376 @@
+:root {
+  --orange-brand-1: #EE6B04;
+  --orange-brand-2: #EC7802;
+  --orange-brand-3: #FCA800;
+  --yellow-brand-1: #FDD300;
+  --red-brand-1: #F5470D;
+  --green: #11D148;
+  --green-dark: #0C9634;
+  --blue: #1160ED;
+  --blue-light: #1ABBED;
+  --blue-dark: #1346A1;
+  --yellow: #FFE248;
+  --yellow-dark: #e6c317;
+  --red: #FF5151;
+  --red-dark: #9A0F0F;
+  --black: #000000;
+  --gray-dark: #151515;
+  --gray-dark-2: #333333;
+  --gray-dark-3: #4F4F4F;
+  --gray-light: #BDBDBD;
+  --gray-light-2: #E0E0E0;
+  --gray-light-3: #F2F2F2;
+  --white: #FFFFFF;
+  --average: #FFA059;
+  --system-down: #E45959;
+  --warning: #FFC859;
+  --high: #E97659;
+  --not-classified: #97AAB3;
+  --information: #42AEFC;
+  --average-2: #FFA05950;
+  --system-down-2: #E4595950;
+  --warning-2: #FFC85950;
+  --high-2: #E9765950;
+  --not-classified-2: #97AAB350;
+  --information-2: #42AEFC50;
+  --orange-componentes: #FF7E00;
+}
+
+/*!
+ * Bootstrap Reboot v5.0.2 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
+ */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+hr {
+  margin: 1rem 0;
+  color: inherit;
+  background-color: currentColor;
+  border: 0;
+  opacity: 0.25;
+}
+
+hr:not([size]) {
+  height: 1px;
+}
+
+h6, h5, h4, h3, h2, h1 {
+  margin: 0;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: calc(1.375rem + 1.5vw);
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+h2 {
+  font-size: calc(1.325rem + 0.9vw);
+}
+
+@media (min-width: 1200px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+h3 {
+  font-size: calc(1.3rem + 0.6vw);
+}
+
+@media (min-width: 1200px) {
+  h3 {
+    font-size: 1.75rem;
+  }
+}
+
+h4 {
+  font-size: calc(1.275rem + 0.3vw);
+}
+
+@media (min-width: 1200px) {
+  h4 {
+    font-size: 1.5rem;
+  }
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ol,
+ul {
+  padding-left: 2rem;
+}
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+blockquote {
+  margin: 0 0 1rem;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+a:not([href]):not([class]), a:not([href]):not([class]):hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+a > code {
+  color: inherit;
+}
+
+img,
+svg {
+  vertical-align: middle;
+}
+
+table {
+  caption-side: bottom;
+  border-collapse: collapse;
+}
+
+caption {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  color: #6c757d;
+  text-align: left;
+}
+
+th {
+  text-align: inherit;
+  text-align: -webkit-match-parent;
+}
+
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+
+label {
+  display: inline-block;
+}
+
+button {
+  border-radius: 0;
+}
+
+button:focus:not(:focus-visible) {
+  outline: 0;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+[role=button] {
+  cursor: pointer;
+}
+
+select {
+  word-wrap: normal;
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+button:not(:disabled),
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled) {
+  cursor: pointer;
+}
+
+::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+output {
+  display: inline-block;
+}
+
+iframe {
+  border: 0;
+}
+
+summary {
+  display: list-item;
+  cursor: pointer;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+:root {
+  --slider-bg: var(--gray-light);
+}
+
+[data-theme="dark"] {
+  --slider-bg: var(--green);
+}
+
+.theme-switch-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.theme-switch-wrapper .theme-switch {
+  display: inline-block;
+  height: 21px;
+  position: relative;
+  width: 38px;
+}
+
+.theme-switch-wrapper .theme-switch input {
+  display: none;
+}
+
+.theme-switch-wrapper .theme-switch input:checked + .slider {
+  background-color: #869487;
+}
+
+.theme-switch-wrapper .theme-switch input:checked + .slider:before {
+  -webkit-transform: translateX(14px);
+          transform: translateX(14px);
+}
+
+.theme-switch-wrapper .theme-switch .slider {
+  background-color: var(--slider-bg) !important;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.theme-switch-wrapper .theme-switch .slider:before {
+  background-color: #fff;
+  bottom: 3px;
+  content: "";
+  height: 16px;
+  left: 4px;
+  position: absolute;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  width: 16px;
+}
+
+.theme-switch-wrapper .theme-switch .slider.round {
+  border-radius: 34px;
+}
+
+.theme-switch-wrapper .theme-switch .slider.round:before {
+  border-radius: 50%;
+}
+
+:root {
+  --button-background-color:  linear-gradient(78.6deg, #F5470D -25.73%, #FCA800 143.01%);
+  --button-font-color: var(--white);
+}
+
+[data-theme="dark"] {
+  --button-background-color: var(--black);
+  --button-font-color: var(--red);
+}
+
+.btn__primary {
+  background: var(--button-background-color);
+  color: var(--button-font-color);
+  border: none;
+  border-radius: 4px;
+  margin: 4px;
+  padding: 2px 16px;
+  font-size: 16px;
+}
+/*# sourceMappingURL=root.css.map */

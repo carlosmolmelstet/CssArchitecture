@@ -1,0 +1,61 @@
+
+:root {
+  --slider-bg: var(--gray-light);
+}
+
+[data-theme="dark"] {
+  --slider-bg: var(--green);
+}
+
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  .theme-switch {
+    display: inline-block;
+    height: 21px;
+    position: relative;
+    width: 38px;
+
+    input {
+      display: none;
+
+      &:checked + .slider {
+        background-color: #869487;
+      }
+
+      &:checked + .slider:before {
+        transform: translateX(14px);
+      }
+    }
+    
+    .slider {
+      background-color: var(--slider-bg) !important;
+      bottom: 0;
+      cursor: pointer;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: 0.4s;
+
+      &:before {
+        background-color: #fff;
+        bottom: 3px;
+        content: "";
+        height: 16px;
+        left: 4px;
+        position: absolute;
+        transition: 0.4s;
+        width: 16px;
+      }
+
+      &.round {
+        border-radius: 34px;
+
+        &:before {
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
