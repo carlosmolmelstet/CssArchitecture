@@ -3,351 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./DesignSystem/css/global/root.css">
+    <link rel="stylesheet" href="./DesignSystem/css/main.css">
     <link rel="stylesheet" href="./css/index.css">
+
     <title>Document</title>
 </head>
 <body>
-    <nav>
-        <h2>CSS Architecture </h2>
-        <div class="theme-switch-wrapper">
-            <label class="theme-switch" for="checkbox">
-                <input type="checkbox"  value="false" id="checkbox" />
-                <div class="slider round"></div>
-            </label>
+    <script>
+        var theme = localStorage.getItem('theme');
+        document.documentElement.setAttribute('data-theme', theme);
+    </script>
+    <nav class="navbar">
+        <div class="menu">
+            <div class="menu__item--active">
+                <div class="menu__icon--active">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 22C14.9801 22 13.168 17.568 15 15.5C16.5632 13.7355 22 14.5428 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5229 6.47715 22 12 22Z" stroke="#4F4F4F" stroke-linejoin="round"/>
+                        <path d="M14 8.5C14.8285 8.5 15.5 7.82845 15.5 7C15.5 6.17155 14.8285 5.5 14 5.5C13.1715 5.5 12.5 6.17155 12.5 7C12.5 7.82845 13.1715 8.5 14 8.5Z" stroke="#4F4F4F" stroke-linejoin="round"/>
+                        <path d="M8 10.5C8.82845 10.5 9.5 9.82845 9.5 9C9.5 8.17155 8.82845 7.5 8 7.5C7.17155 7.5 6.5 8.17155 6.5 9C6.5 9.82845 7.17155 10.5 8 10.5Z" stroke="#4F4F4F" stroke-linejoin="round"/>
+                        <path d="M8.5 17C9.32845 17 10 16.3285 10 15.5C10 14.6715 9.32845 14 8.5 14C7.67155 14 7 14.6715 7 15.5C7 16.3285 7.67155 17 8.5 17Z" stroke="#4F4F4F" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <span>Cores</span>
+            </div>
+            <div class="menu__item">
+                <div class="menu__icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 22C14.9801 22 13.168 17.568 15 15.5C16.5632 13.7355 22 14.5428 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5229 6.47715 22 12 22Z" stroke="#4F4F4F" stroke-linejoin="round"/>
+                        <path d="M14 8.5C14.8285 8.5 15.5 7.82845 15.5 7C15.5 6.17155 14.8285 5.5 14 5.5C13.1715 5.5 12.5 6.17155 12.5 7C12.5 7.82845 13.1715 8.5 14 8.5Z" stroke="#4F4F4F" stroke-linejoin="round"/>
+                        <path d="M8 10.5C8.82845 10.5 9.5 9.82845 9.5 9C9.5 8.17155 8.82845 7.5 8 7.5C7.17155 7.5 6.5 8.17155 6.5 9C6.5 9.82845 7.17155 10.5 8 10.5Z" stroke="#4F4F4F" stroke-linejoin="round"/>
+                        <path d="M8.5 17C9.32845 17 10 16.3285 10 15.5C10 14.6715 9.32845 14 8.5 14C7.67155 14 7 14.6715 7 15.5C7 16.3285 7.67155 17 8.5 17Z" stroke="#4F4F4F" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <span>Cores</span>
+            </div>
+            <div class="menu__item">
+                <div class="menu__icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 22C14.9801 22 13.168 17.568 15 15.5C16.5632 13.7355 22 14.5428 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5229 6.47715 22 12 22Z" stroke="#4F4F4F" stroke-linejoin="round"/>
+                        <path d="M14 8.5C14.8285 8.5 15.5 7.82845 15.5 7C15.5 6.17155 14.8285 5.5 14 5.5C13.1715 5.5 12.5 6.17155 12.5 7C12.5 7.82845 13.1715 8.5 14 8.5Z" stroke="#4F4F4F" stroke-linejoin="round"/>
+                        <path d="M8 10.5C8.82845 10.5 9.5 9.82845 9.5 9C9.5 8.17155 8.82845 7.5 8 7.5C7.17155 7.5 6.5 8.17155 6.5 9C6.5 9.82845 7.17155 10.5 8 10.5Z" stroke="#4F4F4F" stroke-linejoin="round"/>
+                        <path d="M8.5 17C9.32845 17 10 16.3285 10 15.5C10 14.6715 9.32845 14 8.5 14C7.67155 14 7 14.6715 7 15.5C7 16.3285 7.67155 17 8.5 17Z" stroke="#4F4F4F" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <span>Cores</span>
+            </div>
         </div>
+        <label class="themeSwitch" for="checkbox">
+            <input class="themeSwitch__input" type="checkbox"  value="false" id="checkbox" />
+            <div class="themeSwitch__slider"></div>
+            <div class="themeSwitch__icons">
+                <svg width="16" height="17" class="themeSwitch__icon--day" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 5.64697V9.17638V5.64697Z" fill="#EEEEEE"/>
+                    <path d="M8 5.64697V9.17638" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12.7142 7.7146L10.3809 10.1852L12.7142 7.7146Z" fill="#EEEEEE"/>
+                    <path d="M12.7142 7.7146L10.3809 10.1852" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14.6673 12.7058H11.334H14.6673Z" fill="#EEEEEE"/>
+                    <path d="M14.6673 12.7058H11.334" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1.33398 12.7058H4.66732H1.33398Z" fill="#EEEEEE"/>
+                    <path d="M1.33398 12.7058H4.66732" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3.28516 7.7146L5.61849 10.1852L3.28516 7.7146Z" fill="#EEEEEE"/>
+                    <path d="M3.28516 7.7146L5.61849 10.1852" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7.33398 12.7058H8.66732H7.33398Z" fill="#EEEEEE"/>
+                    <path d="M7.33398 12.7058H8.66732" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <svg width="12" height="12" class="themeSwitch__icon--night" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.01318 1.10271C5.6457 1.45924 4.63637 2.70265 4.63637 4.18183C4.63637 5.9391 6.0609 7.36363 7.81817 7.36363C9.29735 7.36363 10.5408 6.3543 10.8973 4.98682C10.9646 5.314 11 5.65288 11 6C11 8.76143 8.76143 11 6 11C3.23857 11 1 8.76143 1 6C1 3.23857 3.23857 1 6 1C6.34712 1 6.686 1.03537 7.01318 1.10271Z" stroke="white" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </label>
     </nav>
     <main>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
-        <button class="btn__primary">Botão</button>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum consectetur porro voluptate, debitis saepe praesentium totam eum, sint temporibus illum ducimus odio earum reprehenderit corporis perspiciatis possimus consequuntur. Provident, nulla?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum consectetur porro voluptate, debitis saepe praesentium totam eum, sint temporibus illum ducimus odio earum reprehenderit corporis perspiciatis possimus consequuntur. Provident, nulla?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum consectetur porro voluptate, debitis saepe praesentium totam eum, sint temporibus illum ducimus odio earum reprehenderit corporis perspiciatis possimus consequuntur. Provident, nulla?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum consectetur porro voluptate, debitis saepe praesentium totam eum, sint temporibus illum ducimus odio earum reprehenderit corporis perspiciatis possimus consequuntur. Provident, nulla?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum consectetur porro voluptate, debitis saepe praesentium totam eum, sint temporibus illum ducimus odio earum reprehenderit corporis perspiciatis possimus consequuntur. Provident, nulla?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum consectetur porro voluptate, debitis saepe praesentium totam eum, sint temporibus illum ducimus odio earum reprehenderit corporis perspiciatis possimus consequuntur. Provident, nulla?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum consectetur porro voluptate, debitis saepe praesentium totam eum, sint temporibus illum ducimus odio earum reprehenderit corporis perspiciatis possimus consequuntur. Provident, nulla?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum consectetur porro voluptate, debitis saepe praesentium totam eum, sint temporibus illum ducimus odio earum reprehenderit corporis perspiciatis possimus consequuntur. Provident, nulla?
     </main>
     <script>
-        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+        const toggleSwitch = document.querySelector('.themeSwitch input[type="checkbox"]');
+
+        if (localStorage.getItem('theme') == "dark") {
+            toggleSwitch.checked = true;
+        }   
+
         function switchTheme(e) {
             if (e.target.checked) {
                 document.documentElement.setAttribute('data-theme', 'dark');

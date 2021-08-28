@@ -1,3 +1,45 @@
+@font-face {
+  font-family: 'Tofino';
+  src: url("../fonts/TofinoProPersonal-Thin.otf") format("opentype");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'Tofino';
+  src: url("../fonts/TofinoProPersonal-Light.otf") format("opentype");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Tofino';
+  src: url("../fonts/TofinoProPersonal-Book.otf") format("opentype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Tofino';
+  src: url("../fonts/TofinoProPersonal-Medium.otf") format("opentype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Tofino';
+  src: url("../fonts/TofinoProPersonal-Semibold.otf") format("opentype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Tofino';
+  src: url("../fonts/TofinoProPersonal-Black.otf") format("opentype");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Tofino';
+  src: url("../fonts/TofinoProPersonal-Ultra.otf") format("opentype");
+  font-weight: 900;
+}
+
 :root {
   --orange-brand-1: #EE6B04;
   --orange-brand-2: #EC7802;
@@ -36,13 +78,6 @@
   --orange-componentes: #FF7E00;
 }
 
-/*!
- * Bootstrap Reboot v5.0.2 (https://getbootstrap.com/)
- * Copyright 2011-2021 The Bootstrap Authors
- * Copyright 2011-2021 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
- */
 *,
 *::before,
 *::after {
@@ -56,11 +91,15 @@
   }
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Tofino', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.5;
   color: #212529;
   background-color: #fff;
@@ -82,7 +121,7 @@ hr:not([size]) {
 
 h6, h5, h4, h3, h2, h1 {
   margin: 0;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.2;
 }
 
@@ -164,7 +203,7 @@ blockquote {
 
 b,
 strong {
-  font-weight: bolder;
+  font-weight: 600;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -286,44 +325,76 @@ progress {
 }
 
 :root {
-  --slider-bg: var(--gray-light);
+  --slider__backgroundSlider--color: linear-gradient(78.6deg, var(--red-brand-1) -25.73%, var(--orange-brand-3) 143.01%);
+  --slider__border--color: var(--gray-light);
+  --slider__icon--day: var(--white);
+  --slider__icon--night: var(--gray-light);
 }
 
 [data-theme="dark"] {
-  --slider-bg: var(--green);
+  --slider__backgroundSlider--color: linear-gradient(78.6deg, var(--red-brand-1) -25.73%, var(--orange-brand-3) 143.01%);
+  --slider__border--color: var(--gray-dark-2);
+  --slider__icon--day: var(--gray-dark-2);
+  --slider__icon--night: var(--white);
 }
 
-.theme-switch-wrapper {
+.themeSwitch {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.theme-switch-wrapper .theme-switch {
-  display: inline-block;
-  height: 21px;
+  height: 32px;
   position: relative;
-  width: 38px;
+  min-width: 74px;
+  max-width: 74px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
 }
 
-.theme-switch-wrapper .theme-switch input {
+.themeSwitch .themeSwitch__input {
   display: none;
 }
 
-.theme-switch-wrapper .theme-switch input:checked + .slider {
-  background-color: #869487;
+.themeSwitch .themeSwitch__input:checked + .themeSwitch__slider:before {
+  -webkit-transform: translateX(32px);
+          transform: translateX(32px);
 }
 
-.theme-switch-wrapper .theme-switch input:checked + .slider:before {
-  -webkit-transform: translateX(14px);
-          transform: translateX(14px);
+.themeSwitch .themeSwitch__icons {
+  width: 100%;
+  z-index: 99;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.theme-switch-wrapper .theme-switch .slider {
-  background-color: var(--slider-bg) !important;
+.themeSwitch .themeSwitch__icons svg {
+  margin: 0 9px;
+}
+
+.themeSwitch .themeSwitch__icons .themeSwitch__icon--day path {
+  stroke: var(--slider__icon--day);
+}
+
+.themeSwitch .themeSwitch__icons .themeSwitch__icon--night path {
+  margin-left: 9px;
+  stroke: var(--slider__icon--night);
+}
+
+.themeSwitch .themeSwitch__slider {
+  background-color: none;
+  border: 1px solid var(--slider__border--color);
   bottom: 0;
   cursor: pointer;
   left: 0;
@@ -332,30 +403,24 @@ progress {
   top: 0;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  border-radius: 6px;
 }
 
-.theme-switch-wrapper .theme-switch .slider:before {
-  background-color: #fff;
-  bottom: 3px;
+.themeSwitch .themeSwitch__slider:before {
+  background: var(--slider__backgroundSlider--color);
+  bottom: 2px;
   content: "";
-  height: 16px;
-  left: 4px;
+  height: 26px;
+  left: 2px;
   position: absolute;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  width: 16px;
-}
-
-.theme-switch-wrapper .theme-switch .slider.round {
-  border-radius: 34px;
-}
-
-.theme-switch-wrapper .theme-switch .slider.round:before {
-  border-radius: 50%;
+  border-radius: 6px;
+  width: 36px;
 }
 
 :root {
-  --button-background-color:  linear-gradient(78.6deg, #F5470D -25.73%, #FCA800 143.01%);
+  --button-background-color:  linear-gradient(78.6deg, var(--red-brand-1) -25.73%, var(--orange-brand-3) 143.01%);
   --button-font-color: var(--white);
 }
 
@@ -364,13 +429,20 @@ progress {
   --button-font-color: var(--red);
 }
 
-.btn__primary {
-  background: var(--button-background-color);
-  color: var(--button-font-color);
+.btn, .btn--primary {
   border: none;
   border-radius: 4px;
   margin: 4px;
-  padding: 2px 16px;
-  font-size: 16px;
+  padding: 10px 12px;
 }
-/*# sourceMappingURL=root.css.map */
+
+.btn--primary {
+  background: var(--button-background-color);
+  color: var(--button-font-color);
+}
+
+.btn--primary {
+  background: var(--button-background-color);
+  color: var(--button-font-color);
+}
+/*# sourceMappingURL=main.css.map */

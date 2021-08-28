@@ -1,61 +1,82 @@
-
 :root {
-  --slider-bg: var(--gray-light);
+  --slider__backgroundSlider--color: linear-gradient(78.6deg, var(--red-brand-1) -25.73%, var(--orange-brand-3) 143.01%);
+  --slider__border--color: var(--gray-light);
+  --slider__icon--day: var(--white);
+  --slider__icon--night: var(--gray-light);
+
 }
 
 [data-theme="dark"] {
-  --slider-bg: var(--green);
+  --slider__backgroundSlider--color: linear-gradient(78.6deg, var(--red-brand-1) -25.73%, var(--orange-brand-3) 143.01%);
+  --slider__border--color: var(--gray-dark-2);
+  --slider__icon--day: var(--gray-dark-2);
+  --slider__icon--night: var(--white);
+
 }
 
-.theme-switch-wrapper {
+.themeSwitch {
   display: flex;
   align-items: center;
-  .theme-switch {
-    display: inline-block;
-    height: 21px;
-    position: relative;
-    width: 38px;
+  height: 32px;
+  position: relative;
+  min-width: 74px;
+  max-width: 74px;
+  user-select: none;
+  cursor: pointer;
 
-    input {
-      display: none;
+  .themeSwitch__input {
+    display: none;
 
-      &:checked + .slider {
-        background-color: #869487;
-      }
-
-      &:checked + .slider:before {
-        transform: translateX(14px);
-      }
-    }
-    
-    .slider {
-      background-color: var(--slider-bg) !important;
-      bottom: 0;
-      cursor: pointer;
-      left: 0;
-      position: absolute;
-      right: 0;
-      top: 0;
-      transition: 0.4s;
-
-      &:before {
-        background-color: #fff;
-        bottom: 3px;
-        content: "";
-        height: 16px;
-        left: 4px;
-        position: absolute;
-        transition: 0.4s;
-        width: 16px;
-      }
-
-      &.round {
-        border-radius: 34px;
-
-        &:before {
-          border-radius: 50%;
-        }
-      }
+    &:checked + .themeSwitch__slider:before {
+      transform: translateX(32px);
     }
   }
+
+  .themeSwitch__icons {
+    width: 100%;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      margin: 0 9px;
+    }
+    
+    .themeSwitch__icon--day  path{
+      stroke: var(--slider__icon--day);
+    }
+
+    .themeSwitch__icon--night path {
+      margin-left: 9px;
+      stroke: var(--slider__icon--night);
+    }
+  }
+  
+  .themeSwitch__slider {
+    background-color: none;
+    border: 1px solid var(--slider__border--color);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+    border-radius: 6px;
+
+    &:before {
+      background: var(--slider__backgroundSlider--color);
+      bottom: 2px;
+      content: "";
+      height: 26px;
+      left: 2px;
+      position: absolute;
+      transition: 0.4s;
+      border-radius: 6px;
+      width: 36px;
+    }
+
+  }
 }
+
