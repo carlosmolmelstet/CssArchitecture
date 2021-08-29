@@ -128,5 +128,10 @@ body {
 
 .container {
     margin-bottom: 50px;
+
+    &__title {
+        @extend .container;
+        margin-bottom: 16px;
+    }
 }
 

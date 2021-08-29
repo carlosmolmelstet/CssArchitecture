@@ -8,20 +8,20 @@
   --button-font-color: var(--red);
 }
 
-.btn {
+.c-button {
   border: none;
   border-radius: 4px;
-  margin: 4px;
   padding: 10px 12px;
+  font-size: 14px;
 
   &--primary {
-    @extend .btn;
+    @extend .c-button;
     background: var(--button-background-color);
     color: var(--button-font-color);
   }
 
   &--primary {
-    @extend .btn;
+    @extend .c-button;
     background: var(--button-background-color);
     color: var(--button-font-color);
   }

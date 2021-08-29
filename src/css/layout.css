@@ -126,7 +126,11 @@ body::-webkit-scrollbar-thumb {
   margin-left: 16px;
 }
 
-.container {
+.container, .container__title {
   margin-bottom: 50px;
+}
+
+.container__title {
+  margin-bottom: 16px;
 }
 /*# sourceMappingURL=layout.css.map */
