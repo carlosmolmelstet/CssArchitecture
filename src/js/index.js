@@ -1,4 +1,5 @@
 const toggleSwitch = document.querySelector('.themeSwitch input[type="checkbox"]');
+$('.my-select').selectpicker();
 
 if (localStorage.getItem('theme') == "dark") {
     toggleSwitch.checked = true;
@@ -16,3 +17,23 @@ function switchTheme(e) {
 }
 
 toggleSwitch.addEventListener('change', switchTheme, false);
+
+function Copy(id) {
+    var value = document.getElementById(id).value;
+    navigator.clipboard.writeText(value);
+}
+
+function ShowCard(id) {
+    var card = document.getElementById(id);
+    var icon = document.getElementById(`${id}-icon`);
+
+    if(icon.classList.contains("card__hide")) {
+        icon.classList.remove("card__hide");
+        card.style.display = "none";
+
+    } else {
+        icon.classList.add("card__hide");
+        card.style.display = "flex";
+    }
+
+}

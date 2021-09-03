@@ -1,3 +1,22 @@
-@import './_config.scss';
-@import './_components.scss';
+// Normalize
+
+@import './base/_normalize.scss';
+
+// Abstract
+
+@import './abstract/_colors.scss';
+@import './abstract/_typography.scss';
+@import './abstract/_tokens.scss';
+
+// Uility
+
+@import './base/_utility.scss';
+
+// Components
+
+@import './components/_button.scss';
+@import './components/_input.scss';
+@import './components/_form-error.scss';
+@import './components/_theme-switch.scss';
+@import './components/_select.scss';
 

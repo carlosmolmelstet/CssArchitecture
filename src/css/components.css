@@ -1,0 +1,172 @@
+[data-theme="dark"] {
+  --card__border--color: var(--gray--2);
+  --card--code--color: var(--gray--3);
+  --card--copy--color: var(--gray--5);
+  --card--scroll--color: var(--gray--2);
+}
+
+.c-wrapper-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.c-wrapper-cards__title {
+  font-size: 32px;
+}
+
+.c-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10px 0;
+  border: 1px solid var(--card__border--color);
+  padding: 8px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.c-card__title {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+@-webkit-keyframes iconHide {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@keyframes iconHide {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@-webkit-keyframes iconShow {
+  from {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes iconShow {
+  from {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+.c-card__icon {
+  position: absolute;
+  right: 16px;
+  top: 8px;
+  -webkit-transition: .5;
+  transition: .5;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-animation: iconShow 400ms;
+          animation: iconShow 400ms;
+}
+
+.c-card__icon svg {
+  cursor: pointer;
+  -webkit-transition: .4;
+  transition: .4;
+}
+
+.c-card__icon svg:hover path {
+  stroke: var(--card--copy--color);
+}
+
+.c-card__icon.card__hide {
+  -webkit-animation: iconHide 400ms;
+          animation: iconHide 400ms;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.c-card__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-transition: 5s;
+  transition: 5s;
+  margin-top: 14px;
+}
+
+.c-card__body button {
+  margin: 0 4px;
+}
+
+.c-card__copy {
+  position: relative;
+  width: 100%;
+}
+
+.c-card__copy svg {
+  cursor: pointer;
+  -webkit-transition: .4;
+  transition: .4;
+  top: 24px;
+  right: 12px;
+  position: absolute;
+}
+
+.c-card__copy svg:hover path {
+  stroke: var(--card--copy--color);
+}
+
+.c-card__code {
+  width: 100%;
+  margin-top: 16px;
+  border: 1px solid var(--card__border--color);
+  background: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+  resize: none;
+  border-radius: 3px;
+  outline: none;
+  font-family: monospace;
+  padding: 8px;
+  color: var(--card--code--color);
+}
+
+.c-card__code::-webkit-scrollbar {
+  width: 8px;
+}
+
+.c-card__code::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: var(--card--scroll--color);
+}
+/*# sourceMappingURL=components.css.map */

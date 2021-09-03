@@ -1,17 +1,15 @@
 :root {
-  --slider__backgroundSlider--color: linear-gradient(78.6deg, var(--red-brand-1) -25.73%, var(--orange-brand-3) 143.01%);
-  --slider__border--color: var(--gray-light);
+  --slider__backgroundSlider: linear-gradient(78.6deg, var(--primary) -25.73%, var(--primary--5) 143.01%);
+  --slider__border: var(--gray--4);
   --slider__icon--day: var(--white);
-  --slider__icon--night: var(--gray-light);
-
+  --slider__icon--night: var(--gray--4);
 }
 
 [data-theme="dark"] {
-  --slider__backgroundSlider--color: linear-gradient(78.6deg, var(--red-brand-1) -25.73%, var(--orange-brand-3) 143.01%);
-  --slider__border--color: var(--gray-dark-2);
-  --slider__icon--day: var(--gray-dark-2);
+  --slider__backgroundSlider: linear-gradient(78.6deg, var(--primary) -25.73%, var(--primary--5) 143.01%);
+  --slider__border: var(--gray--3);
+  --slider__icon--day: var(--gray--3);
   --slider__icon--night: var(--white);
-
 }
 
 .themeSwitch {
@@ -40,22 +38,25 @@
     justify-content: center;
 
     svg {
-      margin: 0 9px;
+      margin: 0 12px;
     }
     
     .themeSwitch__icon--day  path{
       stroke: var(--slider__icon--day);
     }
 
-    .themeSwitch__icon--night path {
-      margin-left: 9px;
+    .themeSwitch__icon--night {
+      margin-left: 6px !important;
+
+       path {
       stroke: var(--slider__icon--night);
     }
+  }
   }
   
   .themeSwitch__slider {
     background-color: none;
-    border: 1px solid var(--slider__border--color);
+    border: 1px solid var(--slider__border);
     bottom: 0;
     cursor: pointer;
     left: 0;
@@ -66,7 +67,7 @@
     border-radius: 6px;
 
     &:before {
-      background: var(--slider__backgroundSlider--color);
+      background: var(--slider__backgroundSlider);
       bottom: 2px;
       content: "";
       height: 26px;

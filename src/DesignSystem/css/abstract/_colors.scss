@@ -1,0 +1,61 @@
+:root {
+    // Brand   
+    --primary:#F5470D;
+    --primary--2: #EE6B04;
+    --primary--3: #EC7802;
+    --primary--4: #FF7E00;
+    --primary--5: #FCA800;
+    --primary--6: #FDD300;
+    --primary--7: #F5CEA8;
+    --primary--8: #F6E1CD;
+    --primary--4-opacity: #FF7E0020;
+
+    // Complementary 
+
+    --green: #11D148;
+    --green--2: #0C9634;
+
+    --blue: #1160ED;
+    --blue--2: #1346A1;
+    --blue--3: #262E44;
+    --blue--4: #171F33;
+    --blue--5: #A6BEE8;
+    --blue--6: #82AEFF;
+
+    --yellow: #FFE248;
+    --yellow--2: #e6c317;
+
+    --red: #FF5151;
+    --red--2: #9A0F0F;
+    --red--3: #FF515110;
+
+    // Gray tone
+
+    --black: #000000;
+
+    --gray: #202020;
+    --gray--2: #333333;
+    --gray--3: #4F4F4F;
+    --gray--4: #BDBDBD;
+    --gray--5: #E0E0E0;
+    --gray--6: #F2F2F2;
+
+    --white: #FFFFFF;
+
+    // Criticalities
+
+    --average: #FFA059;
+    --system-down: #E45959;
+    --warning: #FFC859;
+    --high: #E97659;
+    --not-classified: #97AAB3;
+    --information: #42AEFC;
+
+    --average--2: #FFA05950;
+    --system-down--2: #E4595950;
+    --warning--2: #FFC85950;
+    --high--2: #E9765950;
+    --not-classified--2: #97AAB350;
+    --information--2: #42AEFC50;
+}
+

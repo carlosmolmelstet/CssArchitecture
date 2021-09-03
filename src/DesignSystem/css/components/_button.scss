@@ -1,11 +1,89 @@
-:root{
-  --button-background-color:  linear-gradient(78.6deg, var(--red-brand-1) -25.73%, var(--orange-brand-3) 143.01%);
-  --button-font-color: var(--white);
+:root {
+  // primary
+
+  --button__primary--background: var(--primary);
+  --button__primary--background-hover: var(--primary--2);
+  --button__primary--font: var(--white);
+
+  --button__primary-auxiliary--background: var(--primary--8);
+  --button__primary-auxiliary--background-hover: var(--primary--7);
+  --button__primary-auxiliary--font: var(--primary);
+  
+  --button__primary-disable--background: var(--primary--8);
+  --button__primary-disable--background-hover: var(--primary--7);
+  --button__primary-disable--font: var(--primary--4);
+
+  // secondary
+
+  --button__secondary--background: var(--blue--3);
+  --button__secondary--background-hover: var(--blue--4);
+  --button__secondary--font: var(--white);
+
+  --button__secondary-auxiliary--background: var(--gray--5);
+  --button__secondary-auxiliary--background-hover: var(--gray--4);
+  --button__secondary-auxiliary--font: var(--blue--3);
+
+  --button__secondary-disable--background: var(--gray--5);
+  --button__secondary-disable--background-hover: var(--gray--4);
+  --button__secondary-disable--font: var(--gray--3);
+
+  // tertiary
+
+  --button__tertiary--background: var(--blue);
+  --button__tertiary--background-hover: var(--blue--2);
+  --button__tertiary--font: var(--white);
+
+  --button__tertiary-auxiliary--background: var(--blue--5);
+  --button__tertiary-auxiliary--background-hover: var(--blue--6);
+  --button__tertiary-auxiliary--font: var(--blue);
+
+  --button__tertiary-disable--background: var(--blue--5);
+  --button__tertiary-disable--background-hover: var(--blue--6);
+  --button__tertiary-disable--font: var(--blue--4);
 }
 
 [data-theme="dark"] {
-  --button-background-color: var(--black);
-  --button-font-color: var(--red);
+  // primary
+
+  --button__primary--background: var(--primary);
+  --button__primary--background-hover: var(--primary--2);
+  --button__primary--font: var(--white);
+
+  --button__primary-auxiliary--background: var(--primary--8);
+  --button__primary-auxiliary--background-hover: var(--primary--7);
+  --button__primary-auxiliary--font: var(--primary);
+  
+  --button__primary-disable--background: var(--primary--8);
+  --button__primary-disable--background-hover: var(--primary--7);
+  --button__primary-disable--font: var(--primary--4);
+
+  // secondary
+
+  --button__secondary--background: var(--blue--3);
+  --button__secondary--background-hover: var(--blue--4);
+  --button__secondary--font: var(--white);
+
+  --button__secondary-auxiliary--background: var(--gray--5);
+  --button__secondary-auxiliary--background-hover: var(--gray--4);
+  --button__secondary-auxiliary--font: var(--blue--3);
+
+  --button__secondary-disable--background: var(--gray--5);
+  --button__secondary-disable--background-hover: var(--gray--4);
+  --button__secondary-disable--font: var(--gray--3);
+
+  // tertiary
+
+  --button__tertiary--background: var(--blue);
+  --button__tertiary--background-hover: var(--blue--2);
+  --button__tertiary--font: var(--white);
+
+  --button__tertiary-auxiliary--background: var(--blue--5);
+  --button__tertiary-auxiliary--background-hover: var(--blue--6);
+  --button__tertiary-auxiliary--font: var(--blue);
+
+  --button__tertiary-disable--background: var(--blue--5);
+  --button__tertiary-disable--background-hover: var(--blue--6);
+  --button__tertiary-disable--font: var(--blue--4);
 }
 
 .c-button {
@@ -13,16 +91,147 @@
   border-radius: 4px;
   padding: 10px 12px;
   font-size: 14px;
+  font-weight: 300;
+  transition: 0.4s;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  &--primary {
-    @extend .c-button;
-    background: var(--button-background-color);
-    color: var(--button-font-color);
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 4px;
   }
 
   &--primary {
     @extend .c-button;
-    background: var(--button-background-color);
-    color: var(--button-font-color);
+    background: var(--button__primary--background);
+    color: var(--button__primary--font);
+
+    &:hover {
+      background: var(--button__primary--background-hover);
+    }
+
+    &.c-button--auxiliary {
+      background: var(--button__primary-auxiliary--background);
+      color: var(--button__primary-auxiliary--font);
+
+      &:hover {
+        background: var(--button__primary-auxiliary--background-hover);
+        color: var(--button__primary-auxiliary--font);
+      }
+    }
+
+    &.c-button--disable {
+      background: var(--button__primary-disable--background);
+      color: var(--button__primary-disable--font);
+      cursor: not-allowed;
+      opacity: .5;
+
+      &:hover {
+        background: var(--button__primary-disable--background);
+      }
+    }
+  }
+
+  &--secondary {
+    @extend .c-button;
+    background: var(--button__secondary--background);
+    color: var(--button__secondary--font);
+
+    &:hover {
+      background: var(--button__secondary--background-hover);
+    }
+
+    &.c-button--auxiliary {
+      background: var(--button__secondary-auxiliary--background);
+      color: var(--button__secondary-auxiliary--font);
+
+      &:hover {
+        background: var(--button__secondary-auxiliary--background-hover);
+        color: var(--button__secondary-auxiliary--font);
+      }
+    }
+
+    &.c-button--disable {
+      background: var(--button__secondary-disable--background);
+      color: var(--button__secondary-disable--font);
+      cursor: not-allowed;
+      opacity: .5;
+
+
+      &:hover {
+        background: var(--button__secondary-disable--background);
+      }
+    }
+  }
+
+  &--tertiary {
+    @extend .c-button;
+    background: var(--button__tertiary--background);
+    color: var(--button__tertiary--font);
+
+    &:hover {
+      background: var(--button__tertiary--background-hover);
+    }
+
+    &.c-button--auxiliary {
+      background: var(--button__tertiary-auxiliary--background);
+      color: var(--button__tertiary-auxiliary--font);
+
+      &:hover {
+        background: var(--button__tertiary-auxiliary--background-hover);
+        color: var(--button__tertiary-auxiliary--font);
+      }
+    }
+
+    &.c-button--disable {
+      background: var(--button__tertiary-disable--background);
+      color: var(--button__tertiary-disable--font);
+      cursor: not-allowed;
+      opacity: .5;
+
+      &:hover {
+        background: var(--button__tertiary-disable--background);
+      }
+    }
+  }
+
+  &--action {
+    @extend .c-button;
+
+    .c-button__icon {
+      margin-right: 0px;
+    }
+  }
+
+  &--notification {
+    @extend .c-button;
+
+    .c-button__icon {
+      margin-right: 0px;
+    }
+
+    .c-button__notification {
+      position: absolute;
+      bottom: -2px;
+      right: -3px;
+      height: 20px;
+      width: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      background-color: var(--button__tertiary--background);
+      transition: .4s;
+    }
+
+    &:hover {
+      .c-button__notification {
+        background-color: var(--button__tertiary--background-hover);
+      }
+    }
   }
 }
