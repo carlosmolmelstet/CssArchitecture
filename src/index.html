@@ -1,42 +1,50 @@
 <!DOCTYPE html>
-<html lang="pt-br" >
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.11.1/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="./DesignSystem/css/main.css">
     <link rel="stylesheet" href="./css/layout.css">
     <link rel="stylesheet" href="./css/components.css">
     <script src="./js/loadTheme.js"></script>
     <title>Document</title>
 </head>
-<body> 
+
+<body>
     <nav class="navbar">
-        <img id="logoBY7"  class="logo" src="./assets/logo-seven.svg" />
+        <img id="logoBY7" class="logo" src="./assets/logo-seven.svg" />
         <div class="menu">
             <div class="menu__item--active">
                 <div class="menu__icon--active">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6 6V5.5C5.72386 5.5 5.5 5.72386 5.5 6H6ZM10 6H10.5C10.5 5.72386 10.2761 5.5 10 5.5V6ZM10 10V10.5C10.2761 10.5 10.5 10.2761 10.5 10H10ZM6 10H5.5C5.5 10.2761 5.72386 10.5 6 10.5V10ZM6 14V13.5C5.72386 13.5 5.5 13.7239 5.5 14H6ZM10 14H10.5C10.5 13.7239 10.2761 13.5 10 13.5V14ZM10 18V18.5C10.2761 18.5 10.5 18.2761 10.5 18H10ZM6 18H5.5C5.5 18.2761 5.72386 18.5 6 18.5V18ZM14 13.5C13.7239 13.5 13.5 13.7239 13.5 14C13.5 14.2761 13.7239 14.5 14 14.5V13.5ZM18 14.5C18.2761 14.5 18.5 14.2761 18.5 14C18.5 13.7239 18.2761 13.5 18 13.5V14.5ZM14 17.5C13.7239 17.5 13.5 17.7239 13.5 18C13.5 18.2761 13.7239 18.5 14 18.5V17.5ZM18 18.5C18.2761 18.5 18.5 18.2761 18.5 18C18.5 17.7239 18.2761 17.5 18 17.5V18.5ZM14 5.5C13.7239 5.5 13.5 5.72386 13.5 6C13.5 6.27614 13.7239 6.5 14 6.5V5.5ZM18 6.5C18.2761 6.5 18.5 6.27614 18.5 6C18.5 5.72386 18.2761 5.5 18 5.5V6.5ZM14 9.5C13.7239 9.5 13.5 9.72386 13.5 10C13.5 10.2761 13.7239 10.5 14 10.5V9.5ZM18 10.5C18.2761 10.5 18.5 10.2761 18.5 10C18.5 9.72386 18.2761 9.5 18 9.5V10.5ZM3.5 2.5H20.5V1.5H3.5V2.5ZM20.5 2.5C21.0523 2.5 21.5 2.94772 21.5 3.5H22.5C22.5 2.39543 21.6046 1.5 20.5 1.5V2.5ZM21.5 3.5V20.5H22.5V3.5H21.5ZM21.5 20.5C21.5 21.0523 21.0523 21.5 20.5 21.5V22.5C21.6046 22.5 22.5 21.6046 22.5 20.5H21.5ZM20.5 21.5H3.5V22.5H20.5V21.5ZM3.5 21.5C2.94772 21.5 2.5 21.0523 2.5 20.5H1.5C1.5 21.6046 2.39543 22.5 3.5 22.5V21.5ZM2.5 20.5V3.5H1.5V20.5H2.5ZM2.5 3.5C2.5 2.94772 2.94772 2.5 3.5 2.5V1.5C2.39543 1.5 1.5 2.39543 1.5 3.5H2.5ZM6 6.5H10V5.5H6V6.5ZM9.5 6V10H10.5V6H9.5ZM10 9.5H6V10.5H10V9.5ZM6.5 10V6H5.5V10H6.5ZM6 14.5H10V13.5H6V14.5ZM9.5 14V18H10.5V14H9.5ZM10 17.5H6V18.5H10V17.5ZM6.5 18V14H5.5V18H6.5ZM14 14.5H18V13.5H14V14.5ZM14 18.5H18V17.5H14V18.5ZM14 6.5H18V5.5H14V6.5ZM14 10.5H18V9.5H14V10.5Z" fill="#4F4F4F"/>
-                    </svg>                        
+                        <path
+                            d="M6 6V5.5C5.72386 5.5 5.5 5.72386 5.5 6H6ZM10 6H10.5C10.5 5.72386 10.2761 5.5 10 5.5V6ZM10 10V10.5C10.2761 10.5 10.5 10.2761 10.5 10H10ZM6 10H5.5C5.5 10.2761 5.72386 10.5 6 10.5V10ZM6 14V13.5C5.72386 13.5 5.5 13.7239 5.5 14H6ZM10 14H10.5C10.5 13.7239 10.2761 13.5 10 13.5V14ZM10 18V18.5C10.2761 18.5 10.5 18.2761 10.5 18H10ZM6 18H5.5C5.5 18.2761 5.72386 18.5 6 18.5V18ZM14 13.5C13.7239 13.5 13.5 13.7239 13.5 14C13.5 14.2761 13.7239 14.5 14 14.5V13.5ZM18 14.5C18.2761 14.5 18.5 14.2761 18.5 14C18.5 13.7239 18.2761 13.5 18 13.5V14.5ZM14 17.5C13.7239 17.5 13.5 17.7239 13.5 18C13.5 18.2761 13.7239 18.5 14 18.5V17.5ZM18 18.5C18.2761 18.5 18.5 18.2761 18.5 18C18.5 17.7239 18.2761 17.5 18 17.5V18.5ZM14 5.5C13.7239 5.5 13.5 5.72386 13.5 6C13.5 6.27614 13.7239 6.5 14 6.5V5.5ZM18 6.5C18.2761 6.5 18.5 6.27614 18.5 6C18.5 5.72386 18.2761 5.5 18 5.5V6.5ZM14 9.5C13.7239 9.5 13.5 9.72386 13.5 10C13.5 10.2761 13.7239 10.5 14 10.5V9.5ZM18 10.5C18.2761 10.5 18.5 10.2761 18.5 10C18.5 9.72386 18.2761 9.5 18 9.5V10.5ZM3.5 2.5H20.5V1.5H3.5V2.5ZM20.5 2.5C21.0523 2.5 21.5 2.94772 21.5 3.5H22.5C22.5 2.39543 21.6046 1.5 20.5 1.5V2.5ZM21.5 3.5V20.5H22.5V3.5H21.5ZM21.5 20.5C21.5 21.0523 21.0523 21.5 20.5 21.5V22.5C21.6046 22.5 22.5 21.6046 22.5 20.5H21.5ZM20.5 21.5H3.5V22.5H20.5V21.5ZM3.5 21.5C2.94772 21.5 2.5 21.0523 2.5 20.5H1.5C1.5 21.6046 2.39543 22.5 3.5 22.5V21.5ZM2.5 20.5V3.5H1.5V20.5H2.5ZM2.5 3.5C2.5 2.94772 2.94772 2.5 3.5 2.5V1.5C2.39543 1.5 1.5 2.39543 1.5 3.5H2.5ZM6 6.5H10V5.5H6V6.5ZM9.5 6V10H10.5V6H9.5ZM10 9.5H6V10.5H10V9.5ZM6.5 10V6H5.5V10H6.5ZM6 14.5H10V13.5H6V14.5ZM9.5 14V18H10.5V14H9.5ZM10 17.5H6V18.5H10V17.5ZM6.5 18V14H5.5V18H6.5ZM14 14.5H18V13.5H14V14.5ZM14 18.5H18V17.5H14V18.5ZM14 6.5H18V5.5H14V6.5ZM14 10.5H18V9.5H14V10.5Z"
+                            fill="#4F4F4F" />
+                    </svg>
                 </div>
                 <span>Princípios de design</span>
             </div>
             <div class="menu__item">
                 <div class="menu__icon">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2 3H22V15H2V3Z" stroke="#4F4F4F" stroke-linejoin="round"/>
-                        <path d="M22 15V18H2V15" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M5.5 11V10H6.5V11H5.5Z" fill="#4F4F4F" stroke="#4F4F4F"/>
-                        <path d="M5.5 7.5V6.5H6.5V7.5H5.5Z" fill="#4F4F4F" stroke="#4F4F4F"/>
-                        <path d="M9.5 11V10H10.5V11H9.5Z" fill="#4F4F4F" stroke="#4F4F4F"/>
-                        <path d="M9.5 7.5V6.5H10.5V7.5H9.5Z" fill="#4F4F4F" stroke="#4F4F4F"/>
-                        <path d="M13.5 11V10H14.5V11H13.5Z" fill="#4F4F4F" stroke="#4F4F4F"/>
-                        <path d="M13.5 7.5V6.5H14.5V7.5H13.5Z" fill="#4F4F4F" stroke="#4F4F4F"/>
-                        <path d="M17.5 7.5V6.5H18.5V7.5H17.5Z" fill="#4F4F4F" stroke="#4F4F4F"/>
-                        <path d="M10.4231 18L8 21H16L13.5769 18" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 3H22V15H2V3Z" stroke="#4F4F4F" stroke-linejoin="round" />
+                        <path d="M22 15V18H2V15" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M5.5 11V10H6.5V11H5.5Z" fill="#4F4F4F" stroke="#4F4F4F" />
+                        <path d="M5.5 7.5V6.5H6.5V7.5H5.5Z" fill="#4F4F4F" stroke="#4F4F4F" />
+                        <path d="M9.5 11V10H10.5V11H9.5Z" fill="#4F4F4F" stroke="#4F4F4F" />
+                        <path d="M9.5 7.5V6.5H10.5V7.5H9.5Z" fill="#4F4F4F" stroke="#4F4F4F" />
+                        <path d="M13.5 11V10H14.5V11H13.5Z" fill="#4F4F4F" stroke="#4F4F4F" />
+                        <path d="M13.5 7.5V6.5H14.5V7.5H13.5Z" fill="#4F4F4F" stroke="#4F4F4F" />
+                        <path d="M17.5 7.5V6.5H18.5V7.5H17.5Z" fill="#4F4F4F" stroke="#4F4F4F" />
+                        <path d="M10.4231 18L8 21H16L13.5769 18" stroke="#4F4F4F" stroke-linecap="round"
+                            stroke-linejoin="round" />
                     </svg>
                 </div>
                 <span>Componentes</span>
@@ -44,54 +52,145 @@
             <div class="menu__item">
                 <div class="menu__icon">
                     <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9.5 16.5C11.571 16.5 13.4461 15.6605 14.8033 14.3033C16.1605 12.9461 17 11.071 17 9C17 6.92895 16.1605 5.05395 14.8033 3.6967C13.4461 2.33947 11.571 1.5 9.5 1.5C7.42895 1.5 5.55395 2.33947 4.1967 3.6967C2.83947 5.05395 2 6.92895 2 9C2 11.071 2.83947 12.9461 4.1967 14.3033C5.55395 15.6605 7.42895 16.5 9.5 16.5Z" stroke="#B5B5B5" stroke-linejoin="round"/>
-                        <path d="M9.5 10.7344V9.23437C10.7426 9.23437 11.75 8.22701 11.75 6.98438C11.75 5.74174 10.7426 4.73438 9.5 4.73438C8.25736 4.73438 7.25 5.74174 7.25 6.98438" stroke="#B5B5B5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M9.9375 13.1719C9.9375 13.4135 9.74162 13.6094 9.5 13.6094C9.25838 13.6094 9.0625 13.4135 9.0625 13.1719C9.0625 12.9303 9.25838 12.7344 9.5 12.7344C9.74162 12.7344 9.9375 12.9303 9.9375 13.1719Z" stroke="#B5B5B5"/>
+                        <path
+                            d="M9.5 16.5C11.571 16.5 13.4461 15.6605 14.8033 14.3033C16.1605 12.9461 17 11.071 17 9C17 6.92895 16.1605 5.05395 14.8033 3.6967C13.4461 2.33947 11.571 1.5 9.5 1.5C7.42895 1.5 5.55395 2.33947 4.1967 3.6967C2.83947 5.05395 2 6.92895 2 9C2 11.071 2.83947 12.9461 4.1967 14.3033C5.55395 15.6605 7.42895 16.5 9.5 16.5Z"
+                            stroke="#B5B5B5" stroke-linejoin="round" />
+                        <path
+                            d="M9.5 10.7344V9.23437C10.7426 9.23437 11.75 8.22701 11.75 6.98438C11.75 5.74174 10.7426 4.73438 9.5 4.73438C8.25736 4.73438 7.25 5.74174 7.25 6.98438"
+                            stroke="#B5B5B5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M9.9375 13.1719C9.9375 13.4135 9.74162 13.6094 9.5 13.6094C9.25838 13.6094 9.0625 13.4135 9.0625 13.1719C9.0625 12.9303 9.25838 12.7344 9.5 12.7344C9.74162 12.7344 9.9375 12.9303 9.9375 13.1719Z"
+                            stroke="#B5B5B5" />
                     </svg>
                 </div>
                 <span>Sobre</span>
             </div>
         </div>
         <label class="themeSwitch" for="checkbox">
-            <input class="themeSwitch__input" type="checkbox"  value="false" id="checkbox" />
+            <input class="themeSwitch__input" type="checkbox" value="false" id="checkbox" />
             <div class="themeSwitch__slider"></div>
             <div class="themeSwitch__icons">
-                <svg width="16" height="17" class="themeSwitch__icon--day" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8 5.64697V9.17638V5.64697Z" fill="#EEEEEE"/>
-                    <path d="M8 5.64697V9.17638" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M12.7142 7.7146L10.3809 10.1852L12.7142 7.7146Z" fill="#EEEEEE"/>
-                    <path d="M12.7142 7.7146L10.3809 10.1852" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M14.6673 12.7058H11.334H14.6673Z" fill="#EEEEEE"/>
-                    <path d="M14.6673 12.7058H11.334" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M1.33398 12.7058H4.66732H1.33398Z" fill="#EEEEEE"/>
-                    <path d="M1.33398 12.7058H4.66732" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M3.28516 7.7146L5.61849 10.1852L3.28516 7.7146Z" fill="#EEEEEE"/>
-                    <path d="M3.28516 7.7146L5.61849 10.1852" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M7.33398 12.7058H8.66732H7.33398Z" fill="#EEEEEE"/>
-                    <path d="M7.33398 12.7058H8.66732" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg width="16" height="17" class="themeSwitch__icon--day" viewBox="0 0 16 17" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 5.64697V9.17638V5.64697Z" fill="#EEEEEE" />
+                    <path d="M8 5.64697V9.17638" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12.7142 7.7146L10.3809 10.1852L12.7142 7.7146Z" fill="#EEEEEE" />
+                    <path d="M12.7142 7.7146L10.3809 10.1852" stroke="white" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M14.6673 12.7058H11.334H14.6673Z" fill="#EEEEEE" />
+                    <path d="M14.6673 12.7058H11.334" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M1.33398 12.7058H4.66732H1.33398Z" fill="#EEEEEE" />
+                    <path d="M1.33398 12.7058H4.66732" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M3.28516 7.7146L5.61849 10.1852L3.28516 7.7146Z" fill="#EEEEEE" />
+                    <path d="M3.28516 7.7146L5.61849 10.1852" stroke="white" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M7.33398 12.7058H8.66732H7.33398Z" fill="#EEEEEE" />
+                    <path d="M7.33398 12.7058H8.66732" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-                <svg width="12" height="12" class="themeSwitch__icon--night" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.01318 1.10271C5.6457 1.45924 4.63637 2.70265 4.63637 4.18183C4.63637 5.9391 6.0609 7.36363 7.81817 7.36363C9.29735 7.36363 10.5408 6.3543 10.8973 4.98682C10.9646 5.314 11 5.65288 11 6C11 8.76143 8.76143 11 6 11C3.23857 11 1 8.76143 1 6C1 3.23857 3.23857 1 6 1C6.34712 1 6.686 1.03537 7.01318 1.10271Z" stroke="white" stroke-linejoin="round"/>
+                <svg width="12" height="12" class="themeSwitch__icon--night" viewBox="0 0 12 12" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M7.01318 1.10271C5.6457 1.45924 4.63637 2.70265 4.63637 4.18183C4.63637 5.9391 6.0609 7.36363 7.81817 7.36363C9.29735 7.36363 10.5408 6.3543 10.8973 4.98682C10.9646 5.314 11 5.65288 11 6C11 8.76143 8.76143 11 6 11C3.23857 11 1 8.76143 1 6C1 3.23857 3.23857 1 6 1C6.34712 1 6.686 1.03537 7.01318 1.10271Z"
+                        stroke="white" stroke-linejoin="round" />
                 </svg>
             </div>
         </label>
     </nav>
     <main class="main">
-         <!-- Selects -->
-         <div class="c-wrapper-cards">
-            <h2 class="c-wrapper-cards__title">Selects</h2>
+        <!-- Selects -->
+        <div class="c-wrapper-cards">
+            <h2 class="c-wrapper-cards__title">Tables</h2>
             <div class="c-card">
                 <div class="c-card__title">Normal</div>
                 <div class="c-card__icon" id="card-button-icon" onclick="ShowCard('card-button')">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z" stroke="#4F4F4F" stroke-linejoin="round"/>
-                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>                                          
+                        <path
+                            d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z"
+                            stroke="#4F4F4F" stroke-linejoin="round" />
+                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="c-card__body" id="card-button">
+                    <table id="table_id" class="c-table">
+                        <thead>
+                            <tr>
+                                <th> 
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.2163 11C10.2163 8.51472 8.20158 6.5 5.71631 6.5C3.23103 6.5 1.21631 8.51472 1.21631 11M7.71631 3C7.71631 4.10457 6.82088 5 5.71631 5C4.61174 5 3.71631 4.10457 3.71631 3C3.71631 1.89543 4.61174 1 5.71631 1C6.82088 1 7.71631 1.89543 7.71631 3Z" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <label class="c-table__label">
+                                        Column 1
+                                    </label>
+                                </th>
+                                <th> 
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.2163 11C10.2163 8.51472 8.20158 6.5 5.71631 6.5C3.23103 6.5 1.21631 8.51472 1.21631 11M7.71631 3C7.71631 4.10457 6.82088 5 5.71631 5C4.61174 5 3.71631 4.10457 3.71631 3C3.71631 1.89543 4.61174 1 5.71631 1C6.82088 1 7.71631 1.89543 7.71631 3Z" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <label class="c-table__label">
+                                        Column 2
+                                    </label>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>julio</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>tttt</td>
+                            </tr>
+                            <tr>
+                                <td>Row 3 Data 1</td>
+                                <td>rrrr</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="c-card__copy" onclick="Copy('copy-button');">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z"
+                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <textarea readonly="readonly" rows="10" class="c-card__code" id="copy-button">
+            <div class="c-select">
+                <label class="c-select__label">Client</label>
+                <select class="selectpicker" title="Selecione" multiple  data-live-search="true" data-size="6">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                    <option>Option 4</option>
+                    <option>Option 5</option>
+                    <option>Option 6</option>
+                    <option>Option 7</option>
+                    <option>Option 8</option>
+                    </select>
+            </div>
+                    </textarea>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">Normal</div>
+                <div class="c-card__icon" id="card-button-icon" onclick="ShowCard('card-button')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z"
+                            stroke="#4F4F4F" stroke-linejoin="round" />
+                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
                 </div>
                 <div class="c-card__body" id="card-button">
                     <div class="c-select">
                         <label class="c-select__label">Client</label>
-                        <select class="selectpicker" title="Selecione" multiple  data-live-search="true" data-size="6">
+                        <select class="selectpicker" title="Selecione" data-live-search="true" data-size="6">
                             <option>Option 1</option>
                             <option>Option 2</option>
                             <option>Option 3</option>
@@ -100,17 +199,77 @@
                             <option>Option 6</option>
                             <option>Option 7</option>
                             <option>Option 8</option>
-                          </select>
+                        </select>
                     </div>
                     <div class="c-card__copy" onclick="Copy('copy-button');">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>                            
+                            <path
+                                d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z"
+                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
                     </div>
-                    <textarea readonly="readonly" rows="3" class="c-card__code" id="copy-button">
+                    <textarea readonly="readonly" rows="10" class="c-card__code" id="copy-button">
+<div class="c-select">
+    <label class="c-select__label">Client</label>
+    <select class="selectpicker" title="Selecione"   data-live-search="true" data-size="6">
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+        <option>Option 4</option>
+        <option>Option 5</option>
+        <option>Option 6</option>
+        <option>Option 7</option>
+        <option>Option 8</option>
+        </select>
+</div>
+                    </textarea>
+                </div>
+            </div>
+        </div>
+        <!-- Selects -->
+        <div class="c-wrapper-cards">
+            <h2 class="c-wrapper-cards__title">Selects</h2>
+            <div class="c-card">
+                <div class="c-card__title">Normal</div>
+                <div class="c-card__icon" id="card-button-icon" onclick="ShowCard('card-button')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z"
+                            stroke="#4F4F4F" stroke-linejoin="round" />
+                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="c-card__body" id="card-button">
+                    <div class="c-select">
+                        <label class="c-select__label">Client</label>
+                        <select class="selectpicker" title="Selecione" multiple data-live-search="true" data-size="6">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                            <option>Option 4</option>
+                            <option>Option 5</option>
+                            <option>Option 6</option>
+                            <option>Option 7</option>
+                            <option>Option 8</option>
+                        </select>
+                    </div>
+                    <div class="c-card__copy" onclick="Copy('copy-button');">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z"
+                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <textarea readonly="readonly" rows="10" class="c-card__code" id="copy-button">
 <div class="c-select">
     <label class="c-select__label">Client</label>
     <select class="selectpicker" title="Selecione" multiple  data-live-search="true" data-size="6">
@@ -131,14 +290,17 @@
                 <div class="c-card__title">Normal</div>
                 <div class="c-card__icon" id="card-button-icon" onclick="ShowCard('card-button')">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z" stroke="#4F4F4F" stroke-linejoin="round"/>
-                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>                                          
+                        <path
+                            d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z"
+                            stroke="#4F4F4F" stroke-linejoin="round" />
+                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
                 </div>
                 <div class="c-card__body" id="card-button">
                     <div class="c-select">
                         <label class="c-select__label">Client</label>
-                        <select class="selectpicker" title="Selecione"  data-live-search="true" data-size="6">
+                        <select class="selectpicker" title="Selecione" data-live-search="true" data-size="6">
                             <option>Option 1</option>
                             <option>Option 2</option>
                             <option>Option 3</option>
@@ -147,17 +309,20 @@
                             <option>Option 6</option>
                             <option>Option 7</option>
                             <option>Option 8</option>
-                          </select>
+                        </select>
                     </div>
                     <div class="c-card__copy" onclick="Copy('copy-button');">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>                            
+                            <path
+                                d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z"
+                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
                     </div>
-                    <textarea readonly="readonly" rows="3" class="c-card__code" id="copy-button">
+                    <textarea readonly="readonly" rows="10" class="c-card__code" id="copy-button">
 <div class="c-select">
     <label class="c-select__label">Client</label>
     <select class="selectpicker" title="Selecione"   data-live-search="true" data-size="6">
@@ -175,16 +340,19 @@
                 </div>
             </div>
         </div>
-          <!-- Inputs -->
-          <div class="c-wrapper-cards">
+        <!-- Inputs -->
+        <div class="c-wrapper-cards">
             <h2 class="wrapper-cards__title">Inputs</h2>
             <div class="c-card">
                 <div class="c-card__title">Normal</div>
                 <div class="c-card__icon" id="input-normal-icon" onclick="ShowCard('input-normal')">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z" stroke="#4F4F4F" stroke-linejoin="round"/>
-                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>                                          
+                        <path
+                            d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z"
+                            stroke="#4F4F4F" stroke-linejoin="round" />
+                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
                 </div>
                 <div class="c-card__body" id="input-normal">
                     <div class="c-input">
@@ -193,11 +361,14 @@
                     </div>
                     <div class="c-card__copy" onclick="Copy('copy-input-normal');">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>                            
+                            <path
+                                d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z"
+                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
                     </div>
                     <textarea readonly="readonly" rows="4" class="c-card__code" id="copy-input-normal">
 <div class="c-input">
@@ -210,28 +381,38 @@
                 <div class="c-card__title">With icons</div>
                 <div class="c-card__icon" id="input-icon-icon" onclick="ShowCard('input-icon')">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z" stroke="#4F4F4F" stroke-linejoin="round"/>
-                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>                                          
+                        <path
+                            d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z"
+                            stroke="#4F4F4F" stroke-linejoin="round" />
+                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
                 </div>
                 <div class="c-card__body" id="input-icon">
                     <div class="c-input">
                         <input type="text" placeholder="Search here..." class="c-input__field " required>
                         <label class="c-input__label">Label</label>
                         <div class="c-input__icon">
-                            <svg width="20" height="20" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6.12533 11.0834C8.86373 11.0834 11.0837 8.86348 11.0837 6.12508C11.0837 3.38668 8.86373 1.16675 6.12533 1.16675C3.38693 1.16675 1.16699 3.38668 1.16699 6.12508C1.16699 8.86348 3.38693 11.0834 6.12533 11.0834Z" stroke="#4F4F4F" stroke-linejoin="round"/>
-                                <path d="M9.68945 9.6897L12.1643 12.1646" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
+                            <svg width="20" height="20" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6.12533 11.0834C8.86373 11.0834 11.0837 8.86348 11.0837 6.12508C11.0837 3.38668 8.86373 1.16675 6.12533 1.16675C3.38693 1.16675 1.16699 3.38668 1.16699 6.12508C1.16699 8.86348 3.38693 11.0834 6.12533 11.0834Z"
+                                    stroke="#4F4F4F" stroke-linejoin="round" />
+                                <path d="M9.68945 9.6897L12.1643 12.1646" stroke="#4F4F4F" stroke-linecap="round"
+                                    stroke-linejoin="round" />
                             </svg>
                         </div>
                     </div>
                     <div class="c-card__copy" onclick="Copy('copy-input-icon');">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>                            
+                            <path
+                                d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z"
+                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
                     </div>
                     <textarea readonly="readonly" rows="12" class="c-card__code" id="copy-input-icon">
 <div class="c-input">
@@ -250,9 +431,12 @@
                 <div class="c-card__title">Disable</div>
                 <div class="c-card__icon" id="input-disable-icon" onclick="ShowCard('input-disable')">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z" stroke="#4F4F4F" stroke-linejoin="round"/>
-                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>                                          
+                        <path
+                            d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z"
+                            stroke="#4F4F4F" stroke-linejoin="round" />
+                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
                 </div>
                 <div class="c-card__body" id="input-disable">
                     <div class="c-input--disable">
@@ -261,18 +445,21 @@
                     </div>
                     <div class="c-card__copy" onclick="Copy('copy-input-disable');">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>                            
+                            <path
+                                d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z"
+                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
                     </div>
                     <textarea readonly="readonly" rows="4" class="c-card__code" id="copy-input-disable">
 <div class="c-input--disable">
     <input type="text" placeholder="Search here..." disabled class="c-input__field " required>
     <label class="c-input__label">Label</label>
 </div></textarea>
-                </div>            
+                </div>
             </div>
             <!-- <div class="c-card">
                 <div class="c-card__title">Error</div>
@@ -316,138 +503,180 @@
                 </div>
             </div> -->
         </div>
-                <!-- Buttons -->
-                <div class="c-wrapper-cards">
-                    <h2 class="c-wrapper-cards__title">Buttons</h2>
-                    <div class="c-card">
-                        <div class="c-card__title">Normal</div>
-                        <div class="c-card__icon" id="card-button-icon" onclick="ShowCard('card-button')">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z" stroke="#4F4F4F" stroke-linejoin="round"/>
-                                <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>                                          
-                        </div>
-                        <div class="c-card__body" id="card-button">
-                            <button class="c-button--primary">Primary</button>
-                            <button class="c-button--secondary">Secondary</button>
-                            <button class="c-button--tertiary">Tertiary</button>
-                            <div class="c-card__copy" onclick="Copy('copy-button');">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>                            
-                            </div>
-                            <textarea readonly="readonly" rows="3" class="c-card__code" id="copy-button">
+        <!-- Buttons -->
+        <div class="c-wrapper-cards">
+            <h2 class="c-wrapper-cards__title">Buttons</h2>
+            <div class="c-card">
+                <div class="c-card__title">Normal</div>
+                <div class="c-card__icon" id="card-button-icon" onclick="ShowCard('card-button')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z"
+                            stroke="#4F4F4F" stroke-linejoin="round" />
+                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="c-card__body" id="card-button">
+                    <button class="c-button--primary">Primary</button>
+                    <button class="c-button--secondary">Secondary</button>
+                    <button class="c-button--tertiary">Tertiary</button>
+                    <div class="c-card__copy" onclick="Copy('copy-button');">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z"
+                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <textarea readonly="readonly" rows="3" class="c-card__code" id="copy-button">
         <button class="c-button--primary">Primary</button>
         <button class="c-button--secondary">Secondary</button>
         <button class="c-button--tertiary">Tertiary</button>
                             </textarea>
-                        </div>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">Auxiliary</div>
+                <div class="c-card__icon" id="card-button-auxiliary-icon" onclick="ShowCard('card-button-auxiliary')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z"
+                            stroke="#4F4F4F" stroke-linejoin="round" />
+                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="c-card__body" id="card-button-auxiliary">
+                    <button class="c-button--primary c-button--auxiliary">Primary</button>
+                    <button class="c-button--secondary c-button--auxiliary">Secondary</button>
+                    <button class="c-button--tertiary c-button--auxiliary">Tertiary</button>
+                    <div class="c-card__copy" onclick="Copy('copy-button-auxiliary');">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z"
+                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
                     </div>
-                    <div class="c-card">
-                        <div class="c-card__title">Auxiliary</div>
-                        <div class="c-card__icon" id="card-button-auxiliary-icon" onclick="ShowCard('card-button-auxiliary')">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z" stroke="#4F4F4F" stroke-linejoin="round"/>
-                                <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>                                          
-                        </div>
-                        <div class="c-card__body" id="card-button-auxiliary">
-                            <button class="c-button--primary c-button--auxiliary">Primary</button>
-                            <button class="c-button--secondary c-button--auxiliary">Secondary</button>
-                            <button class="c-button--tertiary c-button--auxiliary">Tertiary</button>
-                            <div class="c-card__copy" onclick="Copy('copy-button-auxiliary');">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>                            
-                            </div>
-                            <textarea readonly="readonly" rows="3" id="copy-button-auxiliary" class="c-card__code">
+                    <textarea readonly="readonly" rows="3" id="copy-button-auxiliary" class="c-card__code">
         <button class="c-button--primary c-button--auxiliary">Primary</button>
         <button class="c-button--secondary c-button--auxiliary">Secondary</button>
         <button class="c-button--tertiary c-button--auxiliary">Tertiary</button>    
                             </textarea>
-                        </div>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">Disable</div>
+                <div class="c-card__icon" id="card-button-disable-icon" onclick="ShowCard('card-button-disable')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z"
+                            stroke="#4F4F4F" stroke-linejoin="round" />
+                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="c-card__body" id="card-button-disable">
+                    <button class="c-button--primary c-button--disable ">Primary</button>
+                    <button class="c-button--secondary c-button--disable">Secondary</button>
+                    <button class="c-button--tertiary c-button--disable">Tertiary</button>
+                    <div class="c-card__copy" onclick="Copy('copy-button-disable');">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z"
+                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
                     </div>
-                    <div class="c-card">
-                        <div class="c-card__title">Disable</div>
-                        <div class="c-card__icon" id="card-button-disable-icon" onclick="ShowCard('card-button-disable')">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z" stroke="#4F4F4F" stroke-linejoin="round"/>
-                                <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>                                          
-                        </div>
-                        <div class="c-card__body" id="card-button-disable">
-                            <button class="c-button--primary c-button--disable ">Primary</button>
-                            <button class="c-button--secondary c-button--disable">Secondary</button>
-                            <button class="c-button--tertiary c-button--disable">Tertiary</button>
-                            <div class="c-card__copy" onclick="Copy('copy-button-disable');">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>                            
-                            </div>
-                            <textarea readonly="readonly" rows="3" id="copy-button-disable" class="c-card__code">
+                    <textarea readonly="readonly" rows="3" id="copy-button-disable" class="c-card__code">
         <button class="c-button--primary c-button--disable">Primary</button>
         <button class="c-button--secondary c-button--disable">Secondary</button>
         <button class="c-button--tertiary c-button--disable">Tertiary</button>
                             </textarea>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">With Icons</div>
+                <div class="c-card__icon" id="card-button-icons-icon" onclick="ShowCard('card-button-icons')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z"
+                            stroke="#4F4F4F" stroke-linejoin="round" />
+                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="c-card__body" id="card-button-icons">
+                    <button class="c-button--primary">
+                        <div class="c-button__icon">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.54167 5.83333C6.66925 5.83333 7.58333 4.91925 7.58333 3.79167C7.58333 2.66409 6.66925 1.75 5.54167 1.75C4.41408 1.75 3.5 2.66409 3.5 3.79167C3.5 4.91925 4.41408 5.83333 5.54167 5.83333Z"
+                                    stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M1.16602 11.8998V12.2498H9.91601V11.8998C9.91601 10.5931 9.91601 9.93966 9.66171 9.44053C9.438 9.00149 9.08103 8.64452 8.64199 8.42081C8.14286 8.1665 7.48947 8.1665 6.18268 8.1665H4.89935C3.59257 8.1665 2.93917 8.1665 2.44004 8.42081C2.00099 8.64452 1.64404 9.00149 1.42033 9.44053C1.16602 9.93966 1.16602 10.5931 1.16602 11.8998Z"
+                                    stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M9.33398 5.5415H12.834M11.084 3.7915V7.2915V3.7915Z" stroke="#FFF"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                         </div>
+                        Primary
+                    </button>
+                    <button class="c-button--secondary">
+                        <div class="c-button__icon">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.54167 5.83333C6.66925 5.83333 7.58333 4.91925 7.58333 3.79167C7.58333 2.66409 6.66925 1.75 5.54167 1.75C4.41408 1.75 3.5 2.66409 3.5 3.79167C3.5 4.91925 4.41408 5.83333 5.54167 5.83333Z"
+                                    stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M1.16602 11.8998V12.2498H9.91601V11.8998C9.91601 10.5931 9.91601 9.93966 9.66171 9.44053C9.438 9.00149 9.08103 8.64452 8.64199 8.42081C8.14286 8.1665 7.48947 8.1665 6.18268 8.1665H4.89935C3.59257 8.1665 2.93917 8.1665 2.44004 8.42081C2.00099 8.64452 1.64404 9.00149 1.42033 9.44053C1.16602 9.93966 1.16602 10.5931 1.16602 11.8998Z"
+                                    stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M9.33398 5.5415H12.834M11.084 3.7915V7.2915V3.7915Z" stroke="#FFF"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        Secondary
+                    </button>
+                    <button class="c-button--tertiary">
+                        <div class="c-button__icon">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.54167 5.83333C6.66925 5.83333 7.58333 4.91925 7.58333 3.79167C7.58333 2.66409 6.66925 1.75 5.54167 1.75C4.41408 1.75 3.5 2.66409 3.5 3.79167C3.5 4.91925 4.41408 5.83333 5.54167 5.83333Z"
+                                    stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M1.16602 11.8998V12.2498H9.91601V11.8998C9.91601 10.5931 9.91601 9.93966 9.66171 9.44053C9.438 9.00149 9.08103 8.64452 8.64199 8.42081C8.14286 8.1665 7.48947 8.1665 6.18268 8.1665H4.89935C3.59257 8.1665 2.93917 8.1665 2.44004 8.42081C2.00099 8.64452 1.64404 9.00149 1.42033 9.44053C1.16602 9.93966 1.16602 10.5931 1.16602 11.8998Z"
+                                    stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M9.33398 5.5415H12.834M11.084 3.7915V7.2915V3.7915Z" stroke="#FFF"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        Tertiary
+                    </button>
+                    <div class="c-card__copy" onclick="Copy('copy-button-icons');">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z"
+                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
                     </div>
-                    <div class="c-card">
-                        <div class="c-card__title">With Icons</div>
-                        <div class="c-card__icon" id="card-button-icons-icon" onclick="ShowCard('card-button-icons')">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z" stroke="#4F4F4F" stroke-linejoin="round"/>
-                                <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>                                          
-                        </div>
-                        <div class="c-card__body" id="card-button-icons">
-                            <button class="c-button--primary">
-                                <div class="c-button__icon">
-                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5.54167 5.83333C6.66925 5.83333 7.58333 4.91925 7.58333 3.79167C7.58333 2.66409 6.66925 1.75 5.54167 1.75C4.41408 1.75 3.5 2.66409 3.5 3.79167C3.5 4.91925 4.41408 5.83333 5.54167 5.83333Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M1.16602 11.8998V12.2498H9.91601V11.8998C9.91601 10.5931 9.91601 9.93966 9.66171 9.44053C9.438 9.00149 9.08103 8.64452 8.64199 8.42081C8.14286 8.1665 7.48947 8.1665 6.18268 8.1665H4.89935C3.59257 8.1665 2.93917 8.1665 2.44004 8.42081C2.00099 8.64452 1.64404 9.00149 1.42033 9.44053C1.16602 9.93966 1.16602 10.5931 1.16602 11.8998Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M9.33398 5.5415H12.834M11.084 3.7915V7.2915V3.7915Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </div>
-                                Primary
-                            </button>
-                            <button class="c-button--secondary">
-                                <div class="c-button__icon">
-                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5.54167 5.83333C6.66925 5.83333 7.58333 4.91925 7.58333 3.79167C7.58333 2.66409 6.66925 1.75 5.54167 1.75C4.41408 1.75 3.5 2.66409 3.5 3.79167C3.5 4.91925 4.41408 5.83333 5.54167 5.83333Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M1.16602 11.8998V12.2498H9.91601V11.8998C9.91601 10.5931 9.91601 9.93966 9.66171 9.44053C9.438 9.00149 9.08103 8.64452 8.64199 8.42081C8.14286 8.1665 7.48947 8.1665 6.18268 8.1665H4.89935C3.59257 8.1665 2.93917 8.1665 2.44004 8.42081C2.00099 8.64452 1.64404 9.00149 1.42033 9.44053C1.16602 9.93966 1.16602 10.5931 1.16602 11.8998Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M9.33398 5.5415H12.834M11.084 3.7915V7.2915V3.7915Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </div>
-                                Secondary
-                            </button>
-                            <button class="c-button--tertiary">
-                                <div class="c-button__icon">
-                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5.54167 5.83333C6.66925 5.83333 7.58333 4.91925 7.58333 3.79167C7.58333 2.66409 6.66925 1.75 5.54167 1.75C4.41408 1.75 3.5 2.66409 3.5 3.79167C3.5 4.91925 4.41408 5.83333 5.54167 5.83333Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M1.16602 11.8998V12.2498H9.91601V11.8998C9.91601 10.5931 9.91601 9.93966 9.66171 9.44053C9.438 9.00149 9.08103 8.64452 8.64199 8.42081C8.14286 8.1665 7.48947 8.1665 6.18268 8.1665H4.89935C3.59257 8.1665 2.93917 8.1665 2.44004 8.42081C2.00099 8.64452 1.64404 9.00149 1.42033 9.44053C1.16602 9.93966 1.16602 10.5931 1.16602 11.8998Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M9.33398 5.5415H12.834M11.084 3.7915V7.2915V3.7915Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </div>
-                                Tertiary
-                            </button>
-                            <div class="c-card__copy" onclick="Copy('copy-button-icons');">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>                            
-                            </div>
-                            <textarea readonly="readonly" rows="10" class="c-card__code" id="copy-button-icons">
+                    <textarea readonly="readonly" rows="10" class="c-card__code" id="copy-button-icons">
         <button class="c-button--primary">
             <div class="c-button__icon">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -459,44 +688,62 @@
             Primary
         </button>
                             </textarea>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">Actions</div>
+                <div class="c-card__icon" id="card-button-actions-icon" onclick="ShowCard('card-button-actions')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z"
+                            stroke="#4F4F4F" stroke-linejoin="round" />
+                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="c-card__body" id="card-button-actions">
+                    <button class="c-button--primary c-button--action">
+                        <div class="c-button__icon">
+                            <svg width="22" height="22" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.54167 5.83333C6.66925 5.83333 7.58333 4.91925 7.58333 3.79167C7.58333 2.66409 6.66925 1.75 5.54167 1.75C4.41408 1.75 3.5 2.66409 3.5 3.79167C3.5 4.91925 4.41408 5.83333 5.54167 5.83333Z"
+                                    stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M1.16602 11.8998V12.2498H9.91601V11.8998C9.91601 10.5931 9.91601 9.93966 9.66171 9.44053C9.438 9.00149 9.08103 8.64452 8.64199 8.42081C8.14286 8.1665 7.48947 8.1665 6.18268 8.1665H4.89935C3.59257 8.1665 2.93917 8.1665 2.44004 8.42081C2.00099 8.64452 1.64404 9.00149 1.42033 9.44053C1.16602 9.93966 1.16602 10.5931 1.16602 11.8998Z"
+                                    stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M9.33398 5.5415H12.834M11.084 3.7915V7.2915V3.7915Z" stroke="#FFF"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                         </div>
+                    </button>
+                    <button class="c-button--secondary c-button--action">
+                        <div class="c-button__icon">
+                            <svg width="22" height="22" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.54167 5.83333C6.66925 5.83333 7.58333 4.91925 7.58333 3.79167C7.58333 2.66409 6.66925 1.75 5.54167 1.75C4.41408 1.75 3.5 2.66409 3.5 3.79167C3.5 4.91925 4.41408 5.83333 5.54167 5.83333Z"
+                                    stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M1.16602 11.8998V12.2498H9.91601V11.8998C9.91601 10.5931 9.91601 9.93966 9.66171 9.44053C9.438 9.00149 9.08103 8.64452 8.64199 8.42081C8.14286 8.1665 7.48947 8.1665 6.18268 8.1665H4.89935C3.59257 8.1665 2.93917 8.1665 2.44004 8.42081C2.00099 8.64452 1.64404 9.00149 1.42033 9.44053C1.16602 9.93966 1.16602 10.5931 1.16602 11.8998Z"
+                                    stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M9.33398 5.5415H12.834M11.084 3.7915V7.2915V3.7915Z" stroke="#FFF"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="c-card__copy" onclick="Copy('copy-button-actions');">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z"
+                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
                     </div>
-                    <div class="c-card">
-                        <div class="c-card__title">Actions</div>
-                        <div class="c-card__icon" id="card-button-actions-icon" onclick="ShowCard('card-button-actions')">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z" stroke="#4F4F4F" stroke-linejoin="round"/>
-                                <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>                                          
-                        </div>
-                        <div class="c-card__body" id="card-button-actions">
-                            <button class="c-button--primary c-button--action">
-                                <div class="c-button__icon">
-                                    <svg width="22" height="22" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5.54167 5.83333C6.66925 5.83333 7.58333 4.91925 7.58333 3.79167C7.58333 2.66409 6.66925 1.75 5.54167 1.75C4.41408 1.75 3.5 2.66409 3.5 3.79167C3.5 4.91925 4.41408 5.83333 5.54167 5.83333Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M1.16602 11.8998V12.2498H9.91601V11.8998C9.91601 10.5931 9.91601 9.93966 9.66171 9.44053C9.438 9.00149 9.08103 8.64452 8.64199 8.42081C8.14286 8.1665 7.48947 8.1665 6.18268 8.1665H4.89935C3.59257 8.1665 2.93917 8.1665 2.44004 8.42081C2.00099 8.64452 1.64404 9.00149 1.42033 9.44053C1.16602 9.93966 1.16602 10.5931 1.16602 11.8998Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M9.33398 5.5415H12.834M11.084 3.7915V7.2915V3.7915Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </div>
-                            </button>
-                            <button class="c-button--secondary c-button--action">
-                                <div class="c-button__icon">
-                                    <svg width="22" height="22" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5.54167 5.83333C6.66925 5.83333 7.58333 4.91925 7.58333 3.79167C7.58333 2.66409 6.66925 1.75 5.54167 1.75C4.41408 1.75 3.5 2.66409 3.5 3.79167C3.5 4.91925 4.41408 5.83333 5.54167 5.83333Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M1.16602 11.8998V12.2498H9.91601V11.8998C9.91601 10.5931 9.91601 9.93966 9.66171 9.44053C9.438 9.00149 9.08103 8.64452 8.64199 8.42081C8.14286 8.1665 7.48947 8.1665 6.18268 8.1665H4.89935C3.59257 8.1665 2.93917 8.1665 2.44004 8.42081C2.00099 8.64452 1.64404 9.00149 1.42033 9.44053C1.16602 9.93966 1.16602 10.5931 1.16602 11.8998Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M9.33398 5.5415H12.834M11.084 3.7915V7.2915V3.7915Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </div>
-                            </button>
-                            <div class="c-card__copy" onclick="Copy('copy-button-actions');">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>                            
-                            </div>
-                            <textarea readonly="readonly" rows="10" class="c-card__code" id="copy-button-actions">
+                    <textarea readonly="readonly" rows="10" class="c-card__code" id="copy-button-actions">
                                 <button class="c-button--primary c-button--action">
                                     <div class="c-button__icon">
                                         <svg width="22" height="22" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -516,54 +763,77 @@
                                     </div>
                                 </button>
                             </textarea>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">Notifications</div>
+                <div class="c-card__icon" id="card-button-notifications-icon"
+                    onclick="ShowCard('card-button-notifications')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z"
+                            stroke="#4F4F4F" stroke-linejoin="round" />
+                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="c-card__body" id="card-button-notifications">
+                    <button class="c-button--primary c-button--notification">
+                        <div class="c-button__icon">
+                            <svg width="22" height="22" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.54167 5.83333C6.66925 5.83333 7.58333 4.91925 7.58333 3.79167C7.58333 2.66409 6.66925 1.75 5.54167 1.75C4.41408 1.75 3.5 2.66409 3.5 3.79167C3.5 4.91925 4.41408 5.83333 5.54167 5.83333Z"
+                                    stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M1.16602 11.8998V12.2498H9.91601V11.8998C9.91601 10.5931 9.91601 9.93966 9.66171 9.44053C9.438 9.00149 9.08103 8.64452 8.64199 8.42081C8.14286 8.1665 7.48947 8.1665 6.18268 8.1665H4.89935C3.59257 8.1665 2.93917 8.1665 2.44004 8.42081C2.00099 8.64452 1.64404 9.00149 1.42033 9.44053C1.16602 9.93966 1.16602 10.5931 1.16602 11.8998Z"
+                                    stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M9.33398 5.5415H12.834M11.084 3.7915V7.2915V3.7915Z" stroke="#FFF"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
                         </div>
+                        <div class="c-button__notification">
+                            <svg width="8" height="8" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2.4992 0.520752L1.86243 1.8205L0.416016 2.03024L1.46382 3.05462L1.21335 4.47909L2.4992 3.79359L3.78533 4.47909L3.5367 3.05462L4.58268 2.03024L3.14428 1.8205L2.4992 0.520752Z"
+                                    stroke="#C6C6C6" stroke-width="0.6" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </button>
+                    <button class="c-button--secondary c-button--notification">
+                        <div class="c-button__icon">
+                            <svg width="22" height="22" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.54167 5.83333C6.66925 5.83333 7.58333 4.91925 7.58333 3.79167C7.58333 2.66409 6.66925 1.75 5.54167 1.75C4.41408 1.75 3.5 2.66409 3.5 3.79167C3.5 4.91925 4.41408 5.83333 5.54167 5.83333Z"
+                                    stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M1.16602 11.8998V12.2498H9.91601V11.8998C9.91601 10.5931 9.91601 9.93966 9.66171 9.44053C9.438 9.00149 9.08103 8.64452 8.64199 8.42081C8.14286 8.1665 7.48947 8.1665 6.18268 8.1665H4.89935C3.59257 8.1665 2.93917 8.1665 2.44004 8.42081C2.00099 8.64452 1.64404 9.00149 1.42033 9.44053C1.16602 9.93966 1.16602 10.5931 1.16602 11.8998Z"
+                                    stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M9.33398 5.5415H12.834M11.084 3.7915V7.2915V3.7915Z" stroke="#FFF"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="c-button__notification">
+                            <svg width="8" height="8" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2.4992 0.520752L1.86243 1.8205L0.416016 2.03024L1.46382 3.05462L1.21335 4.47909L2.4992 3.79359L3.78533 4.47909L3.5367 3.05462L4.58268 2.03024L3.14428 1.8205L2.4992 0.520752Z"
+                                    stroke="#C6C6C6" stroke-width="0.6" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="c-card__copy" onclick="Copy('copy-button-notifications');">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z"
+                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
                     </div>
-                    <div class="c-card">
-                        <div class="c-card__title">Notifications</div>
-                        <div class="c-card__icon" id="card-button-notifications-icon" onclick="ShowCard('card-button-notifications')">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z" stroke="#4F4F4F" stroke-linejoin="round"/>
-                                <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>                                          
-                        </div>
-                        <div class="c-card__body" id="card-button-notifications">
-                            <button class="c-button--primary c-button--notification">
-                                <div class="c-button__icon">
-                                    <svg width="22" height="22" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5.54167 5.83333C6.66925 5.83333 7.58333 4.91925 7.58333 3.79167C7.58333 2.66409 6.66925 1.75 5.54167 1.75C4.41408 1.75 3.5 2.66409 3.5 3.79167C3.5 4.91925 4.41408 5.83333 5.54167 5.83333Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M1.16602 11.8998V12.2498H9.91601V11.8998C9.91601 10.5931 9.91601 9.93966 9.66171 9.44053C9.438 9.00149 9.08103 8.64452 8.64199 8.42081C8.14286 8.1665 7.48947 8.1665 6.18268 8.1665H4.89935C3.59257 8.1665 2.93917 8.1665 2.44004 8.42081C2.00099 8.64452 1.64404 9.00149 1.42033 9.44053C1.16602 9.93966 1.16602 10.5931 1.16602 11.8998Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M9.33398 5.5415H12.834M11.084 3.7915V7.2915V3.7915Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </div>
-                                <div class="c-button__notification">
-                                    <svg width="8" height="8" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M2.4992 0.520752L1.86243 1.8205L0.416016 2.03024L1.46382 3.05462L1.21335 4.47909L2.4992 3.79359L3.78533 4.47909L3.5367 3.05462L4.58268 2.03024L3.14428 1.8205L2.4992 0.520752Z" stroke="#C6C6C6" stroke-width="0.6" stroke-linejoin="round"/>
-                                    </svg>                                        
-                                </div>
-                            </button>
-                            <button class="c-button--secondary c-button--notification">
-                                <div class="c-button__icon">
-                                    <svg width="22" height="22" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5.54167 5.83333C6.66925 5.83333 7.58333 4.91925 7.58333 3.79167C7.58333 2.66409 6.66925 1.75 5.54167 1.75C4.41408 1.75 3.5 2.66409 3.5 3.79167C3.5 4.91925 4.41408 5.83333 5.54167 5.83333Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M1.16602 11.8998V12.2498H9.91601V11.8998C9.91601 10.5931 9.91601 9.93966 9.66171 9.44053C9.438 9.00149 9.08103 8.64452 8.64199 8.42081C8.14286 8.1665 7.48947 8.1665 6.18268 8.1665H4.89935C3.59257 8.1665 2.93917 8.1665 2.44004 8.42081C2.00099 8.64452 1.64404 9.00149 1.42033 9.44053C1.16602 9.93966 1.16602 10.5931 1.16602 11.8998Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M9.33398 5.5415H12.834M11.084 3.7915V7.2915V3.7915Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </div>
-                                <div class="c-button__notification">
-                                    <svg width="8" height="8" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M2.4992 0.520752L1.86243 1.8205L0.416016 2.03024L1.46382 3.05462L1.21335 4.47909L2.4992 3.79359L3.78533 4.47909L3.5367 3.05462L4.58268 2.03024L3.14428 1.8205L2.4992 0.520752Z" stroke="#C6C6C6" stroke-width="0.6" stroke-linejoin="round"/>
-                                    </svg>                                        
-                                </div>
-                            </button>
-                            <div class="c-card__copy" onclick="Copy('copy-button-notifications');">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>                            
-                            </div>
-                            <textarea readonly="readonly" rows="10" class="c-card__code" id="copy-button-notifications">
+                    <textarea readonly="readonly" rows="10" class="c-card__code" id="copy-button-notifications">
                                 <button class="c-button--primary c-button--notification">
                                     <div class="c-button__icon">
                                         <svg width="22" height="22" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -593,18 +863,27 @@
                                     </div>
                                 </button>
                             </textarea>
-                        </div>
-                    </div>
                 </div>
-              
-                
+            </div>
+        </div>
+
+
     </main>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/js/bootstrap-select.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/js/bootstrap-select.min.js"></script>
+    <script src="//cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
+
+
+
     <script src="./js/index.js"></script>
 </body>
-</html>
 
+</html>

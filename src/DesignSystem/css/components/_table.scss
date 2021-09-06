@@ -1,0 +1,104 @@
+[data-theme="dark"] {
+  --table__thead--background: #252525;
+  --table__thead--color: #908E8E;
+  --table__sorting--color: #908E8E;
+  
+  --table__tbody--background: #1C1C1C;
+  --table__tbody--color: #B5B5B5;
+  --table__td--border: var(--gray);
+}
+.dataTables_wrapper {
+  width: 100%;
+
+  .c-table {
+    border-radius: 4px;
+    overflow: hidden;
+    font-weight: 300 !important;
+    thead  {
+
+
+      tr {
+      color: var(--table__thead--color);
+      background: var(--table__thead--background);
+      border-radius: 4px;
+        
+        th {
+          font-weight: 300 !important;
+          font-size: 12px !important;
+          position: relative;
+          padding: 12px 16px;
+
+          .c-table__label {
+            margin-left: 8px;
+          }
+        }
+      }
+
+      .sorting {
+        background-image: none !important;
+
+        &::after{
+          content: '';
+          position: absolute;
+          right: 8px;
+          top: calc(50% - 1px);
+          width: 8px;
+          height: 2px;
+          background: var(--table__sorting--color);
+          clear: both;
+        }
+
+        &.sorting_asc {
+          background-image: none !important;
+  
+          &::after{
+            content: '';
+            position: absolute;
+            top: calc(50% - 3px);
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid var(--table__sorting--color);
+            background: none;
+            clear: both;
+          }
+        }
+
+        &.sorting_desc {
+          background-image: none !important;
+          
+          &::after{
+            content: '';
+            top: calc(50% - 3px);
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid var(--table__sorting--color);
+            background: none;
+            clear: both;
+          }
+        }
+      }
+
+    
+
+    }
+
+    tbody tr {
+      color: var(--table__tbody--color);
+      background: var(--table__tbody--background);
+
+      td {
+        font-weight: 300 !important;
+        font-size: 12px !important;
+        border: 1px solid  var(--table__td--border) !important;
+      }
+    }
+
+    &.no-footer {
+      border: none !important;
+    }
+  }
+}

@@ -1,5 +1,10 @@
-const toggleSwitch = document.querySelector('.themeSwitch input[type="checkbox"]');
 $('.my-select').selectpicker();
+$(document).ready( function () {
+    $('#table_id').DataTable();
+} );
+
+
+const toggleSwitch = document.querySelector('.themeSwitch input[type="checkbox"]');
 
 if (localStorage.getItem('theme') == "dark") {
     toggleSwitch.checked = true;
@@ -37,3 +42,4 @@ function ShowCard(id) {
     }
 
 }
+
