@@ -12,8 +12,8 @@
 
   --select__list--background: #131313;
   --select__list--color: var(--white);
-  --select__list--hover: #0E0B08;
-  --select__list--checkbox: var(--primary--4-opacity);
+  --select__list--hover: var(--yellow--5);
+  --select__list--checkbox: var(--yellow--4);
   --select__list--check-icon: var(--primary);
 
   --select__scroll--background: var(--gray--3);
@@ -21,8 +21,8 @@
 
   --select__font--color: var(--white);
   --select__border--color: var(--gray-dark);
-  --select--active-1: var(--gray-light);
-  --select--active-2: var(--orange-brand-3);
+  --select--active-1: var(--primary--2);
+  --select--active-2: var(--primary--2);
 }
 
 .c-select {

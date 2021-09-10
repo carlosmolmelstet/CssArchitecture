@@ -114,9 +114,7 @@
 }
 
 .c-card__body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-transition: 5s;
@@ -162,7 +160,7 @@
 }
 
 .c-card__code::-webkit-scrollbar {
-  width: 8px;
+  width: 5px;
 }
 
 .c-card__code::-webkit-scrollbar-thumb {

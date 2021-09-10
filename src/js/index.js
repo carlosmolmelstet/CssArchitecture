@@ -1,6 +1,13 @@
 $('.my-select').selectpicker();
 $(document).ready( function () {
-    $('#table_id').DataTable();
+    $('#table_id').DataTable({
+        "oLanguage": {
+            "sSearch": "<label class='dataTables_filter__label'>Pesquisar</label> _INPUT_" //search
+          },
+        "pagingType": "simple_numbers"
+    });
+
+    
 } );
 
 

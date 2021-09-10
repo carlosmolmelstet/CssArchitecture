@@ -1,3 +1,329 @@
-.u-margin-1 {
-    margin: $space !important;    
+/* #region Margins */
+.u-margin--1 {
+    margin: $space !important;
 }
+.u-margin--2 {
+    margin: ($space * 2) !important;
+}
+.u-margin--3 {
+    margin: ($space * 3) !important;
+}
+.u-margin--4 {
+    margin: ($space * 4) !important;
+}
+
+.u-margin__top--1 {
+    margin-top: $space !important;
+}
+.u-margin__top--2 {
+    margin-top: ($space * 2) !important;
+}
+.u-margin__top--3 {
+    margin-top: ($space * 3) !important;
+}
+.u-margin__top--4 {
+    margin-top: ($space * 4) !important;
+}
+
+.u-margin__left--1 {
+    margin-left: $space !important;
+}
+.u-margin__left--2 {
+    margin-left: ($space * 2) !important;
+}
+.u-margin__left--3 {
+    margin-left: ($space * 3) !important;
+}
+.u-margin__left--4 {
+    margin-left: ($space * 4) !important;
+}
+
+.u-margin__right--1 {
+    margin-right: $space !important;
+}
+.u-margin__right--2 {
+    margin-right: ($space * 2) !important;
+}
+.u-margin__right--3 {
+    margin-right: ($space * 3) !important;
+}
+.u-margin__right--4 {
+    margin-right: ($space * 4) !important;
+}
+
+.u-margin__bottom--1 {
+    margin-bottom: $space !important;
+}
+.u-margin__bottom--2 {
+    margin-bottom: ($space * 2) !important;
+}
+.u-margin__bottom--3 {
+    margin-bottom: ($space * 3) !important;
+}
+.u-margin__bottom--4 {
+    margin-right: ($space * 4) !important;
+}
+/* #endregion */
+
+/* #region Padding */
+.u-padding--1 {
+    padding: $space !important;
+}
+.u-padding--2 {
+    padding: ($space * 2) !important;
+}
+.u-padding--3 {
+    padding: ($space * 3) !important;
+}
+.u-padding--4 {
+    padding: ($space * 4) !important;
+}
+
+.u-padding__top--1 {
+    padding-top: $space !important;
+}
+.u-padding__top--2 {
+    padding-top: ($space * 2) !important;
+}
+.u-padding__top--3 {
+    padding-top: ($space * 3) !important;
+}
+.u-padding__top--4 {
+    padding-top: ($space * 4) !important;
+}
+
+.u-padding__left--1 {
+    padding-left: $space !important;
+}
+.u-padding__left--2 {
+    padding-left: ($space * 2) !important;
+}
+.u-padding__left--3 {
+    padding-left: ($space * 3) !important;
+}
+.u-padding__left--4 {
+    padding-left: ($space * 4) !important;
+}
+
+.u-padding__right--1 {
+    padding-right: $space !important;
+}
+.u-padding__right--2 {
+    padding-right: ($space * 2) !important;
+}
+.u-padding__right--3 {
+    padding-right: ($space * 3) !important;
+}
+.u-padding__right--4 {
+    padding-right: ($space * 4) !important;
+}
+
+.u-padding__bottom--1 {
+    padding-bottom: $space !important;
+}
+.u-padding__bottom--2 {
+    padding-bottom: ($space * 2) !important;
+}
+.u-padding__bottom--3 {
+    padding-bottom: ($space * 3) !important;
+}
+.u-padding__bottom--4 {
+    padding-right: ($space * 4) !important;
+}
+/* #endregion */
+
+/* #region Font */
+
+.u-font__size--1 {
+    font-size: $font-size !important;
+}
+
+.u-font__size--2 {
+    font-size: ($font-size + 2px) !important;
+}
+
+.u-font__size--3 {
+    font-size: ($font-size + 4px) !important;
+}
+
+.u-font__size--4 {
+    font-size: ($font-size + 10px) !important;
+}
+
+.u-font__size--5 {
+    font-size: ($font-size + 18px) !important;
+}
+
+.u-font__size--6 {
+    font-size: ($font-size + 30px) !important;
+}
+
+.u-font__weight--1 {
+    font-weight: ($font-weight - 200) !important;
+}
+
+.u-font__weight--2 {
+    font-weight: ($font-weight - 100) !important;
+}
+
+.u-font__weight--3 {
+    font-weight: $font-weight !important;
+}
+
+.u-font__weight--4 {
+    font-weight: ($font-weight + 200) !important;
+}
+
+.u-font__weight--5 {
+    font-weight: ($font-weight + 300) !important;
+}
+
+.u-font__weight--6 {
+    font-weight: ($font-weight + 400) !important;
+}
+
+.u-font__weight--7 {
+    font-weight: ($font-weight + 500) !important;
+}
+
+.u-font__weight--8 {
+    font-weight: ($font-weight + 600) !important;
+}
+/* #endregion */
+
+/* #region Display */
+.u-display--none {
+    display: none !important;
+}
+
+.u-display--flex {
+    display: flex !important;
+}
+
+.u-display--inline {
+    display: inline !important;
+}
+
+.u-display--block {
+    display: block !important;
+}
+/* #endregion */
+
+/* #region Justify */
+
+.u-justify__content--center {
+    justify-content: center !important;
+}
+
+.u-justify__content--flex-start {
+    justify-content: flex-start !important;
+}
+
+.u-justify__content--flex-end {
+    justify-content: flex-end !important;
+}
+
+.u-justify__content--space-between {
+    justify-content: space-between !important;
+}
+
+.u-justify__content--space-around {
+    justify-content: space-around !important;
+}
+
+.u-justify__content--space-evenly {
+    justify-content: space-evenly !important;
+}
+
+.u-justify__items--center {
+    justify-items: center !important;
+}
+
+.u-justify__items--flex-start {
+    justify-items: flex-start !important;
+}
+
+.u-justify__items--flex-end {
+    justify-items: flex-end !important;
+}
+
+.u-justify__items--space-between {
+    justify-items: space-between !important;
+}
+
+.u-justify__items--space-around {
+    justify-items: space-around !important;
+}
+
+.u-justify__items--space-evenly {
+    justify-items: space-evenly !important;
+}
+
+/* #endregion */
+
+/* #region Align */
+
+.u-align__content--center {
+    align-content: center !important;
+}
+
+.u-align__content--flex-start {
+    align-content: flex-start !important;
+}
+
+.u-align__content--flex-end {
+    align-content: flex-end !important;
+}
+
+.u-align__content--space-between {
+    align-content: space-between !important;
+}
+
+.u-align__content--space-around {
+    align-content: space-around !important;
+}
+
+.u-align__content--space-evenly {
+    align-content: space-evenly !important;
+}
+
+.u-align__items--center {
+    align-items: center !important;
+}
+
+.u-align__items--flex-start {
+    align-items: flex-start !important;
+}
+
+.u-align__items--flex-end {
+    align-items: flex-end !important;
+}
+
+.u-align__items--space-between {
+    align-items: space-between !important;
+}
+
+.u-align__items--space-around {
+    align-items: space-around !important;
+}
+
+.u-align__items--space-evenly {
+    align-items: space-evenly !important;
+}
+
+/* #endregion */
+
+/* #region Text  */
+
+.u-text__align--center {
+    text-align: center !important;
+}
+
+.u-text__align--left {
+    text-align: left !important;
+}
+
+.u-text__align--right {
+    text-align: right !important;
+}
+/* #endregion */

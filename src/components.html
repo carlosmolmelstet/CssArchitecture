@@ -1,0 +1,1987 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="./DesignSystem/css/main.css">
+    <link rel="stylesheet" href="./DesignSystem/icons/icons.css">
+    <link rel="stylesheet" href="./css/layout/layout.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <script src="./js/loadTheme.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <img id="logoBY7" class="logo" src="./assets/logo-seven.svg" />
+        <div class="menu">
+            <a href="design.html" class="menu__item">
+                <i class="i-bydesign menu__icon"></i>
+                <span class="menu__label">Princípios de design</span>
+            </a>
+            <a href="components.html" class="menu__item--active">
+                <i class="i-blocks-and-arrows menu__icon"></i>
+                <span class="menu__label">Componentes</span>
+            </a>
+            <a href="icons.html" class="menu__item">
+                <i class="i-graphic-design-two menu__icon"></i>
+                <span class="menu__label">Icones</span>
+            </a>
+        </div>
+        <label class="themeSwitch" for="checkbox">
+            <input class="themeSwitch__input" type="checkbox" value="false" id="checkbox" />
+            <div class="themeSwitch__slider"></div>
+            <div class="themeSwitch__icons">
+                <svg width="16" height="17" class="themeSwitch__icon--day" viewBox="0 0 16 17" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 5.64697V9.17638V5.64697Z" fill="#EEEEEE" />
+                    <path d="M8 5.64697V9.17638" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12.7142 7.7146L10.3809 10.1852L12.7142 7.7146Z" fill="#EEEEEE" />
+                    <path d="M12.7142 7.7146L10.3809 10.1852" stroke="white" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M14.6673 12.7058H11.334H14.6673Z" fill="#EEEEEE" />
+                    <path d="M14.6673 12.7058H11.334" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M1.33398 12.7058H4.66732H1.33398Z" fill="#EEEEEE" />
+                    <path d="M1.33398 12.7058H4.66732" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M3.28516 7.7146L5.61849 10.1852L3.28516 7.7146Z" fill="#EEEEEE" />
+                    <path d="M3.28516 7.7146L5.61849 10.1852" stroke="white" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M7.33398 12.7058H8.66732H7.33398Z" fill="#EEEEEE" />
+                    <path d="M7.33398 12.7058H8.66732" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <svg width="12" height="12" class="themeSwitch__icon--night" viewBox="0 0 12 12" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M7.01318 1.10271C5.6457 1.45924 4.63637 2.70265 4.63637 4.18183C4.63637 5.9391 6.0609 7.36363 7.81817 7.36363C9.29735 7.36363 10.5408 6.3543 10.8973 4.98682C10.9646 5.314 11 5.65288 11 6C11 8.76143 8.76143 11 6 11C3.23857 11 1 8.76143 1 6C1 3.23857 3.23857 1 6 1C6.34712 1 6.686 1.03537 7.01318 1.10271Z"
+                        stroke="white" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </label>
+    </nav>
+    <main class="main">
+        <!-- Inputs -->
+        <div class="c-wrapper-cards">
+            <h2 class="wrapper-cards__title">Inputs</h2>
+            <div class="c-card">
+                <div class="c-card__title">Normal</div>
+                <div class="c-card__icon" id="input-normal-icon" onclick="ShowCard('input-normal')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z"
+                            stroke="#4F4F4F" stroke-linejoin="round" />
+                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="c-card__body" id="input-normal">
+                    <div class="c-input">
+                        <input type="text" placeholder="Search here..." class="c-input__field " required>
+                        <label class="c-input__label">Label</label>
+                    </div>
+                    <div class="c-card__copy" onclick="Copy('copy-input-normal');">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z"
+                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <textarea readonly="readonly" rows="4" class="c-card__code" id="copy-input-normal">
+    <div class="c-input">
+        <input type="text" placeholder="Search here..." class="c-input__field " required>
+        <label class="c-input__label">Label</label>
+    </div></textarea>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">With icons</div>
+                <div class="c-card__icon" id="input-icon-icon" onclick="ShowCard('input-icon')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z"
+                            stroke="#4F4F4F" stroke-linejoin="round" />
+                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="c-card__body" id="input-icon">
+                    <div class="c-input">
+                        <input type="text" placeholder="Search here..." class="c-input__field " required>
+                        <label class="c-input__label">Label</label>
+                        <div class="c-input__icon">
+                            <svg width="20" height="20" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6.12533 11.0834C8.86373 11.0834 11.0837 8.86348 11.0837 6.12508C11.0837 3.38668 8.86373 1.16675 6.12533 1.16675C3.38693 1.16675 1.16699 3.38668 1.16699 6.12508C1.16699 8.86348 3.38693 11.0834 6.12533 11.0834Z"
+                                    stroke="#4F4F4F" stroke-linejoin="round" />
+                                <path d="M9.68945 9.6897L12.1643 12.1646" stroke="#4F4F4F" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="c-card__copy" onclick="Copy('copy-input-icon');">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z"
+                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <textarea readonly="readonly" rows="12" class="c-card__code" id="copy-input-icon">
+    <div class="c-input">
+        <input type="text" placeholder="Search here..." class="c-input__field " required>
+        <label class="c-input__label">Label</label>
+        <div class="c-input__icon">
+            <svg width="20" height="20" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.12533 11.0834C8.86373 11.0834 11.0837 8.86348 11.0837 6.12508C11.0837 3.38668 8.86373 1.16675 6.12533 1.16675C3.38693 1.16675 1.16699 3.38668 1.16699 6.12508C1.16699 8.86348 3.38693 11.0834 6.12533 11.0834Z" stroke="#4F4F4F" stroke-linejoin="round"/>
+                <path d="M9.68945 9.6897L12.1643 12.1646" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    </div></textarea>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">Disable</div>
+                <div class="c-card__icon" id="input-disable-icon" onclick="ShowCard('input-disable')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z"
+                            stroke="#4F4F4F" stroke-linejoin="round" />
+                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="c-card__body" id="input-disable">
+                    <div class="c-input--disable">
+                        <input type="text" placeholder="Search here..." disabled class="c-input__field " required>
+                        <label class="c-input__label">Label</label>
+                    </div>
+                    <div class="c-card__copy" onclick="Copy('copy-input-disable');">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z"
+                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <textarea readonly="readonly" rows="4" class="c-card__code" id="copy-input-disable">
+    <div class="c-input--disable">
+        <input type="text" placeholder="Search here..." disabled class="c-input__field " required>
+        <label class="c-input__label">Label</label>
+    </div></textarea>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">Checkbox</div>
+                <div class="c-card__icon" id="input-checkbox-icon" onclick="ShowCard('input-checkbox')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z"
+                            stroke="#4F4F4F" stroke-linejoin="round" />
+                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="c-card__body" style="flex-direction: column;" id="input-checkbox">
+                    <label class="c-checkbox">
+                        <input type="checkbox" class="c-checkbox__input">
+                        <span class="c-checkbox__mark">
+                            <svg width="10" height="8" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.66732 1L3.00065 4.66667L1.33398 3" stroke="#FF7E00" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                        <div class="c-checkbox__label">
+                            Checkbox
+                        </div>
+                    </label>
+                    <div style="margin-top: 10px;">
+                        <label class="c-checkbox">
+                            <input type="checkbox" class="c-checkbox__input">
+                            <span class="c-checkbox__mark">
+                                <svg width="10" height="8" viewBox="0 0 8 6" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.66732 1L3.00065 4.66667L1.33398 3" stroke="#FF7E00"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </label>
+                    </div>
+                    <div style="margin-top: 10px;">
+                        <label class="c-checkbox--disable">
+                            <input type="checkbox" class="c-checkbox__input" disabled>
+                            <span class="c-checkbox__mark">
+                                <svg width="10" height="8" viewBox="0 0 8 6" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.66732 1L3.00065 4.66667L1.33398 3" stroke="#FF7E00"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <div class="c-checkbox__label">
+                                Disable
+                            </div>
+                        </label>
+                    </div>
+                    <div class="c-card__copy" onclick="Copy('copy-input-checkbox');">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z"
+                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <textarea readonly="readonly" rows="4" class="c-card__code" id="copy-input-checkbox">
+                            <label class="c-checkbox">
+                                <input  type="checkbox" class="c-checkbox__input">
+                                <span class="c-checkbox__mark">
+                                    <svg width="10" height="8" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.66732 1L3.00065 4.66667L1.33398 3" stroke="#FF7E00" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                    
+                                </span>
+                                <div class="c-checkbox__label">
+                                    Checkbox
+                                </div>
+                            </label>
+                                <label class="c-checkbox">
+                                    <input  type="checkbox" class="c-checkbox__input">
+                                    <span class="c-checkbox__mark">
+                                        <svg width="10" height="8" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.66732 1L3.00065 4.66667L1.33398 3" stroke="#FF7E00" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>                                    
+                                    </span>
+                                </label>
+                                <label class="c-checkbox--disable">
+                                    <input  type="checkbox" class="c-checkbox__input" disabled>
+                                    <span class="c-checkbox__mark">
+                                        <svg width="10" height="8" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.66732 1L3.00065 4.66667L1.33398 3" stroke="#FF7E00" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>                                    
+                                    </span>
+                                    <div class="c-checkbox__label">
+                                        Disable
+                                    </div>
+                                </label>
+                        </textarea>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">Radio</div>
+                <div class="c-card__icon" id="input-radio-icon" onclick="ShowCard('input-radio')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z"
+                            stroke="#4F4F4F" stroke-linejoin="round" />
+                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="c-card__body" style="flex-direction: column;" id="input-radio">
+                    <label class="c-radio">
+                        <input type="radio" class="c-radio__input" checked="checked" name="radio">
+                        <span class="c-radio__mark"></span>
+                        <div class="c-radio__label">
+                            Option 1
+                        </div>
+                    </label>
+                    <div style="margin: 10px 0;">
+                        <label class="c-radio">
+                            <input type="radio" class="c-radio__input" checked="checked" name="radio">
+                            <span class="c-radio__mark"></span>
+                            <div class="c-radio__label">
+                                Option 2
+                            </div>
+                        </label>
+                    </div>
+                    <label class="c-radio--disable">
+                        <input type="radio" class="c-radio__input" disabled name="radio">
+                        <span class="c-radio__mark"></span>
+                        <div class="c-radio__label">
+                            Option 2
+                        </div>
+                    </label>
+                    <div class="c-card__copy" onclick="Copy('copy-input-radio');">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z"
+                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <textarea readonly="readonly" rows="4" class="c-card__code" id="copy-input-radio">
+                            <label class="c-radio">
+                                <input type="radio" class="c-radio__input" checked="checked" name="radio">
+                                <span class="c-radio__mark"></span>
+                                <div class="c-radio__label">
+                                    Option 1
+                                </div>
+                            </label>
+                            <label class="c-radio">
+                                <input type="radio" class="c-radio__input" checked="checked" name="radio">
+                                <span class="c-radio__mark"></span>
+                                <div class="c-radio__label">
+                                    Option 2
+                                </div>
+                            </label>
+                            <label class="c-radio--disable">
+                                <input type="radio" class="c-radio__input" disabled  name="radio">
+                                <span class="c-radio__mark"></span>
+                                <div class="c-radio__label">
+                                    Option 2
+                                </div>
+                            </label>
+                        </textarea>
+                </div>
+            </div>
+        </div>
+        <!-- Buttons -->
+        <div class="c-wrapper-cards">
+            <h2 class="c-wrapper-cards__title">Buttons</h2>
+            <div class="c-card">
+                <div class="c-card__title">Normal</div>
+                <div class="c-card__icon" id="card-button-icon" onclick="ShowCard('card-button')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z"
+                            stroke="#4F4F4F" stroke-linejoin="round" />
+                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="c-card__body" id="card-button">
+                    <button class="c-button--primary">Primary</button>
+                    <button class="c-button--secondary">Secondary</button>
+                    <button class="c-button--tertiary">Tertiary</button>
+                    <div class="c-card__copy" onclick="Copy('copy-button');">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z"
+                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <textarea readonly="readonly" rows="3" class="c-card__code" id="copy-button">
+        <button class="c-button--primary">Primary</button>
+        <button class="c-button--secondary">Secondary</button>
+        <button class="c-button--tertiary">Tertiary</button>
+                            </textarea>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">Auxiliary</div>
+                <div class="c-card__icon" id="card-button-auxiliary-icon" onclick="ShowCard('card-button-auxiliary')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z"
+                            stroke="#4F4F4F" stroke-linejoin="round" />
+                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="c-card__body" id="card-button-auxiliary">
+                    <button class="c-button--primary c-button--auxiliary">Primary</button>
+                    <button class="c-button--secondary c-button--auxiliary">Secondary</button>
+                    <button class="c-button--tertiary c-button--auxiliary">Tertiary</button>
+                    <div class="c-card__copy" onclick="Copy('copy-button-auxiliary');">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z"
+                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <textarea readonly="readonly" rows="3" id="copy-button-auxiliary" class="c-card__code">
+        <button class="c-button--primary c-button--auxiliary">Primary</button>
+        <button class="c-button--secondary c-button--auxiliary">Secondary</button>
+        <button class="c-button--tertiary c-button--auxiliary">Tertiary</button>    
+                            </textarea>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">Disable</div>
+                <div class="c-card__icon" id="card-button-disable-icon" onclick="ShowCard('card-button-disable')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z"
+                            stroke="#4F4F4F" stroke-linejoin="round" />
+                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="c-card__body" id="card-button-disable">
+                    <button class="c-button--primary c-button--disable ">Primary</button>
+                    <button class="c-button--secondary c-button--disable">Secondary</button>
+                    <button class="c-button--tertiary c-button--disable">Tertiary</button>
+                    <div class="c-card__copy" onclick="Copy('copy-button-disable');">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z"
+                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <textarea readonly="readonly" rows="3" id="copy-button-disable" class="c-card__code">
+        <button class="c-button--primary c-button--disable">Primary</button>
+        <button class="c-button--secondary c-button--disable">Secondary</button>
+        <button class="c-button--tertiary c-button--disable">Tertiary</button>
+                            </textarea>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">With Icons</div>
+                <div class="c-card__icon" id="card-button-icons-icon" onclick="ShowCard('card-button-icons')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z"
+                            stroke="#4F4F4F" stroke-linejoin="round" />
+                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="c-card__body" id="card-button-icons">
+                    <button class="c-button--primary">
+                        <div class="c-button__icon">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.54167 5.83333C6.66925 5.83333 7.58333 4.91925 7.58333 3.79167C7.58333 2.66409 6.66925 1.75 5.54167 1.75C4.41408 1.75 3.5 2.66409 3.5 3.79167C3.5 4.91925 4.41408 5.83333 5.54167 5.83333Z"
+                                    stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M1.16602 11.8998V12.2498H9.91601V11.8998C9.91601 10.5931 9.91601 9.93966 9.66171 9.44053C9.438 9.00149 9.08103 8.64452 8.64199 8.42081C8.14286 8.1665 7.48947 8.1665 6.18268 8.1665H4.89935C3.59257 8.1665 2.93917 8.1665 2.44004 8.42081C2.00099 8.64452 1.64404 9.00149 1.42033 9.44053C1.16602 9.93966 1.16602 10.5931 1.16602 11.8998Z"
+                                    stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M9.33398 5.5415H12.834M11.084 3.7915V7.2915V3.7915Z" stroke="#FFF"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        Primary
+                    </button>
+                    <button class="c-button--secondary">
+                        <div class="c-button__icon">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.54167 5.83333C6.66925 5.83333 7.58333 4.91925 7.58333 3.79167C7.58333 2.66409 6.66925 1.75 5.54167 1.75C4.41408 1.75 3.5 2.66409 3.5 3.79167C3.5 4.91925 4.41408 5.83333 5.54167 5.83333Z"
+                                    stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M1.16602 11.8998V12.2498H9.91601V11.8998C9.91601 10.5931 9.91601 9.93966 9.66171 9.44053C9.438 9.00149 9.08103 8.64452 8.64199 8.42081C8.14286 8.1665 7.48947 8.1665 6.18268 8.1665H4.89935C3.59257 8.1665 2.93917 8.1665 2.44004 8.42081C2.00099 8.64452 1.64404 9.00149 1.42033 9.44053C1.16602 9.93966 1.16602 10.5931 1.16602 11.8998Z"
+                                    stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M9.33398 5.5415H12.834M11.084 3.7915V7.2915V3.7915Z" stroke="#FFF"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        Secondary
+                    </button>
+                    <button class="c-button--tertiary">
+                        <div class="c-button__icon">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.54167 5.83333C6.66925 5.83333 7.58333 4.91925 7.58333 3.79167C7.58333 2.66409 6.66925 1.75 5.54167 1.75C4.41408 1.75 3.5 2.66409 3.5 3.79167C3.5 4.91925 4.41408 5.83333 5.54167 5.83333Z"
+                                    stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M1.16602 11.8998V12.2498H9.91601V11.8998C9.91601 10.5931 9.91601 9.93966 9.66171 9.44053C9.438 9.00149 9.08103 8.64452 8.64199 8.42081C8.14286 8.1665 7.48947 8.1665 6.18268 8.1665H4.89935C3.59257 8.1665 2.93917 8.1665 2.44004 8.42081C2.00099 8.64452 1.64404 9.00149 1.42033 9.44053C1.16602 9.93966 1.16602 10.5931 1.16602 11.8998Z"
+                                    stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M9.33398 5.5415H12.834M11.084 3.7915V7.2915V3.7915Z" stroke="#FFF"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        Tertiary
+                    </button>
+                    <div class="c-card__copy" onclick="Copy('copy-button-icons');">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z"
+                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <textarea readonly="readonly" rows="10" class="c-card__code" id="copy-button-icons">
+        <button class="c-button--primary">
+            <div class="c-button__icon">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.54167 5.83333C6.66925 5.83333 7.58333 4.91925 7.58333 3.79167C7.58333 2.66409 6.66925 1.75 5.54167 1.75C4.41408 1.75 3.5 2.66409 3.5 3.79167C3.5 4.91925 4.41408 5.83333 5.54167 5.83333Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1.16602 11.8998V12.2498H9.91601V11.8998C9.91601 10.5931 9.91601 9.93966 9.66171 9.44053C9.438 9.00149 9.08103 8.64452 8.64199 8.42081C8.14286 8.1665 7.48947 8.1665 6.18268 8.1665H4.89935C3.59257 8.1665 2.93917 8.1665 2.44004 8.42081C2.00099 8.64452 1.64404 9.00149 1.42033 9.44053C1.16602 9.93966 1.16602 10.5931 1.16602 11.8998Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9.33398 5.5415H12.834M11.084 3.7915V7.2915V3.7915Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            Primary
+        </button>
+                            </textarea>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">Helps</div>
+                <div class="c-card__icon" id="card-button-helps-icon" onclick="ShowCard('card-button-helps')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z"
+                            stroke="#4F4F4F" stroke-linejoin="round" />
+                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="c-card__body" id="card-button-helps">
+                    <button class="c-button--success">
+                        <div class="c-button__icon">
+                            <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <mask id="path-1-inside-1" fill="white">
+                                    <path
+                                        d="M9.20841 9.19558L8.79593 8.7831C8.74935 8.82968 8.711 8.88382 8.68247 8.9432L9.20841 9.19558ZM1.91406 7.08315C1.91406 7.40533 2.17522 7.66649 2.49739 7.66649C2.81956 7.66649 3.08072 7.40533 3.08072 7.08315H1.91406ZM10.9938 6.17278L10.5813 6.58525L10.9938 6.17278ZM10.9938 7.4102L11.4063 7.82268L10.9938 7.4102ZM7.75007 8.17903L7.16674 8.1788C7.16662 8.41479 7.30872 8.62756 7.52671 8.71792C7.74474 8.80828 7.99569 8.75837 8.16255 8.59151L7.75007 8.17903ZM7.7529 1.54532L8.33624 1.54557V1.54532H7.7529ZM6.87709 0.669515V0.0861816H6.87691L6.87709 0.669515ZM6.87618 0.669515L6.87601 0.0861816H6.8756L6.87618 0.669515ZM10.3703 5.91649L10.3672 5.33315L10.3703 5.91649ZM11.2501 6.79149H11.8334H11.2501ZM9.20841 9.19558C8.68247 8.9432 8.68253 8.94314 8.68256 8.94306L8.68259 8.943C8.68259 8.94297 8.68259 8.943 8.68256 8.94306C8.6825 8.9432 8.68233 8.94352 8.68209 8.94402C8.6816 8.94504 8.68075 8.94679 8.67956 8.94924C8.67716 8.95417 8.67337 8.96193 8.66821 8.97234C8.65791 8.99319 8.64222 9.0246 8.62154 9.06509C8.58019 9.14611 8.51899 9.2631 8.44123 9.404C8.28508 9.68698 8.06519 10.0607 7.80736 10.4312C7.54678 10.8057 7.26185 11.1559 6.97923 11.4065C6.68181 11.6703 6.46998 11.7499 6.34748 11.7499V12.9166C6.90261 12.9166 7.38718 12.6041 7.75325 12.2795C8.13411 11.9417 8.47974 11.5076 8.76499 11.0976C9.05298 10.6837 9.29419 10.273 9.46268 9.96768C9.54726 9.81444 9.61432 9.68628 9.66058 9.59572C9.68371 9.55042 9.7017 9.51443 9.7141 9.48929C9.72031 9.47672 9.72515 9.46686 9.72854 9.45992C9.73023 9.45645 9.73154 9.45368 9.73253 9.45169C9.733 9.45067 9.73341 9.44988 9.7337 9.44924C9.73384 9.44892 9.73396 9.44866 9.73408 9.44845C9.73414 9.44834 9.73419 9.44822 9.73422 9.44816C9.73428 9.44805 9.73431 9.44796 9.20841 9.19558ZM6.34748 11.7499H2.87965V12.9166H6.34748V11.7499ZM2.87965 11.7499C1.91243 11.7499 1.33073 10.9264 1.33073 10.3091H0.164062C0.164062 11.4939 1.19378 12.9166 2.87965 12.9166V11.7499ZM1.33073 3.29423C1.33073 3.13314 1.46131 3.00256 1.6224 3.00256V1.8359C0.816979 1.8359 0.164062 2.48882 0.164062 3.29423H1.33073ZM1.6224 3.00256H1.62504V1.8359H1.6224V3.00256ZM1.62504 3.00256C1.78466 3.00256 1.91406 3.13195 1.91406 3.29158H3.08072C3.08072 2.48763 2.42899 1.8359 1.62504 1.8359V3.00256ZM1.91406 3.29158V7.08315H3.08072V3.29158H1.91406ZM9.34386 5.76027L7.3376 7.76656L8.16255 8.59151L10.1688 6.58525L9.34386 5.76027ZM10.5813 6.99773L8.79593 8.7831L9.62088 9.60806L11.4063 7.82268L10.5813 6.99773ZM8.33341 8.1793L8.33624 1.54557L7.16957 1.54507L7.16674 8.1788L8.33341 8.1793ZM8.33624 1.54532C8.33624 0.73946 7.68296 0.0861816 6.87709 0.0861816V1.25285C7.03861 1.25285 7.16957 1.38379 7.16957 1.54532H8.33624ZM6.87691 0.0861816H6.87601L6.87636 1.25285H6.87726L6.87691 0.0861816ZM6.8756 0.0861816C6.06931 0.0870129 5.41616 0.740857 5.41616 1.54713H6.58282C6.58282 1.38472 6.71439 1.25301 6.87679 1.25285L6.8756 0.0861816ZM5.41616 1.54713V6.7982H6.58282V1.54713H5.41616ZM10.1688 6.58525C10.2255 6.52855 10.2985 6.50023 10.3735 6.49982L10.3672 5.33315C9.99745 5.33514 9.62648 5.47768 9.34386 5.76027L10.1688 6.58525ZM10.3735 6.49982C10.4496 6.49941 10.5239 6.52779 10.5813 6.58525L11.4063 5.76027C11.1196 5.47362 10.7421 5.33114 10.3672 5.33315L10.3735 6.49982ZM10.5813 6.58525C10.6384 6.6423 10.6667 6.71595 10.6667 6.79149H11.8334C11.8334 6.41918 11.6909 6.04494 11.4063 5.76027L10.5813 6.58525ZM10.6667 6.79149C10.6667 6.86703 10.6384 6.94065 10.5813 6.99773L11.4063 7.82268C11.6909 7.53804 11.8334 7.1638 11.8334 6.79149H10.6667ZM1.33073 10.3091V3.29423H0.164062V10.3091H1.33073ZM5.41674 5.91649V6.79149H6.58341V5.91649H5.41674Z" />
+                                </mask>
+                                <path
+                                    d="M9.20841 9.19558L8.79593 8.7831C8.74935 8.82968 8.711 8.88382 8.68247 8.9432L9.20841 9.19558ZM1.91406 7.08315C1.91406 7.40533 2.17522 7.66649 2.49739 7.66649C2.81956 7.66649 3.08072 7.40533 3.08072 7.08315H1.91406ZM10.9938 6.17278L10.5813 6.58525L10.9938 6.17278ZM10.9938 7.4102L11.4063 7.82268L10.9938 7.4102ZM7.75007 8.17903L7.16674 8.1788C7.16662 8.41479 7.30872 8.62756 7.52671 8.71792C7.74474 8.80828 7.99569 8.75837 8.16255 8.59151L7.75007 8.17903ZM7.7529 1.54532L8.33624 1.54557V1.54532H7.7529ZM6.87709 0.669515V0.0861816H6.87691L6.87709 0.669515ZM6.87618 0.669515L6.87601 0.0861816H6.8756L6.87618 0.669515ZM10.3703 5.91649L10.3672 5.33315L10.3703 5.91649ZM11.2501 6.79149H11.8334H11.2501ZM9.20841 9.19558C8.68247 8.9432 8.68253 8.94314 8.68256 8.94306L8.68259 8.943C8.68259 8.94297 8.68259 8.943 8.68256 8.94306C8.6825 8.9432 8.68233 8.94352 8.68209 8.94402C8.6816 8.94504 8.68075 8.94679 8.67956 8.94924C8.67716 8.95417 8.67337 8.96193 8.66821 8.97234C8.65791 8.99319 8.64222 9.0246 8.62154 9.06509C8.58019 9.14611 8.51899 9.2631 8.44123 9.404C8.28508 9.68698 8.06519 10.0607 7.80736 10.4312C7.54678 10.8057 7.26185 11.1559 6.97923 11.4065C6.68181 11.6703 6.46998 11.7499 6.34748 11.7499V12.9166C6.90261 12.9166 7.38718 12.6041 7.75325 12.2795C8.13411 11.9417 8.47974 11.5076 8.76499 11.0976C9.05298 10.6837 9.29419 10.273 9.46268 9.96768C9.54726 9.81444 9.61432 9.68628 9.66058 9.59572C9.68371 9.55042 9.7017 9.51443 9.7141 9.48929C9.72031 9.47672 9.72515 9.46686 9.72854 9.45992C9.73023 9.45645 9.73154 9.45368 9.73253 9.45169C9.733 9.45067 9.73341 9.44988 9.7337 9.44924C9.73384 9.44892 9.73396 9.44866 9.73408 9.44845C9.73414 9.44834 9.73419 9.44822 9.73422 9.44816C9.73428 9.44805 9.73431 9.44796 9.20841 9.19558ZM6.34748 11.7499H2.87965V12.9166H6.34748V11.7499ZM2.87965 11.7499C1.91243 11.7499 1.33073 10.9264 1.33073 10.3091H0.164062C0.164062 11.4939 1.19378 12.9166 2.87965 12.9166V11.7499ZM1.33073 3.29423C1.33073 3.13314 1.46131 3.00256 1.6224 3.00256V1.8359C0.816979 1.8359 0.164062 2.48882 0.164062 3.29423H1.33073ZM1.6224 3.00256H1.62504V1.8359H1.6224V3.00256ZM1.62504 3.00256C1.78466 3.00256 1.91406 3.13195 1.91406 3.29158H3.08072C3.08072 2.48763 2.42899 1.8359 1.62504 1.8359V3.00256ZM1.91406 3.29158V7.08315H3.08072V3.29158H1.91406ZM9.34386 5.76027L7.3376 7.76656L8.16255 8.59151L10.1688 6.58525L9.34386 5.76027ZM10.5813 6.99773L8.79593 8.7831L9.62088 9.60806L11.4063 7.82268L10.5813 6.99773ZM8.33341 8.1793L8.33624 1.54557L7.16957 1.54507L7.16674 8.1788L8.33341 8.1793ZM8.33624 1.54532C8.33624 0.73946 7.68296 0.0861816 6.87709 0.0861816V1.25285C7.03861 1.25285 7.16957 1.38379 7.16957 1.54532H8.33624ZM6.87691 0.0861816H6.87601L6.87636 1.25285H6.87726L6.87691 0.0861816ZM6.8756 0.0861816C6.06931 0.0870129 5.41616 0.740857 5.41616 1.54713H6.58282C6.58282 1.38472 6.71439 1.25301 6.87679 1.25285L6.8756 0.0861816ZM5.41616 1.54713V6.7982H6.58282V1.54713H5.41616ZM10.1688 6.58525C10.2255 6.52855 10.2985 6.50023 10.3735 6.49982L10.3672 5.33315C9.99745 5.33514 9.62648 5.47768 9.34386 5.76027L10.1688 6.58525ZM10.3735 6.49982C10.4496 6.49941 10.5239 6.52779 10.5813 6.58525L11.4063 5.76027C11.1196 5.47362 10.7421 5.33114 10.3672 5.33315L10.3735 6.49982ZM10.5813 6.58525C10.6384 6.6423 10.6667 6.71595 10.6667 6.79149H11.8334C11.8334 6.41918 11.6909 6.04494 11.4063 5.76027L10.5813 6.58525ZM10.6667 6.79149C10.6667 6.86703 10.6384 6.94065 10.5813 6.99773L11.4063 7.82268C11.6909 7.53804 11.8334 7.1638 11.8334 6.79149H10.6667ZM1.33073 10.3091V3.29423H0.164062V10.3091H1.33073ZM5.41674 5.91649V6.79149H6.58341V5.91649H5.41674Z"
+                                    fill="#4F4F4F" stroke="#028127" stroke-width="2" mask="url(#path-1-inside-1)" />
+                            </svg>
+                        </div>
+                        Sucesso
+                    </button>
+                    <button class="c-button--info">
+                        <div class="c-button__icon">
+                            <svg width="14" height="15" viewBox="0 0 14 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.00033 13.3334C8.61114 13.3334 10.0695 12.6805 11.1251 11.6249C12.1807 10.5692 12.8337 9.1109 12.8337 7.50008C12.8337 5.88927 12.1807 4.43093 11.1251 3.37529C10.0695 2.31967 8.61114 1.66675 7.00033 1.66675C5.38951 1.66675 3.93118 2.31967 2.87553 3.37529C1.81991 4.43093 1.16699 5.88927 1.16699 7.50008C1.16699 9.1109 1.81991 10.5692 2.87553 11.6249C3.93118 12.6805 5.38951 13.3334 7.00033 13.3334Z"
+                                    stroke="#045792" stroke-linejoin="round" />
+                                <path
+                                    d="M6.99967 4.20825C7.12624 4.20825 7.22884 4.31086 7.22884 4.43742C7.22884 4.56398 7.12624 4.66659 6.99967 4.66659C6.87311 4.66659 6.77051 4.56398 6.77051 4.43742C6.77051 4.31086 6.87311 4.20825 6.99967 4.20825Z"
+                                    stroke="#045792" />
+                                <path d="M7.14583 10.4166V6.33325H6.85417H6.5625" stroke="#045792"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M6.125 10.4167H8.16667" stroke="#045792" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        Informação
+                    </button>
+                    <button class="c-button--error">
+                        <div class="c-button__icon">
+                            <svg width="14" height="13" viewBox="0 0 14 13" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.00033 12.3334C10.222 12.3334 12.8337 9.72174 12.8337 6.50008C12.8337 3.27842 10.222 0.666748 7.00033 0.666748C3.77866 0.666748 1.16699 3.27842 1.16699 6.50008C1.16699 9.72174 3.77866 12.3334 7.00033 12.3334Z"
+                                    stroke="#900404" stroke-linejoin="round" />
+                                <path
+                                    d="M6.99967 7.95825C8.45801 7.95825 9.04134 9.12492 9.04134 9.12492H4.95801C4.95801 9.12492 5.54134 7.95825 6.99967 7.95825Z"
+                                    stroke="#900404" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M9.04199 4.75V5.91667" stroke="#900404" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M4.95801 4.75V5.91667" stroke="#900404" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        Erro
+                    </button>
+                    <button class="c-button--warning">
+                        <div class="c-button__icon">
+                            <svg width="14" height="15" viewBox="0 0 14 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M4.08301 7.79167C4.08301 6.18085 5.38886 4.875 6.99967 4.875C8.61049 4.875 9.91634 6.18085 9.91634 7.79167V12.4583H4.08301V7.79167Z"
+                                    stroke="#8B7604" stroke-linejoin="round" />
+                                <path d="M7 1.95825V2.83325" stroke="#8B7604" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M10.4687 3.2207L9.90625 3.89099" stroke="#8B7604" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M12.3139 6.41724L11.4521 6.5692" stroke="#8B7604" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M1.68652 6.41724L2.54823 6.56917" stroke="#8B7604" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M3.53125 3.2207L4.0937 3.89099" stroke="#8B7604" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M1.75 12.4583H12.5417" stroke="#8B7604" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        Alerta
+                    </button>
+                    <div class="c-card__copy" onclick="Copy('copy-button-helps');">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z"
+                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <textarea readonly="readonly" rows="10" class="c-card__code" id="copy-button-helps">
+                        <button class="c-button--success">
+                            <div class="c-button__icon">
+                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="path-1-inside-1" fill="white">
+                                    <path d="M9.20841 9.19558L8.79593 8.7831C8.74935 8.82968 8.711 8.88382 8.68247 8.9432L9.20841 9.19558ZM1.91406 7.08315C1.91406 7.40533 2.17522 7.66649 2.49739 7.66649C2.81956 7.66649 3.08072 7.40533 3.08072 7.08315H1.91406ZM10.9938 6.17278L10.5813 6.58525L10.9938 6.17278ZM10.9938 7.4102L11.4063 7.82268L10.9938 7.4102ZM7.75007 8.17903L7.16674 8.1788C7.16662 8.41479 7.30872 8.62756 7.52671 8.71792C7.74474 8.80828 7.99569 8.75837 8.16255 8.59151L7.75007 8.17903ZM7.7529 1.54532L8.33624 1.54557V1.54532H7.7529ZM6.87709 0.669515V0.0861816H6.87691L6.87709 0.669515ZM6.87618 0.669515L6.87601 0.0861816H6.8756L6.87618 0.669515ZM10.3703 5.91649L10.3672 5.33315L10.3703 5.91649ZM11.2501 6.79149H11.8334H11.2501ZM9.20841 9.19558C8.68247 8.9432 8.68253 8.94314 8.68256 8.94306L8.68259 8.943C8.68259 8.94297 8.68259 8.943 8.68256 8.94306C8.6825 8.9432 8.68233 8.94352 8.68209 8.94402C8.6816 8.94504 8.68075 8.94679 8.67956 8.94924C8.67716 8.95417 8.67337 8.96193 8.66821 8.97234C8.65791 8.99319 8.64222 9.0246 8.62154 9.06509C8.58019 9.14611 8.51899 9.2631 8.44123 9.404C8.28508 9.68698 8.06519 10.0607 7.80736 10.4312C7.54678 10.8057 7.26185 11.1559 6.97923 11.4065C6.68181 11.6703 6.46998 11.7499 6.34748 11.7499V12.9166C6.90261 12.9166 7.38718 12.6041 7.75325 12.2795C8.13411 11.9417 8.47974 11.5076 8.76499 11.0976C9.05298 10.6837 9.29419 10.273 9.46268 9.96768C9.54726 9.81444 9.61432 9.68628 9.66058 9.59572C9.68371 9.55042 9.7017 9.51443 9.7141 9.48929C9.72031 9.47672 9.72515 9.46686 9.72854 9.45992C9.73023 9.45645 9.73154 9.45368 9.73253 9.45169C9.733 9.45067 9.73341 9.44988 9.7337 9.44924C9.73384 9.44892 9.73396 9.44866 9.73408 9.44845C9.73414 9.44834 9.73419 9.44822 9.73422 9.44816C9.73428 9.44805 9.73431 9.44796 9.20841 9.19558ZM6.34748 11.7499H2.87965V12.9166H6.34748V11.7499ZM2.87965 11.7499C1.91243 11.7499 1.33073 10.9264 1.33073 10.3091H0.164062C0.164062 11.4939 1.19378 12.9166 2.87965 12.9166V11.7499ZM1.33073 3.29423C1.33073 3.13314 1.46131 3.00256 1.6224 3.00256V1.8359C0.816979 1.8359 0.164062 2.48882 0.164062 3.29423H1.33073ZM1.6224 3.00256H1.62504V1.8359H1.6224V3.00256ZM1.62504 3.00256C1.78466 3.00256 1.91406 3.13195 1.91406 3.29158H3.08072C3.08072 2.48763 2.42899 1.8359 1.62504 1.8359V3.00256ZM1.91406 3.29158V7.08315H3.08072V3.29158H1.91406ZM9.34386 5.76027L7.3376 7.76656L8.16255 8.59151L10.1688 6.58525L9.34386 5.76027ZM10.5813 6.99773L8.79593 8.7831L9.62088 9.60806L11.4063 7.82268L10.5813 6.99773ZM8.33341 8.1793L8.33624 1.54557L7.16957 1.54507L7.16674 8.1788L8.33341 8.1793ZM8.33624 1.54532C8.33624 0.73946 7.68296 0.0861816 6.87709 0.0861816V1.25285C7.03861 1.25285 7.16957 1.38379 7.16957 1.54532H8.33624ZM6.87691 0.0861816H6.87601L6.87636 1.25285H6.87726L6.87691 0.0861816ZM6.8756 0.0861816C6.06931 0.0870129 5.41616 0.740857 5.41616 1.54713H6.58282C6.58282 1.38472 6.71439 1.25301 6.87679 1.25285L6.8756 0.0861816ZM5.41616 1.54713V6.7982H6.58282V1.54713H5.41616ZM10.1688 6.58525C10.2255 6.52855 10.2985 6.50023 10.3735 6.49982L10.3672 5.33315C9.99745 5.33514 9.62648 5.47768 9.34386 5.76027L10.1688 6.58525ZM10.3735 6.49982C10.4496 6.49941 10.5239 6.52779 10.5813 6.58525L11.4063 5.76027C11.1196 5.47362 10.7421 5.33114 10.3672 5.33315L10.3735 6.49982ZM10.5813 6.58525C10.6384 6.6423 10.6667 6.71595 10.6667 6.79149H11.8334C11.8334 6.41918 11.6909 6.04494 11.4063 5.76027L10.5813 6.58525ZM10.6667 6.79149C10.6667 6.86703 10.6384 6.94065 10.5813 6.99773L11.4063 7.82268C11.6909 7.53804 11.8334 7.1638 11.8334 6.79149H10.6667ZM1.33073 10.3091V3.29423H0.164062V10.3091H1.33073ZM5.41674 5.91649V6.79149H6.58341V5.91649H5.41674Z"/>
+                                    </mask>
+                                    <path d="M9.20841 9.19558L8.79593 8.7831C8.74935 8.82968 8.711 8.88382 8.68247 8.9432L9.20841 9.19558ZM1.91406 7.08315C1.91406 7.40533 2.17522 7.66649 2.49739 7.66649C2.81956 7.66649 3.08072 7.40533 3.08072 7.08315H1.91406ZM10.9938 6.17278L10.5813 6.58525L10.9938 6.17278ZM10.9938 7.4102L11.4063 7.82268L10.9938 7.4102ZM7.75007 8.17903L7.16674 8.1788C7.16662 8.41479 7.30872 8.62756 7.52671 8.71792C7.74474 8.80828 7.99569 8.75837 8.16255 8.59151L7.75007 8.17903ZM7.7529 1.54532L8.33624 1.54557V1.54532H7.7529ZM6.87709 0.669515V0.0861816H6.87691L6.87709 0.669515ZM6.87618 0.669515L6.87601 0.0861816H6.8756L6.87618 0.669515ZM10.3703 5.91649L10.3672 5.33315L10.3703 5.91649ZM11.2501 6.79149H11.8334H11.2501ZM9.20841 9.19558C8.68247 8.9432 8.68253 8.94314 8.68256 8.94306L8.68259 8.943C8.68259 8.94297 8.68259 8.943 8.68256 8.94306C8.6825 8.9432 8.68233 8.94352 8.68209 8.94402C8.6816 8.94504 8.68075 8.94679 8.67956 8.94924C8.67716 8.95417 8.67337 8.96193 8.66821 8.97234C8.65791 8.99319 8.64222 9.0246 8.62154 9.06509C8.58019 9.14611 8.51899 9.2631 8.44123 9.404C8.28508 9.68698 8.06519 10.0607 7.80736 10.4312C7.54678 10.8057 7.26185 11.1559 6.97923 11.4065C6.68181 11.6703 6.46998 11.7499 6.34748 11.7499V12.9166C6.90261 12.9166 7.38718 12.6041 7.75325 12.2795C8.13411 11.9417 8.47974 11.5076 8.76499 11.0976C9.05298 10.6837 9.29419 10.273 9.46268 9.96768C9.54726 9.81444 9.61432 9.68628 9.66058 9.59572C9.68371 9.55042 9.7017 9.51443 9.7141 9.48929C9.72031 9.47672 9.72515 9.46686 9.72854 9.45992C9.73023 9.45645 9.73154 9.45368 9.73253 9.45169C9.733 9.45067 9.73341 9.44988 9.7337 9.44924C9.73384 9.44892 9.73396 9.44866 9.73408 9.44845C9.73414 9.44834 9.73419 9.44822 9.73422 9.44816C9.73428 9.44805 9.73431 9.44796 9.20841 9.19558ZM6.34748 11.7499H2.87965V12.9166H6.34748V11.7499ZM2.87965 11.7499C1.91243 11.7499 1.33073 10.9264 1.33073 10.3091H0.164062C0.164062 11.4939 1.19378 12.9166 2.87965 12.9166V11.7499ZM1.33073 3.29423C1.33073 3.13314 1.46131 3.00256 1.6224 3.00256V1.8359C0.816979 1.8359 0.164062 2.48882 0.164062 3.29423H1.33073ZM1.6224 3.00256H1.62504V1.8359H1.6224V3.00256ZM1.62504 3.00256C1.78466 3.00256 1.91406 3.13195 1.91406 3.29158H3.08072C3.08072 2.48763 2.42899 1.8359 1.62504 1.8359V3.00256ZM1.91406 3.29158V7.08315H3.08072V3.29158H1.91406ZM9.34386 5.76027L7.3376 7.76656L8.16255 8.59151L10.1688 6.58525L9.34386 5.76027ZM10.5813 6.99773L8.79593 8.7831L9.62088 9.60806L11.4063 7.82268L10.5813 6.99773ZM8.33341 8.1793L8.33624 1.54557L7.16957 1.54507L7.16674 8.1788L8.33341 8.1793ZM8.33624 1.54532C8.33624 0.73946 7.68296 0.0861816 6.87709 0.0861816V1.25285C7.03861 1.25285 7.16957 1.38379 7.16957 1.54532H8.33624ZM6.87691 0.0861816H6.87601L6.87636 1.25285H6.87726L6.87691 0.0861816ZM6.8756 0.0861816C6.06931 0.0870129 5.41616 0.740857 5.41616 1.54713H6.58282C6.58282 1.38472 6.71439 1.25301 6.87679 1.25285L6.8756 0.0861816ZM5.41616 1.54713V6.7982H6.58282V1.54713H5.41616ZM10.1688 6.58525C10.2255 6.52855 10.2985 6.50023 10.3735 6.49982L10.3672 5.33315C9.99745 5.33514 9.62648 5.47768 9.34386 5.76027L10.1688 6.58525ZM10.3735 6.49982C10.4496 6.49941 10.5239 6.52779 10.5813 6.58525L11.4063 5.76027C11.1196 5.47362 10.7421 5.33114 10.3672 5.33315L10.3735 6.49982ZM10.5813 6.58525C10.6384 6.6423 10.6667 6.71595 10.6667 6.79149H11.8334C11.8334 6.41918 11.6909 6.04494 11.4063 5.76027L10.5813 6.58525ZM10.6667 6.79149C10.6667 6.86703 10.6384 6.94065 10.5813 6.99773L11.4063 7.82268C11.6909 7.53804 11.8334 7.1638 11.8334 6.79149H10.6667ZM1.33073 10.3091V3.29423H0.164062V10.3091H1.33073ZM5.41674 5.91649V6.79149H6.58341V5.91649H5.41674Z" fill="#4F4F4F" stroke="#028127" stroke-width="2" mask="url(#path-1-inside-1)"/>
+                                </svg>                                
+                            </div>
+                            Sucesso
+                        </button>
+                        <button class="c-button--info">
+                            <div class="c-button__icon">
+                                <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.00033 13.3334C8.61114 13.3334 10.0695 12.6805 11.1251 11.6249C12.1807 10.5692 12.8337 9.1109 12.8337 7.50008C12.8337 5.88927 12.1807 4.43093 11.1251 3.37529C10.0695 2.31967 8.61114 1.66675 7.00033 1.66675C5.38951 1.66675 3.93118 2.31967 2.87553 3.37529C1.81991 4.43093 1.16699 5.88927 1.16699 7.50008C1.16699 9.1109 1.81991 10.5692 2.87553 11.6249C3.93118 12.6805 5.38951 13.3334 7.00033 13.3334Z" stroke="#045792" stroke-linejoin="round"/>
+                                    <path d="M6.99967 4.20825C7.12624 4.20825 7.22884 4.31086 7.22884 4.43742C7.22884 4.56398 7.12624 4.66659 6.99967 4.66659C6.87311 4.66659 6.77051 4.56398 6.77051 4.43742C6.77051 4.31086 6.87311 4.20825 6.99967 4.20825Z" stroke="#045792"/>
+                                    <path d="M7.14583 10.4166V6.33325H6.85417H6.5625" stroke="#045792" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M6.125 10.4167H8.16667" stroke="#045792" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                                             
+                            </div>
+                            Informação
+                        </button>
+                        <button class="c-button--error">
+                            <div class="c-button__icon">
+                                <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.00033 12.3334C10.222 12.3334 12.8337 9.72174 12.8337 6.50008C12.8337 3.27842 10.222 0.666748 7.00033 0.666748C3.77866 0.666748 1.16699 3.27842 1.16699 6.50008C1.16699 9.72174 3.77866 12.3334 7.00033 12.3334Z" stroke="#900404" stroke-linejoin="round"/>
+                                    <path d="M6.99967 7.95825C8.45801 7.95825 9.04134 9.12492 9.04134 9.12492H4.95801C4.95801 9.12492 5.54134 7.95825 6.99967 7.95825Z" stroke="#900404" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9.04199 4.75V5.91667" stroke="#900404" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M4.95801 4.75V5.91667" stroke="#900404" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                                              
+                            </div>
+                            Erro
+                        </button>
+                        <button class="c-button--warning">
+                            <div class="c-button__icon">
+                                <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.08301 7.79167C4.08301 6.18085 5.38886 4.875 6.99967 4.875C8.61049 4.875 9.91634 6.18085 9.91634 7.79167V12.4583H4.08301V7.79167Z" stroke="#8B7604" stroke-linejoin="round"/>
+                                    <path d="M7 1.95825V2.83325" stroke="#8B7604" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M10.4687 3.2207L9.90625 3.89099" stroke="#8B7604" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12.3139 6.41724L11.4521 6.5692" stroke="#8B7604" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M1.68652 6.41724L2.54823 6.56917" stroke="#8B7604" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M3.53125 3.2207L4.0937 3.89099" stroke="#8B7604" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M1.75 12.4583H12.5417" stroke="#8B7604" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                                                                             
+                            </div>
+                            Alerta
+                        </button>    
+                            </textarea>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">Actions</div>
+                <div class="c-card__icon" id="card-button-actions-icon" onclick="ShowCard('card-button-actions')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z"
+                            stroke="#4F4F4F" stroke-linejoin="round" />
+                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="c-card__body" id="card-button-actions">
+                    <button class="c-button--primary c-button--action">
+                        <div class="c-button__icon">
+                            <svg width="22" height="22" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.54167 5.83333C6.66925 5.83333 7.58333 4.91925 7.58333 3.79167C7.58333 2.66409 6.66925 1.75 5.54167 1.75C4.41408 1.75 3.5 2.66409 3.5 3.79167C3.5 4.91925 4.41408 5.83333 5.54167 5.83333Z"
+                                    stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M1.16602 11.8998V12.2498H9.91601V11.8998C9.91601 10.5931 9.91601 9.93966 9.66171 9.44053C9.438 9.00149 9.08103 8.64452 8.64199 8.42081C8.14286 8.1665 7.48947 8.1665 6.18268 8.1665H4.89935C3.59257 8.1665 2.93917 8.1665 2.44004 8.42081C2.00099 8.64452 1.64404 9.00149 1.42033 9.44053C1.16602 9.93966 1.16602 10.5931 1.16602 11.8998Z"
+                                    stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M9.33398 5.5415H12.834M11.084 3.7915V7.2915V3.7915Z" stroke="#FFF"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </button>
+                    <button class="c-button--secondary c-button--action">
+                        <div class="c-button__icon">
+                            <svg width="22" height="22" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.54167 5.83333C6.66925 5.83333 7.58333 4.91925 7.58333 3.79167C7.58333 2.66409 6.66925 1.75 5.54167 1.75C4.41408 1.75 3.5 2.66409 3.5 3.79167C3.5 4.91925 4.41408 5.83333 5.54167 5.83333Z"
+                                    stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M1.16602 11.8998V12.2498H9.91601V11.8998C9.91601 10.5931 9.91601 9.93966 9.66171 9.44053C9.438 9.00149 9.08103 8.64452 8.64199 8.42081C8.14286 8.1665 7.48947 8.1665 6.18268 8.1665H4.89935C3.59257 8.1665 2.93917 8.1665 2.44004 8.42081C2.00099 8.64452 1.64404 9.00149 1.42033 9.44053C1.16602 9.93966 1.16602 10.5931 1.16602 11.8998Z"
+                                    stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M9.33398 5.5415H12.834M11.084 3.7915V7.2915V3.7915Z" stroke="#FFF"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="c-card__copy" onclick="Copy('copy-button-actions');">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z"
+                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <textarea readonly="readonly" rows="10" class="c-card__code" id="copy-button-actions">
+                                <button class="c-button--primary c-button--action">
+                                    <div class="c-button__icon">
+                                        <svg width="22" height="22" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.54167 5.83333C6.66925 5.83333 7.58333 4.91925 7.58333 3.79167C7.58333 2.66409 6.66925 1.75 5.54167 1.75C4.41408 1.75 3.5 2.66409 3.5 3.79167C3.5 4.91925 4.41408 5.83333 5.54167 5.83333Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1.16602 11.8998V12.2498H9.91601V11.8998C9.91601 10.5931 9.91601 9.93966 9.66171 9.44053C9.438 9.00149 9.08103 8.64452 8.64199 8.42081C8.14286 8.1665 7.48947 8.1665 6.18268 8.1665H4.89935C3.59257 8.1665 2.93917 8.1665 2.44004 8.42081C2.00099 8.64452 1.64404 9.00149 1.42033 9.44053C1.16602 9.93966 1.16602 10.5931 1.16602 11.8998Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M9.33398 5.5415H12.834M11.084 3.7915V7.2915V3.7915Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </button>
+                                <button class="c-button--secondary c-button--action">
+                                    <div class="c-button__icon">
+                                        <svg width="22" height="22" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.54167 5.83333C6.66925 5.83333 7.58333 4.91925 7.58333 3.79167C7.58333 2.66409 6.66925 1.75 5.54167 1.75C4.41408 1.75 3.5 2.66409 3.5 3.79167C3.5 4.91925 4.41408 5.83333 5.54167 5.83333Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1.16602 11.8998V12.2498H9.91601V11.8998C9.91601 10.5931 9.91601 9.93966 9.66171 9.44053C9.438 9.00149 9.08103 8.64452 8.64199 8.42081C8.14286 8.1665 7.48947 8.1665 6.18268 8.1665H4.89935C3.59257 8.1665 2.93917 8.1665 2.44004 8.42081C2.00099 8.64452 1.64404 9.00149 1.42033 9.44053C1.16602 9.93966 1.16602 10.5931 1.16602 11.8998Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M9.33398 5.5415H12.834M11.084 3.7915V7.2915V3.7915Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                </button>
+                            </textarea>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">Notifications</div>
+                <div class="c-card__icon" id="card-button-notifications-icon"
+                    onclick="ShowCard('card-button-notifications')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z"
+                            stroke="#4F4F4F" stroke-linejoin="round" />
+                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="c-card__body" id="card-button-notifications">
+                    <button class="c-button--primary c-button--notification">
+                        <div class="c-button__icon">
+                            <svg width="22" height="22" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.54167 5.83333C6.66925 5.83333 7.58333 4.91925 7.58333 3.79167C7.58333 2.66409 6.66925 1.75 5.54167 1.75C4.41408 1.75 3.5 2.66409 3.5 3.79167C3.5 4.91925 4.41408 5.83333 5.54167 5.83333Z"
+                                    stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M1.16602 11.8998V12.2498H9.91601V11.8998C9.91601 10.5931 9.91601 9.93966 9.66171 9.44053C9.438 9.00149 9.08103 8.64452 8.64199 8.42081C8.14286 8.1665 7.48947 8.1665 6.18268 8.1665H4.89935C3.59257 8.1665 2.93917 8.1665 2.44004 8.42081C2.00099 8.64452 1.64404 9.00149 1.42033 9.44053C1.16602 9.93966 1.16602 10.5931 1.16602 11.8998Z"
+                                    stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M9.33398 5.5415H12.834M11.084 3.7915V7.2915V3.7915Z" stroke="#FFF"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="c-button__notification">
+                            <svg width="8" height="8" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2.4992 0.520752L1.86243 1.8205L0.416016 2.03024L1.46382 3.05462L1.21335 4.47909L2.4992 3.79359L3.78533 4.47909L3.5367 3.05462L4.58268 2.03024L3.14428 1.8205L2.4992 0.520752Z"
+                                    stroke="#C6C6C6" stroke-width="0.6" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </button>
+                    <button class="c-button--secondary c-button--notification">
+                        <div class="c-button__icon">
+                            <svg width="22" height="22" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.54167 5.83333C6.66925 5.83333 7.58333 4.91925 7.58333 3.79167C7.58333 2.66409 6.66925 1.75 5.54167 1.75C4.41408 1.75 3.5 2.66409 3.5 3.79167C3.5 4.91925 4.41408 5.83333 5.54167 5.83333Z"
+                                    stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M1.16602 11.8998V12.2498H9.91601V11.8998C9.91601 10.5931 9.91601 9.93966 9.66171 9.44053C9.438 9.00149 9.08103 8.64452 8.64199 8.42081C8.14286 8.1665 7.48947 8.1665 6.18268 8.1665H4.89935C3.59257 8.1665 2.93917 8.1665 2.44004 8.42081C2.00099 8.64452 1.64404 9.00149 1.42033 9.44053C1.16602 9.93966 1.16602 10.5931 1.16602 11.8998Z"
+                                    stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M9.33398 5.5415H12.834M11.084 3.7915V7.2915V3.7915Z" stroke="#FFF"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="c-button__notification">
+                            <svg width="8" height="8" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M2.4992 0.520752L1.86243 1.8205L0.416016 2.03024L1.46382 3.05462L1.21335 4.47909L2.4992 3.79359L3.78533 4.47909L3.5367 3.05462L4.58268 2.03024L3.14428 1.8205L2.4992 0.520752Z"
+                                    stroke="#C6C6C6" stroke-width="0.6" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="c-card__copy" onclick="Copy('copy-button-notifications');">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z"
+                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <textarea readonly="readonly" rows="10" class="c-card__code" id="copy-button-notifications">
+                                <button class="c-button--primary c-button--notification">
+                                    <div class="c-button__icon">
+                                        <svg width="22" height="22" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.54167 5.83333C6.66925 5.83333 7.58333 4.91925 7.58333 3.79167C7.58333 2.66409 6.66925 1.75 5.54167 1.75C4.41408 1.75 3.5 2.66409 3.5 3.79167C3.5 4.91925 4.41408 5.83333 5.54167 5.83333Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1.16602 11.8998V12.2498H9.91601V11.8998C9.91601 10.5931 9.91601 9.93966 9.66171 9.44053C9.438 9.00149 9.08103 8.64452 8.64199 8.42081C8.14286 8.1665 7.48947 8.1665 6.18268 8.1665H4.89935C3.59257 8.1665 2.93917 8.1665 2.44004 8.42081C2.00099 8.64452 1.64404 9.00149 1.42033 9.44053C1.16602 9.93966 1.16602 10.5931 1.16602 11.8998Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M9.33398 5.5415H12.834M11.084 3.7915V7.2915V3.7915Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <div class="c-button__notification">
+                                        <svg width="8" height="8" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2.4992 0.520752L1.86243 1.8205L0.416016 2.03024L1.46382 3.05462L1.21335 4.47909L2.4992 3.79359L3.78533 4.47909L3.5367 3.05462L4.58268 2.03024L3.14428 1.8205L2.4992 0.520752Z" stroke="#C6C6C6" stroke-width="0.6" stroke-linejoin="round"/>
+                                        </svg>                                        
+                                    </div>
+                                </button>
+                                <button class="c-button--secondary c-button--notification">
+                                    <div class="c-button__icon">
+                                        <svg width="22" height="22" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M5.54167 5.83333C6.66925 5.83333 7.58333 4.91925 7.58333 3.79167C7.58333 2.66409 6.66925 1.75 5.54167 1.75C4.41408 1.75 3.5 2.66409 3.5 3.79167C3.5 4.91925 4.41408 5.83333 5.54167 5.83333Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M1.16602 11.8998V12.2498H9.91601V11.8998C9.91601 10.5931 9.91601 9.93966 9.66171 9.44053C9.438 9.00149 9.08103 8.64452 8.64199 8.42081C8.14286 8.1665 7.48947 8.1665 6.18268 8.1665H4.89935C3.59257 8.1665 2.93917 8.1665 2.44004 8.42081C2.00099 8.64452 1.64404 9.00149 1.42033 9.44053C1.16602 9.93966 1.16602 10.5931 1.16602 11.8998Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M9.33398 5.5415H12.834M11.084 3.7915V7.2915V3.7915Z" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <div class="c-button__notification">
+                                        <svg width="8" height="8" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2.4992 0.520752L1.86243 1.8205L0.416016 2.03024L1.46382 3.05462L1.21335 4.47909L2.4992 3.79359L3.78533 4.47909L3.5367 3.05462L4.58268 2.03024L3.14428 1.8205L2.4992 0.520752Z" stroke="#C6C6C6" stroke-width="0.6" stroke-linejoin="round"/>
+                                        </svg>                                        
+                                    </div>
+                                </button>
+                            </textarea>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">Toggle</div>
+                <div class="c-card__icon" id="card-button-toggle-icon" onclick="ShowCard('card-button-toggle')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z"
+                            stroke="#4F4F4F" stroke-linejoin="round" />
+                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="c-card__body" id="card-button-toggle">
+                    <label class="c-switch">
+                        <input class="c-switch__input" type="checkbox">
+                        <div class="c-switch__slider">
+                            <span class="c-switch__toggle"></span>
+                            <span class="c-switch__icon--active">
+                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.7348 4.42456L5.36038 10.799L2.46289 7.90154" stroke="#14B970"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <span class="c-switch__icon--inactive">
+                                <svg width="16" height="16" viewBox="0 0 15 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.20117 5.00391L9.99614 10.7989" stroke="#95B9A9" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M4.20117 10.7989L9.99614 5.00391" stroke="#95B9A9" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </div>
+                    </label>
+                    <textarea readonly="readonly" rows="3" id="copy-button-toggle" class="c-card__code">
+                        <label class="c-switch">
+                            <input class="c-switch__input" type="checkbox">
+                            <div class="c-switch__slider">
+                                <span class="c-switch__toggle"></span>
+                                <span class="c-switch__icon--active">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M11.7348 4.42456L5.36038 10.799L2.46289 7.90154" stroke="#14B970" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                
+                                </span>
+                                <span class="c-switch__icon--inactive">
+                                    <svg width="16" height="16" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.20117 5.00391L9.99614 10.7989" stroke="#95B9A9" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M4.20117 10.7989L9.99614 5.00391" stroke="#95B9A9" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                              
+                                </span>
+                            </div>
+                          </label>
+                            </textarea>
+                </div>
+            </div>
+        </div>
+        <!-- Tables -->
+        <div class="c-wrapper-cards">
+            <h2 class="c-wrapper-cards__title">Tables</h2>
+            <div class="c-card">
+                <div class="c-card__title">Normal</div>
+                <div class="c-card__icon" id="card-table-icon" onclick="ShowCard('card-table')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z"
+                            stroke="#4F4F4F" stroke-linejoin="round" />
+                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="c-card__body" id="card-table">
+                    <table class="c-table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M10.2163 11C10.2163 8.51472 8.20158 6.5 5.71631 6.5C3.23103 6.5 1.21631 8.51472 1.21631 11M7.71631 3C7.71631 4.10457 6.82088 5 5.71631 5C4.61174 5 3.71631 4.10457 3.71631 3C3.71631 1.89543 4.61174 1 5.71631 1C6.82088 1 7.71631 1.89543 7.71631 3Z"
+                                            stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <label class="c-table__label">
+                                        Column 1
+                                    </label>
+                                </th>
+                                <th>
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M10.2163 11C10.2163 8.51472 8.20158 6.5 5.71631 6.5C3.23103 6.5 1.21631 8.51472 1.21631 11M7.71631 3C7.71631 4.10457 6.82088 5 5.71631 5C4.61174 5 3.71631 4.10457 3.71631 3C3.71631 1.89543 4.61174 1 5.71631 1C6.82088 1 7.71631 1.89543 7.71631 3Z"
+                                            stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <label class="c-table__label">
+                                        Column 2
+                                    </label>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 3 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="c-card__copy" onclick="Copy('copy-table');">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z"
+                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <textarea readonly="readonly" rows="10" class="c-card__code" id="copy-table">
+                        <table class="c-table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.2163 11C10.2163 8.51472 8.20158 6.5 5.71631 6.5C3.23103 6.5 1.21631 8.51472 1.21631 11M7.71631 3C7.71631 4.10457 6.82088 5 5.71631 5C4.61174 5 3.71631 4.10457 3.71631 3C3.71631 1.89543 4.61174 1 5.71631 1C6.82088 1 7.71631 1.89543 7.71631 3Z"
+                                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <label class="c-table__label">
+                                            Column 1
+                                        </label>
+                                    </th>
+                                    <th>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.2163 11C10.2163 8.51472 8.20158 6.5 5.71631 6.5C3.23103 6.5 1.21631 8.51472 1.21631 11M7.71631 3C7.71631 4.10457 6.82088 5 5.71631 5C4.61174 5 3.71631 4.10457 3.71631 3C3.71631 1.89543 4.61174 1 5.71631 1C6.82088 1 7.71631 1.89543 7.71631 3Z"
+                                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <label class="c-table__label">
+                                            Column 2
+                                        </label>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Row 1 Data 1</td>
+                                    <td>Column</td>
+                                </tr>
+                                <tr>
+                                    <td>Row 2 Data 1</td>
+                                    <td>Column</td>
+                                </tr>
+                                <tr>
+                                    <td>Row 3 Data 1</td>
+                                    <td>Column</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                
+                    </textarea>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">Data Table</div>
+                <div class="c-card__icon" id="card-datatable-icon" onclick="ShowCard('card-datatable')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z"
+                            stroke="#4F4F4F" stroke-linejoin="round" />
+                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="c-card__body" id="card-datatable">
+                    <table id="table_id" class="c-table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M10.2163 11C10.2163 8.51472 8.20158 6.5 5.71631 6.5C3.23103 6.5 1.21631 8.51472 1.21631 11M7.71631 3C7.71631 4.10457 6.82088 5 5.71631 5C4.61174 5 3.71631 4.10457 3.71631 3C3.71631 1.89543 4.61174 1 5.71631 1C6.82088 1 7.71631 1.89543 7.71631 3Z"
+                                            stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <label class="c-table__label">
+                                        Column 1
+                                    </label>
+                                </th>
+                                <th>
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M10.2163 11C10.2163 8.51472 8.20158 6.5 5.71631 6.5C3.23103 6.5 1.21631 8.51472 1.21631 11M7.71631 3C7.71631 4.10457 6.82088 5 5.71631 5C4.61174 5 3.71631 4.10457 3.71631 3C3.71631 1.89543 4.61174 1 5.71631 1C6.82088 1 7.71631 1.89543 7.71631 3Z"
+                                            stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <label class="c-table__label">
+                                        Column 2
+                                    </label>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Row 3 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 3 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 3 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 3 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 3 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 3 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 3 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 3 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 3 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 3 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 3 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 3 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="c-card__copy" onclick="Copy('copy-datatable');">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z"
+                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <textarea readonly="readonly" rows="10" class="c-card__code" id="copy-datatable">
+                        <table id="table_id" class="c-table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.2163 11C10.2163 8.51472 8.20158 6.5 5.71631 6.5C3.23103 6.5 1.21631 8.51472 1.21631 11M7.71631 3C7.71631 4.10457 6.82088 5 5.71631 5C4.61174 5 3.71631 4.10457 3.71631 3C3.71631 1.89543 4.61174 1 5.71631 1C6.82088 1 7.71631 1.89543 7.71631 3Z"
+                                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <label class="c-table__label">
+                                            Column 1
+                                        </label>
+                                    </th>
+                                    <th>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.2163 11C10.2163 8.51472 8.20158 6.5 5.71631 6.5C3.23103 6.5 1.21631 8.51472 1.21631 11M7.71631 3C7.71631 4.10457 6.82088 5 5.71631 5C4.61174 5 3.71631 4.10457 3.71631 3C3.71631 1.89543 4.61174 1 5.71631 1C6.82088 1 7.71631 1.89543 7.71631 3Z"
+                                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <label class="c-table__label">
+                                            Column 2
+                                        </label>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Row 3 Data 1</td>
+                                    <td>Column</td>
+                                </tr>
+                                <tr>
+                                    <td>Row 1 Data 1</td>
+                                    <td>Column</td>
+                                </tr>
+                                <tr>
+                                    <td>Row 2 Data 1</td>
+                                    <td>Column</td>
+                                </tr>
+                                <tr>
+                                    <td>Row 3 Data 1</td>
+                                    <td>Column</td>
+                                </tr>
+                                <tr>
+                                    <td>Row 1 Data 1</td>
+                                    <td>Column</td>
+                                </tr>
+                                <tr>
+                                    <td>Row 2 Data 1</td>
+                                    <td>Column</td>
+                                </tr>
+                                <tr>
+                                    <td>Row 3 Data 1</td>
+                                    <td>Column</td>
+                                </tr>
+                                <tr>
+                                    <td>Row 1 Data 1</td>
+                                    <td>Column</td>
+                                </tr>
+                                <tr>
+                                    <td>Row 2 Data 1</td>
+                                    <td>Column</td>
+                                </tr>
+                                <tr>
+                                    <td>Row 3 Data 1</td>
+                                    <td>Column</td>
+                                </tr>
+                                <tr>
+                                    <td>Row 1 Data 1</td>
+                                    <td>Column</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </textarea>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">Actions</div>
+                <div class="c-card__icon" id="card-tableActions-icon" onclick="ShowCard('card-tableActions')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z"
+                            stroke="#4F4F4F" stroke-linejoin="round" />
+                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="c-card__body" id="card-tableActions">
+                    <table id="table_id" class="c-table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M10.2163 11C10.2163 8.51472 8.20158 6.5 5.71631 6.5C3.23103 6.5 1.21631 8.51472 1.21631 11M7.71631 3C7.71631 4.10457 6.82088 5 5.71631 5C4.61174 5 3.71631 4.10457 3.71631 3C3.71631 1.89543 4.61174 1 5.71631 1C6.82088 1 7.71631 1.89543 7.71631 3Z"
+                                            stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <label class="c-table__label">
+                                        Column 1
+                                    </label>
+                                </th>
+                                <th style="width: 150px;">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M10.2163 11C10.2163 8.51472 8.20158 6.5 5.71631 6.5C3.23103 6.5 1.21631 8.51472 1.21631 11M7.71631 3C7.71631 4.10457 6.82088 5 5.71631 5C4.61174 5 3.71631 4.10457 3.71631 3C3.71631 1.89543 4.61174 1 5.71631 1C6.82088 1 7.71631 1.89543 7.71631 3Z"
+                                            stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <label class="c-table__label">
+                                        Column 2
+                                    </label>
+                                </th>
+                                <th style="width: 150px;">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M10.2163 11C10.2163 8.51472 8.20158 6.5 5.71631 6.5C3.23103 6.5 1.21631 8.51472 1.21631 11M7.71631 3C7.71631 4.10457 6.82088 5 5.71631 5C4.61174 5 3.71631 4.10457 3.71631 3C3.71631 1.89543 4.61174 1 5.71631 1C6.82088 1 7.71631 1.89543 7.71631 3Z"
+                                            stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                    <label class="c-table__label">
+                                        Action
+                                    </label>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Column 1</td>
+                                <td>
+                                    <div class="c-table__status c-table__status--inative">
+                                        <div class="c-table__statusIcon"></div>
+                                        Inativo
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="c-table__actions">
+                                        <div class="c-table__action c-table__action--primary">
+                                            <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.75 9.5H9.75" stroke="#FF7E00" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M1.75 5.67998V7.5H3.5793L8.75 2.32702L6.92378 0.5L1.75 5.67998Z"
+                                                    stroke="#FF7E00" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="c-table__action c-table__action--secondary">
+                                            <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.75 9.5H9.75" stroke="#FF7E00" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M1.75 5.67998V7.5H3.5793L8.75 2.32702L6.92378 0.5L1.75 5.67998Z"
+                                                    stroke="#FF7E00" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="c-table__action c-table__action--tertiary">
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.25 6C3.25 6.13807 3.13807 6.25 3 6.25C2.86193 6.25 2.75 6.13807 2.75 6C2.75 5.86193 2.86193 5.75 3 5.75C3.13807 5.75 3.25 5.86193 3.25 6Z"
+                                                    stroke="#121212" />
+                                                <path
+                                                    d="M6.25 6C6.25 6.13807 6.13807 6.25 6 6.25C5.86193 6.25 5.75 6.13807 5.75 6C5.75 5.86193 5.86193 5.75 6 5.75C6.13807 5.75 6.25 5.86193 6.25 6Z"
+                                                    stroke="#121212" />
+                                                <path
+                                                    d="M9.25 6C9.25 6.13807 9.13807 6.25 9 6.25C8.86193 6.25 8.75 6.13807 8.75 6C8.75 5.86193 8.86193 5.75 9 5.75C9.13807 5.75 9.25 5.86193 9.25 6Z"
+                                                    stroke="#121212" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Column 1</td>
+                                <td>
+                                    <div class="c-table__status c-table__status--active">
+                                        <div class="c-table__statusIcon"></div>
+                                        ativo
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="c-table__actions">
+                                        <div class="c-table__action c-table__action--primary">
+                                            <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.75 9.5H9.75" stroke="#FF7E00" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M1.75 5.67998V7.5H3.5793L8.75 2.32702L6.92378 0.5L1.75 5.67998Z"
+                                                    stroke="#FF7E00" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="c-table__action c-table__action--secondary">
+                                            <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.75 9.5H9.75" stroke="#FF7E00" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M1.75 5.67998V7.5H3.5793L8.75 2.32702L6.92378 0.5L1.75 5.67998Z"
+                                                    stroke="#FF7E00" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="c-table__action c-table__action--tertiary">
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.25 6C3.25 6.13807 3.13807 6.25 3 6.25C2.86193 6.25 2.75 6.13807 2.75 6C2.75 5.86193 2.86193 5.75 3 5.75C3.13807 5.75 3.25 5.86193 3.25 6Z"
+                                                    stroke="#121212" />
+                                                <path
+                                                    d="M6.25 6C6.25 6.13807 6.13807 6.25 6 6.25C5.86193 6.25 5.75 6.13807 5.75 6C5.75 5.86193 5.86193 5.75 6 5.75C6.13807 5.75 6.25 5.86193 6.25 6Z"
+                                                    stroke="#121212" />
+                                                <path
+                                                    d="M9.25 6C9.25 6.13807 9.13807 6.25 9 6.25C8.86193 6.25 8.75 6.13807 8.75 6C8.75 5.86193 8.86193 5.75 9 5.75C9.13807 5.75 9.25 5.86193 9.25 6Z"
+                                                    stroke="#121212" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Column 1</td>
+                                <td>
+                                    <div class="c-table__status c-table__status--inative">
+                                        <div class="c-table__statusIcon"></div>
+                                        Inativo
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="c-table__actions">
+                                        <div class="c-table__action c-table__action--primary">
+                                            <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.75 9.5H9.75" stroke="#FF7E00" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M1.75 5.67998V7.5H3.5793L8.75 2.32702L6.92378 0.5L1.75 5.67998Z"
+                                                    stroke="#FF7E00" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="c-table__action c-table__action--secondary">
+                                            <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.75 9.5H9.75" stroke="#FF7E00" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M1.75 5.67998V7.5H3.5793L8.75 2.32702L6.92378 0.5L1.75 5.67998Z"
+                                                    stroke="#FF7E00" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="c-table__action c-table__action--tertiary">
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.25 6C3.25 6.13807 3.13807 6.25 3 6.25C2.86193 6.25 2.75 6.13807 2.75 6C2.75 5.86193 2.86193 5.75 3 5.75C3.13807 5.75 3.25 5.86193 3.25 6Z"
+                                                    stroke="#121212" />
+                                                <path
+                                                    d="M6.25 6C6.25 6.13807 6.13807 6.25 6 6.25C5.86193 6.25 5.75 6.13807 5.75 6C5.75 5.86193 5.86193 5.75 6 5.75C6.13807 5.75 6.25 5.86193 6.25 6Z"
+                                                    stroke="#121212" />
+                                                <path
+                                                    d="M9.25 6C9.25 6.13807 9.13807 6.25 9 6.25C8.86193 6.25 8.75 6.13807 8.75 6C8.75 5.86193 8.86193 5.75 9 5.75C9.13807 5.75 9.25 5.86193 9.25 6Z"
+                                                    stroke="#121212" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Column 1</td>
+                                <td>
+                                    <div class="c-table__status c-table__status--active">
+                                        <div class="c-table__statusIcon"></div>
+                                        ativo
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="c-table__actions">
+                                        <div class="c-table__action c-table__action--primary">
+                                            <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.75 9.5H9.75" stroke="#FF7E00" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M1.75 5.67998V7.5H3.5793L8.75 2.32702L6.92378 0.5L1.75 5.67998Z"
+                                                    stroke="#FF7E00" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="c-table__action c-table__action--secondary">
+                                            <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.75 9.5H9.75" stroke="#FF7E00" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M1.75 5.67998V7.5H3.5793L8.75 2.32702L6.92378 0.5L1.75 5.67998Z"
+                                                    stroke="#FF7E00" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="c-table__action c-table__action--tertiary">
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.25 6C3.25 6.13807 3.13807 6.25 3 6.25C2.86193 6.25 2.75 6.13807 2.75 6C2.75 5.86193 2.86193 5.75 3 5.75C3.13807 5.75 3.25 5.86193 3.25 6Z"
+                                                    stroke="#121212" />
+                                                <path
+                                                    d="M6.25 6C6.25 6.13807 6.13807 6.25 6 6.25C5.86193 6.25 5.75 6.13807 5.75 6C5.75 5.86193 5.86193 5.75 6 5.75C6.13807 5.75 6.25 5.86193 6.25 6Z"
+                                                    stroke="#121212" />
+                                                <path
+                                                    d="M9.25 6C9.25 6.13807 9.13807 6.25 9 6.25C8.86193 6.25 8.75 6.13807 8.75 6C8.75 5.86193 8.86193 5.75 9 5.75C9.13807 5.75 9.25 5.86193 9.25 6Z"
+                                                    stroke="#121212" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                    <div class="c-card__copy" onclick="Copy('copy-tableActions');">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z"
+                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <textarea readonly="readonly" rows="10" class="c-card__code" id="copy-tableActions">
+                        <table id="table_id" class="c-table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.2163 11C10.2163 8.51472 8.20158 6.5 5.71631 6.5C3.23103 6.5 1.21631 8.51472 1.21631 11M7.71631 3C7.71631 4.10457 6.82088 5 5.71631 5C4.61174 5 3.71631 4.10457 3.71631 3C3.71631 1.89543 4.61174 1 5.71631 1C6.82088 1 7.71631 1.89543 7.71631 3Z"
+                                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <label class="c-table__label">
+                                            Column 1
+                                        </label>
+                                    </th>
+                                    <th style="width: 150px;">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.2163 11C10.2163 8.51472 8.20158 6.5 5.71631 6.5C3.23103 6.5 1.21631 8.51472 1.21631 11M7.71631 3C7.71631 4.10457 6.82088 5 5.71631 5C4.61174 5 3.71631 4.10457 3.71631 3C3.71631 1.89543 4.61174 1 5.71631 1C6.82088 1 7.71631 1.89543 7.71631 3Z"
+                                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <label class="c-table__label">
+                                            Column 2
+                                        </label>
+                                    </th>
+                                    <th style="width: 150px;">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.2163 11C10.2163 8.51472 8.20158 6.5 5.71631 6.5C3.23103 6.5 1.21631 8.51472 1.21631 11M7.71631 3C7.71631 4.10457 6.82088 5 5.71631 5C4.61174 5 3.71631 4.10457 3.71631 3C3.71631 1.89543 4.61174 1 5.71631 1C6.82088 1 7.71631 1.89543 7.71631 3Z"
+                                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        <label class="c-table__label">
+                                            Action
+                                        </label>
+                                    </th>
+                                </tr>
+                            </thead>
+                          <tbody>
+                            <tr>
+                                <td>Column 1</td>
+                                <td>
+                                    <div class="c-table__status c-table__status--inative">
+                                        <div class="c-table__statusIcon"></div>
+                                       Inativo
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="c-table__actions">
+                                        <div class="c-table__action c-table__action--primary">
+                                            <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.75 9.5H9.75" stroke="#FF7E00" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M1.75 5.67998V7.5H3.5793L8.75 2.32702L6.92378 0.5L1.75 5.67998Z"
+                                                    stroke="#FF7E00" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="c-table__action c-table__action--secondary">
+                                            <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.75 9.5H9.75" stroke="#FF7E00" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M1.75 5.67998V7.5H3.5793L8.75 2.32702L6.92378 0.5L1.75 5.67998Z"
+                                                    stroke="#FF7E00" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="c-table__action c-table__action--tertiary">
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.25 6C3.25 6.13807 3.13807 6.25 3 6.25C2.86193 6.25 2.75 6.13807 2.75 6C2.75 5.86193 2.86193 5.75 3 5.75C3.13807 5.75 3.25 5.86193 3.25 6Z"
+                                                    stroke="#121212" />
+                                                <path
+                                                    d="M6.25 6C6.25 6.13807 6.13807 6.25 6 6.25C5.86193 6.25 5.75 6.13807 5.75 6C5.75 5.86193 5.86193 5.75 6 5.75C6.13807 5.75 6.25 5.86193 6.25 6Z"
+                                                    stroke="#121212" />
+                                                <path
+                                                    d="M9.25 6C9.25 6.13807 9.13807 6.25 9 6.25C8.86193 6.25 8.75 6.13807 8.75 6C8.75 5.86193 8.86193 5.75 9 5.75C9.13807 5.75 9.25 5.86193 9.25 6Z"
+                                                    stroke="#121212" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Column 1</td>
+                                <td>
+                                    <div class="c-table__status c-table__status--active">
+                                        <div class="c-table__statusIcon"></div>
+                                       ativo
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="c-table__actions">
+                                        <div class="c-table__action c-table__action--primary">
+                                            <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.75 9.5H9.75" stroke="#FF7E00" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M1.75 5.67998V7.5H3.5793L8.75 2.32702L6.92378 0.5L1.75 5.67998Z"
+                                                    stroke="#FF7E00" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="c-table__action c-table__action--secondary">
+                                            <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.75 9.5H9.75" stroke="#FF7E00" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M1.75 5.67998V7.5H3.5793L8.75 2.32702L6.92378 0.5L1.75 5.67998Z"
+                                                    stroke="#FF7E00" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="c-table__action c-table__action--tertiary">
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.25 6C3.25 6.13807 3.13807 6.25 3 6.25C2.86193 6.25 2.75 6.13807 2.75 6C2.75 5.86193 2.86193 5.75 3 5.75C3.13807 5.75 3.25 5.86193 3.25 6Z"
+                                                    stroke="#121212" />
+                                                <path
+                                                    d="M6.25 6C6.25 6.13807 6.13807 6.25 6 6.25C5.86193 6.25 5.75 6.13807 5.75 6C5.75 5.86193 5.86193 5.75 6 5.75C6.13807 5.75 6.25 5.86193 6.25 6Z"
+                                                    stroke="#121212" />
+                                                <path
+                                                    d="M9.25 6C9.25 6.13807 9.13807 6.25 9 6.25C8.86193 6.25 8.75 6.13807 8.75 6C8.75 5.86193 8.86193 5.75 9 5.75C9.13807 5.75 9.25 5.86193 9.25 6Z"
+                                                    stroke="#121212" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Column 1</td>
+                                <td>
+                                    <div class="c-table__status c-table__status--inative">
+                                        <div class="c-table__statusIcon"></div>
+                                       Inativo
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="c-table__actions">
+                                        <div class="c-table__action c-table__action--primary">
+                                            <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.75 9.5H9.75" stroke="#FF7E00" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M1.75 5.67998V7.5H3.5793L8.75 2.32702L6.92378 0.5L1.75 5.67998Z"
+                                                    stroke="#FF7E00" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="c-table__action c-table__action--secondary">
+                                            <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.75 9.5H9.75" stroke="#FF7E00" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M1.75 5.67998V7.5H3.5793L8.75 2.32702L6.92378 0.5L1.75 5.67998Z"
+                                                    stroke="#FF7E00" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="c-table__action c-table__action--tertiary">
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.25 6C3.25 6.13807 3.13807 6.25 3 6.25C2.86193 6.25 2.75 6.13807 2.75 6C2.75 5.86193 2.86193 5.75 3 5.75C3.13807 5.75 3.25 5.86193 3.25 6Z"
+                                                    stroke="#121212" />
+                                                <path
+                                                    d="M6.25 6C6.25 6.13807 6.13807 6.25 6 6.25C5.86193 6.25 5.75 6.13807 5.75 6C5.75 5.86193 5.86193 5.75 6 5.75C6.13807 5.75 6.25 5.86193 6.25 6Z"
+                                                    stroke="#121212" />
+                                                <path
+                                                    d="M9.25 6C9.25 6.13807 9.13807 6.25 9 6.25C8.86193 6.25 8.75 6.13807 8.75 6C8.75 5.86193 8.86193 5.75 9 5.75C9.13807 5.75 9.25 5.86193 9.25 6Z"
+                                                    stroke="#121212" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Column 1</td>
+                                <td>
+                                    <div class="c-table__status c-table__status--active">
+                                        <div class="c-table__statusIcon"></div>
+                                       ativo
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="c-table__actions">
+                                        <div class="c-table__action c-table__action--primary">
+                                            <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.75 9.5H9.75" stroke="#FF7E00" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M1.75 5.67998V7.5H3.5793L8.75 2.32702L6.92378 0.5L1.75 5.67998Z"
+                                                    stroke="#FF7E00" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="c-table__action c-table__action--secondary">
+                                            <svg width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.75 9.5H9.75" stroke="#FF7E00" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M1.75 5.67998V7.5H3.5793L8.75 2.32702L6.92378 0.5L1.75 5.67998Z"
+                                                    stroke="#FF7E00" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="c-table__action c-table__action--tertiary">
+                                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M3.25 6C3.25 6.13807 3.13807 6.25 3 6.25C2.86193 6.25 2.75 6.13807 2.75 6C2.75 5.86193 2.86193 5.75 3 5.75C3.13807 5.75 3.25 5.86193 3.25 6Z"
+                                                    stroke="#121212" />
+                                                <path
+                                                    d="M6.25 6C6.25 6.13807 6.13807 6.25 6 6.25C5.86193 6.25 5.75 6.13807 5.75 6C5.75 5.86193 5.86193 5.75 6 5.75C6.13807 5.75 6.25 5.86193 6.25 6Z"
+                                                    stroke="#121212" />
+                                                <path
+                                                    d="M9.25 6C9.25 6.13807 9.13807 6.25 9 6.25C8.86193 6.25 8.75 6.13807 8.75 6C8.75 5.86193 8.86193 5.75 9 5.75C9.13807 5.75 9.25 5.86193 9.25 6Z"
+                                                    stroke="#121212" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </textarea>
+                </div>
+            </div>
+        </div>
+        <!-- Selects -->
+        <div class="c-wrapper-cards">
+            <h2 class="c-wrapper-cards__title">Selects</h2>
+            <div class="c-card">
+                <div class="c-card__title">Multiple</div>
+                <div class="c-card__icon" id="card-multiple-icon" onclick="ShowCard('card-multiple')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z"
+                            stroke="#4F4F4F" stroke-linejoin="round" />
+                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="c-card__body" id="card-multiple">
+                    <div class="c-select">
+                        <label class="c-select__label">Client</label>
+                        <select class="selectpicker" title="Selecione" multiple data-live-search="true" data-size="6">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                            <option>Option 4</option>
+                            <option>Option 5</option>
+                            <option>Option 6</option>
+                            <option>Option 7</option>
+                            <option>Option 8</option>
+                        </select>
+                    </div>
+                    <div class="c-card__copy" onclick="Copy('copy-multiple');">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z"
+                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <textarea readonly="readonly" rows="10" class="c-card__code" id="copy-multiple">
+<div class="c-select">
+    <label class="c-select__label">Client</label>
+    <select class="selectpicker" title="Selecione" multiple  data-live-search="true" data-size="6">
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+        <option>Option 4</option>
+        <option>Option 5</option>
+        <option>Option 6</option>
+        <option>Option 7</option>
+        <option>Option 8</option>
+        </select>
+</div>
+                    </textarea>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">Normal</div>
+                <div class="c-card__icon" id="card-select-icon" onclick="ShowCard('card-select')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C6.47715 2 2 6.47715 2 12Z"
+                            stroke="#4F4F4F" stroke-linejoin="round" />
+                        <path d="M7.5 10.5L12 15L16.5 10.5" stroke="#4F4F4F" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="c-card__body" id="card-select">
+                    <div class="c-select">
+                        <label class="c-select__label">Client</label>
+                        <select class="selectpicker" title="Selecione" data-live-search="true" data-size="6">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                            <option>Option 4</option>
+                            <option>Option 5</option>
+                            <option>Option 6</option>
+                            <option>Option 7</option>
+                            <option>Option 8</option>
+                        </select>
+                    </div>
+                    <div class="c-card__copy" onclick="Copy('copy-select');">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19 2H5C4.44771 2 4 2.44771 4 3V21C4 21.5523 4.44771 22 5 22H19C19.5523 22 20 21.5523 20 21V3C20 2.44771 19.5523 2 19 2Z"
+                                stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 15H15.5" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.5 18H12" stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15 6.5L11 10.5L9 8.5" stroke="#4F4F4F" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <textarea readonly="readonly" rows="10" class="c-card__code" id="copy-select">
+<div class="c-select">
+    <label class="c-select__label">Client</label>
+    <select class="selectpicker" title="Selecione"   data-live-search="true" data-size="6">
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+        <option>Option 4</option>
+        <option>Option 5</option>
+        <option>Option 6</option>
+        <option>Option 7</option>
+        <option>Option 8</option>
+        </select>
+</div>
+                    </textarea>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/js/bootstrap-select.min.js"></script>
+    <script src="//cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
