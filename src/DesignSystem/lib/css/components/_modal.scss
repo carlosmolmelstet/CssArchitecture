@@ -1,0 +1,81 @@
+@import '../abstract/_colors.scss';
+
+[data-theme="dark"] {
+    --modal__overlay--background: rgba($black, .7);
+    --modal__close--color: $gray--10;
+    --modal__body--background: $gray;
+    --modal__body--scroll: $gray--3;
+    --modal__body--border: $gray--3;
+}
+
+
+.c-modal {
+    background: var(--modal__overlay--background) !important;
+    .close {
+        box-shadow: none;
+
+        i::before {
+            cursor: pointer;
+            color: var(--modal__close--color);
+            font-size: 16px;
+        }
+    }
+
+    .modal-dialog {
+        margin: 20px 25vw !important;
+    }
+
+    .modal-content {
+        border-radius: 4px;
+        width: 50vw !important;
+        background: var(--modal__body--background) !important;
+
+        .modal-header {
+            border-color: var(--modal__body--border) !important;
+        }
+
+        .modal-body {
+            max-height: 70vh !important;
+            overflow-y: auto;
+            overflow-x: hidden;
+
+            &::-webkit-scrollbar {
+                width: 5px !important;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                -webkit-border-radius: 10px !important;
+                border-radius: 10px !important;
+                background: var(--modal__body--scroll) !important;
+            }
+        }
+
+        .modal-footer {
+            border-color: var(--modal__body--border) !important;
+        }
+    }
+
+    &--small {
+        @extend .c-modal;
+
+        .modal-dialog {
+            margin: 20px 35vw !important;
+        }
+
+        .modal-content {
+            width: 30vw !important;
+        }
+    }
+
+    &--larger {
+        @extend .c-modal;
+
+        .modal-dialog {
+            margin: 20px 10vw !important;
+        }
+
+        .modal-content {
+            width: 80vw !important;
+        }
+    }
+}

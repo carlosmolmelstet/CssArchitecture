@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="./lib/css/main.min.css">
+    <link rel="stylesheet" href="./lib/icons/icons.min.css">
+    <link rel="stylesheet" href="./css/layout/layout.min.css">
+    <link rel="stylesheet" href="./css/design.css">
+    <script src="./js/loadTheme.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <nav class="navbar">
+        <img id="logoBY7" class="logo" src="./assets/logo-seven.svg" />
+        <div class="menu">
+            <a href="design.html" class="menu__item--active">
+                <i class="i-bydesign menu__icon"></i>
+                <span class="menu__label">Princípios de design</span>
+            </a>
+            <a href="components.html" class="menu__item">
+                <i class="i-blocks-and-arrows menu__icon"></i>
+                <span class="menu__label">Componentes</span>
+            </a>
+            <a href="icons.html" class="menu__item">
+                <i class="i-graphic-design-two menu__icon"></i>
+                <span class="menu__label">Icones</span>
+            </a>
+        </div>
+        <label class="c-themeSwitch" for="checkbox">
+            <input class="c-themeSwitch__input" type="checkbox" value="false" id="checkbox" />
+            <div class="c-themeSwitch__slider"></div>
+            <div class="c-themeSwitch__icons">
+                <svg width="16" height="17" class="c-themeSwitch__icon--day" viewBox="0 0 16 17" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 5.64697V9.17638V5.64697Z" fill="#EEEEEE" />
+                    <path d="M8 5.64697V9.17638" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12.7142 7.7146L10.3809 10.1852L12.7142 7.7146Z" fill="#EEEEEE" />
+                    <path d="M12.7142 7.7146L10.3809 10.1852" stroke="white" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M14.6673 12.7058H11.334H14.6673Z" fill="#EEEEEE" />
+                    <path d="M14.6673 12.7058H11.334" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M1.33398 12.7058H4.66732H1.33398Z" fill="#EEEEEE" />
+                    <path d="M1.33398 12.7058H4.66732" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M3.28516 7.7146L5.61849 10.1852L3.28516 7.7146Z" fill="#EEEEEE" />
+                    <path d="M3.28516 7.7146L5.61849 10.1852" stroke="white" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M7.33398 12.7058H8.66732H7.33398Z" fill="#EEEEEE" />
+                    <path d="M7.33398 12.7058H8.66732" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <svg width="12" height="12" class="c-themeSwitch__icon--night" viewBox="0 0 12 12" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M7.01318 1.10271C5.6457 1.45924 4.63637 2.70265 4.63637 4.18183C4.63637 5.9391 6.0609 7.36363 7.81817 7.36363C9.29735 7.36363 10.5408 6.3543 10.8973 4.98682C10.9646 5.314 11 5.65288 11 6C11 8.76143 8.76143 11 6 11C3.23857 11 1 8.76143 1 6C1 3.23857 3.23857 1 6 1C6.34712 1 6.686 1.03537 7.01318 1.10271Z"
+                        stroke="white" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </label>
+    </nav>
+   <main class="main">
+    <label class="c-switch">
+        <input class="c-switch__input" type="checkbox">
+        <div class="c-switch__slider">
+            <span class="c-switch__toggle"></span>
+            <span class="c-switch__icon--active">
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.7348 4.42456L5.36038 10.799L2.46289 7.90154" stroke="#14B970" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                
+            </span>
+            <span class="c-switch__icon--inactive">
+                <svg width="16" height="16" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.20117 5.00391L9.99614 10.7989" stroke="#95B9A9" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M4.20117 10.7989L9.99614 5.00391" stroke="#95B9A9" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                              
+            </span>
+        </div>
+      </label>
+   </main>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/js/bootstrap-select.min.js"></script>
+    <script src="//cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

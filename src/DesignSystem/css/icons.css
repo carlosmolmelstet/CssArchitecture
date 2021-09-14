@@ -1,0 +1,49 @@
+﻿:root {
+  --icon__border--color: #897D81;
+  --icon__item--color: #212121;
+  --icon__name--color: #333333;
+  --icon__copy--color: #333333;
+  --icon__copy--color-hover: #ABA6A6; }
+
+[data-theme="dark"] {
+  --icon__border--color: #212121;
+  --icon__item--color: #F9690C;
+  --icon__name--color: #B5B5B5;
+  --icon__copy--color: #333333;
+  --icon__copy--color-hover: #B5B5B5; }
+
+.wrapper-filters {
+  max-width: calc(25% - 32px);
+  margin: 40px 16px; }
+
+.wrapper-icons {
+  display: flex;
+  flex-wrap: wrap; }
+
+.icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 16px;
+  width: calc(25% - 32px);
+  grid-area: "icon";
+  border: 1px solid var(--icon__border--color);
+  border-radius: 4px;
+  padding: 10px; }
+  .icon__item {
+    margin-right: 10px; }
+    .icon__item::before {
+      color: var(--icon__item--color); }
+  .icon__name {
+    color: var(--icon__name--color);
+    font-size: 14px;
+    word-break: break-all;
+    padding-right: 20px; }
+  .icon__copy {
+    position: absolute;
+    right: 10px;
+    cursor: pointer; }
+    .icon__copy::before {
+      color: var(--icon__copy--color); }
+    .icon__copy:hover::before {
+      color: var(--icon__copy--color-hover); }

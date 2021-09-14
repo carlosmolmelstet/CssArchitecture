@@ -1,0 +1,85 @@
+@import '../abstract/_colors.scss';
+
+:root {
+  --slider__backgroundSlider: linear-gradient(78.6deg, $primary--3 -25.73%, $primary--5 143.01%);
+  --slider__border: $gray--8;
+  --slider__icon--day: $white;
+  --slider__icon--night: $gray--8;
+}
+
+[data-theme="dark"] {
+  --slider__backgroundSlider: linear-gradient(78.6deg, $primary--3 -25.73%, $primary--5 143.01%);
+  --slider__border: $gray--5;
+  --slider__icon--day: $gray--5;
+  --slider__icon--night: $white;
+}
+
+.c-themeSwitch {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  position: relative;
+  min-width: 74px;
+  max-width: 74px;
+  user-select: none;
+  cursor: pointer;
+
+  .c-themeSwitch__input {
+    display: none;
+
+    &:checked + .c-themeSwitch__slider:before {
+      transform: translateX(32px);
+    }
+  }
+
+  .c-themeSwitch__icons {
+    width: 100%;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      margin: 0 12px;
+    }
+    
+    .c-themeSwitch__icon--day  path{
+      stroke: var(--slider__icon--day);
+    }
+
+    .c-themeSwitch__icon--night {
+      margin-left: 6px !important;
+
+       path {
+      stroke: var(--slider__icon--night);
+    }
+  }
+  }
+  
+  .c-themeSwitch__slider {
+    background-color: none;
+    border: 1px solid var(--slider__border);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+    border-radius: 6px;
+
+    &:before {
+      background: var(--slider__backgroundSlider);
+      bottom: 2px;
+      content: "";
+      height: 26px;
+      left: 2px;
+      position: absolute;
+      transition: 0.4s;
+      border-radius: 6px;
+      width: 36px;
+    }
+
+  }
+}
+

@@ -1,0 +1,84 @@
+﻿[data-theme="dark"] {
+  --body__font--color: #B5B5B5;
+  --body__background--color: #151515;
+  --body__scroll--color: #212121;
+  --navbar__background--color: #151515;
+  --navbar__border--color: #212121;
+  --menu__font--color: #333333;
+  --menu__active--color: #F9690C; }
+
+body {
+  background-color: var(--body__background--color);
+  color: var(--body__font--color);
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-size: 16px;
+  height: 100vh; }
+  body::-webkit-scrollbar {
+    width: 8px; }
+  body::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background: var(--body__scroll--color); }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--navbar__background--color);
+  width: 100vw;
+  height: 58px;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 0px 40px;
+  border-bottom: 1px solid var(--navbar__border--color); }
+
+.logo {
+  width: 58px;
+  height: 40px; }
+
+.menu, .menu__item, .menu__item--active {
+  display: flex;
+  height: 58px; }
+  .menu__item, .menu__item--active {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid transparent;
+    padding: 0 8px;
+    font-weight: 400;
+    cursor: pointer;
+    margin: 0 8px;
+    color: var(--menu__font--color);
+    transition: .5s;
+    text-decoration: none; }
+    .menu__item .menu__icon, .menu__item--active .menu__icon, .menu__item .menu__icon--active, .menu__item--active .menu__icon--active {
+      margin-right: 10px;
+      color: var(--menu__font--color); }
+      .menu__item .menu__icon--active, .menu__item--active .menu__icon--active {
+        color: var(--menu__active--color); }
+    .menu__item--active {
+      color: var(--menu__active--color);
+      border-color: var(--menu__active--color); }
+      .menu__item--active .menu__icon::before, .menu__item--active .menu__icon--active::before {
+        color: var(--menu__active--color); }
+      .menu__item--active .menu__label {
+        border-color: var(--menu__active--color);
+        color: var(--menu__active--color); }
+    .menu__item:hover, .menu__item--active:hover {
+      border-color: var(--menu__active--color);
+      color: var(--menu__font--color); }
+
+.sidebar {
+  background: var(--sidebar-background-color);
+  width: 270px;
+  margin-left: 16px;
+  border-radius: 10px;
+  height: calc(100vh - 150px); }
+
+.main {
+  width: 90vw;
+  margin: 0 auto;
+  padding-bottom: 50px; }
+
+.container, .container__title {
+  margin-bottom: 50px; }
+  .container__title {
+    margin-bottom: 16px; }

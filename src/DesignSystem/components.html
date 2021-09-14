@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="./lib/css/main.min.css">
+    <link rel="stylesheet" href="./lib/icons/icons.min.css">
+    <link rel="stylesheet" href="./css/layout/layout.min.css">
+    <link rel="stylesheet" href="./css/components.min.css">
+    <script src="./js/loadTheme.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <img id="logoBY7" class="logo" src="./assets/logo-seven.svg" />
+        <div class="menu">
+            <a href="design.html" class="menu__item">
+                <i class="i-bydesign menu__icon"></i>
+                <span class="menu__label">Princípios de design</span>
+            </a>
+            <a href="components.html" class="menu__item--active">
+                <i class="i-blocks-and-arrows menu__icon"></i>
+                <span class="menu__label">Componentes</span>
+            </a>
+            <a href="icons.html" class="menu__item">
+                <i class="i-graphic-design-two menu__icon"></i>
+                <span class="menu__label">Icones</span>
+            </a>
+        </div>
+        <label class="c-themeSwitch" for="checkbox">
+            <input class="c-themeSwitch__input" type="checkbox" value="false" id="checkbox" />
+            <div class="c-themeSwitch__slider"></div>
+            <div class="c-themeSwitch__icons">
+                <svg width="16" height="17" class="c-themeSwitch__icon--day" viewBox="0 0 16 17" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 5.64697V9.17638V5.64697Z" fill="#EEEEEE" />
+                    <path d="M8 5.64697V9.17638" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12.7142 7.7146L10.3809 10.1852L12.7142 7.7146Z" fill="#EEEEEE" />
+                    <path d="M12.7142 7.7146L10.3809 10.1852" stroke="white" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                    <path d="M14.6673 12.7058H11.334H14.6673Z" fill="#EEEEEE" />
+                    <path d="M14.6673 12.7058H11.334" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M1.33398 12.7058H4.66732H1.33398Z" fill="#EEEEEE" />
+                    <path d="M1.33398 12.7058H4.66732" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M3.28516 7.7146L5.61849 10.1852L3.28516 7.7146Z" fill="#EEEEEE" />
+                    <path d="M3.28516 7.7146L5.61849 10.1852" stroke="white" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                    <path d="M7.33398 12.7058H8.66732H7.33398Z" fill="#EEEEEE" />
+                    <path d="M7.33398 12.7058H8.66732" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <svg width="12" height="12" class="c-themeSwitch__icon--night" viewBox="0 0 12 12" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.01318 1.10271C5.6457 1.45924 4.63637 2.70265 4.63637 4.18183C4.63637 5.9391 6.0609 7.36363 7.81817 7.36363C9.29735 7.36363 10.5408 6.3543 10.8973 4.98682C10.9646 5.314 11 5.65288 11 6C11 8.76143 8.76143 11 6 11C3.23857 11 1 8.76143 1 6C1 3.23857 3.23857 1 6 1C6.34712 1 6.686 1.03537 7.01318 1.10271Z"
+                          stroke="white" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </label>
+    </nav>
+    <main class="main">
+        <!-- Inputs -->
+        <div class="c-wrapper-cards">
+            <h2 class="wrapper-cards__title">Inputs</h2>
+            <div class="c-card">
+                <div class="c-card__title">Normal</div>
+                <div class="c-card__icon" id="input-normal-icon" onclick="ShowCard('input-normal')">
+                     <i class="i-arrow-circle-down"></i>
+                </div>
+                <div class="c-card__body" id="input-normal">
+                    <div class="c-input">
+                        <input type="text" placeholder="Search here..." class="c-input__field " required>
+                        <label class="c-input__label">Label</label>
+                    </div>
+                    <div class="c-card__copy" onclick="Copy('copy-input-normal');">
+                        <i class=" i-copy"></i>
+                    </div>
+                    <textarea readonly="readonly" rows="4" class="c-card__code" id="copy-input-normal">
+<div class="c-input">
+    <input type="text" placeholder="Search here..." class="c-input__field " required>
+    <label class="c-input__label">Label</label>
+</div>
+                    </textarea>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">With icons</div>
+                <div class="c-card__icon" id="input-icon-icon" onclick="ShowCard('input-icon')">
+                 <i class="i-arrow-circle-down"></i>
+                </div>
+                <div class="c-card__body" id="input-icon">
+                    <div class="c-input">
+                        <input type="text" placeholder="Search here..." class="c-input__field " required>
+                        <label class="c-input__label">Label</label>
+                        <div class="c-input__icon">
+                            <i class="i-search"></i>
+                        </div>
+                    </div>
+                    <div class="c-card__copy" onclick="Copy('copy-input-icon');">
+                        <i class=" i-copy"></i>
+                    </div>
+                    <textarea readonly="readonly" rows="8" class="c-card__code" id="copy-input-icon">
+<div class="c-input">
+    <input type="text" placeholder="Search here..." class="c-input__field " required>
+    <label class="c-input__label">Label</label>
+    <div class="c-input__icon">
+        <i class="i-search"></i>
+    </div>
+</div>
+                    </textarea>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">Disable</div>
+                <div class="c-card__icon" id="input-disable-icon" onclick="ShowCard('input-disable')">
+                                        <i class="i-arrow-circle-down"></i>
+                </div>
+                <div class="c-card__body" id="input-disable">
+                    <div class="c-input--disable">
+                        <input type="text" placeholder="Search here..." disabled class="c-input__field " required>
+                        <label class="c-input__label">Label</label>
+                    </div>
+                    <div class="c-card__copy" onclick="Copy('copy-input-disable');">
+                        <i class=" i-copy"></i>
+
+                    </div>
+                    <textarea readonly="readonly" rows="4" class="c-card__code" id="copy-input-disable">
+<div class="c-input--disable">
+    <input type="text" placeholder="Search here..." disabled class="c-input__field " required>
+    <label class="c-input__label">Label</label>
+</div>
+                    </textarea>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">Checkbox</div>
+                <div class="c-card__icon" id="input-checkbox-icon" onclick="ShowCard('input-checkbox')">
+                    <i class="i-arrow-circle-down"></i>
+                </div>
+                <div class="c-card__body" style="flex-direction: column;" id="input-checkbox">
+                    <label class="c-checkbox">
+                        <input type="checkbox" class="c-checkbox__input">
+                        <span class="c-checkbox__mark">
+                            <i class=" i-check"></i>
+                        </span>
+                        <div class="c-checkbox__label">
+                            Checkbox
+                        </div>
+                    </label>
+                    <div style="margin-top: 10px;">
+                        <label class="c-checkbox">
+                            <input type="checkbox" class="c-checkbox__input">
+                            <span class="c-checkbox__mark">
+                                <i class=" i-check"></i>
+                            </span>
+                        </label>
+                    </div>
+                    <div style="margin-top: 10px;">
+                        <label class="c-checkbox--disable">
+                            <input type="checkbox" class="c-checkbox__input" disabled>
+                            <span class="c-checkbox__mark">
+                                <i class=" i-check"></i>
+                            </span>
+                            <div class="c-checkbox__label">
+                                Disable
+                            </div>
+                        </label>
+                    </div>
+                    <div class="c-card__copy" onclick="Copy('copy-input-checkbox');">
+                        <i class=" i-copy"></i>
+
+                    </div>
+                    <textarea readonly="readonly" rows="4" class="c-card__code" id="copy-input-checkbox">
+<label class="c-checkbox">
+    <input type="checkbox" class="c-checkbox__input">
+    <span class="c-checkbox__mark">
+    <i class=" i-check"></i>
+    </span>
+    <div class="c-checkbox__label">
+        Checkbox
+    </div>
+</label>
+<label class="c-checkbox">
+    <input type="checkbox" class="c-checkbox__input">
+    <span class="c-checkbox__mark">
+        <i class=" i-check"></i>
+    </span>
+</label>
+<label class="c-checkbox--disable">
+    <input type="checkbox" class="c-checkbox__input" disabled>
+    <span class="c-checkbox__mark">
+        <i class=" i-check"></i>
+    </span>
+    <div class="c-checkbox__label">
+        Disable
+    </div>
+</label>
+                     </textarea>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">Radio</div>
+                <div class="c-card__icon" id="input-radio-icon" onclick="ShowCard('input-radio')">
+                                        <i class="i-arrow-circle-down"></i>
+
+                </div>
+                <div class="c-card__body" style="flex-direction: column;" id="input-radio">
+                    <label class="c-radio">
+                        <input type="radio" class="c-radio__input" checked="checked" name="radio">
+                        <span class="c-radio__mark"></span>
+                        <div class="c-radio__label">
+                            Option 1
+                        </div>
+                    </label>
+                    <div style="margin: 10px 0;">
+                        <label class="c-radio">
+                            <input type="radio" class="c-radio__input" checked="checked" name="radio">
+                            <span class="c-radio__mark"></span>
+                            <div class="c-radio__label">
+                                Option 2
+                            </div>
+                        </label>
+                    </div>
+                    <label class="c-radio--disable">
+                        <input type="radio" class="c-radio__input" disabled name="radio">
+                        <span class="c-radio__mark"></span>
+                        <div class="c-radio__label">
+                            Option 2
+                        </div>
+                    </label>
+                    <div class="c-card__copy" onclick="Copy('copy-input-radio');">
+                        <i class=" i-copy"></i>
+
+                    </div>
+                    <textarea readonly="readonly" rows="4" class="c-card__code" id="copy-input-radio">
+<label class="c-radio">
+    <input type="radio" class="c-radio__input" checked="checked" name="radio">
+    <span class="c-radio__mark"></span>
+    <div class="c-radio__label">
+       Option 1
+    </div>
+</label>
+<label class="c-radio">
+    <input type="radio" class="c-radio__input" checked="checked" name="radio">
+    <span class="c-radio__mark"></span>
+    <div class="c-radio__label">
+       Option 2
+    </div>
+</label>
+<label class="c-radio--disable">
+    <input type="radio" class="c-radio__input" disabled name="radio">
+    <span class="c-radio__mark"></span>
+    <div class="c-radio__label">
+        Option 2
+    </div>
+</label>
+                     </textarea>
+                </div>
+            </div>
+        </div>
+        <!-- Buttons -->
+        <div class="c-wrapper-cards">
+            <h2 class="c-wrapper-cards__title">Buttons</h2>
+            <div class="c-card">
+                <div class="c-card__title">Normal</div>
+                <div class="c-card__icon" id="card-button-icon" onclick="ShowCard('card-button')">
+                   <i class="i-arrow-circle-down"></i>
+                </div>
+                <div class="c-card__body" id="card-button">
+                    <button class="c-button--primary">Primary</button>
+                    <button class="c-button--secondary">Secondary</button>
+                    <button class="c-button--tertiary">Tertiary</button>
+                    <div class="c-card__copy" onclick="Copy('copy-button');">
+                        <i class=" i-copy"></i>
+                    </div>
+                    <textarea readonly="readonly" rows="3" class="c-card__code" id="copy-button">
+<button class="c-button--primary">Primary</button>
+<button class="c-button--secondary">Secondary</button>
+<button class="c-button--tertiary">Tertiary</button>
+                     </textarea>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">Auxiliary</div>
+                <div class="c-card__icon" id="card-button-auxiliary-icon" onclick="ShowCard('card-button-auxiliary')">
+                    <i class="i-arrow-circle-down"></i>
+                </div>
+                <div class="c-card__body" id="card-button-auxiliary">
+                    <button class="c-button--primary c-button--auxiliary">Primary</button>
+                    <button class="c-button--secondary c-button--auxiliary">Secondary</button>
+                    <button class="c-button--tertiary c-button--auxiliary">Tertiary</button>
+                    <div class="c-card__copy" onclick="Copy('copy-button-auxiliary');">
+                        <i class=" i-copy"></i>
+                    </div>
+                    <textarea readonly="readonly" rows="3" id="copy-button-auxiliary" class="c-card__code">
+<button class="c-button--primary c-button--auxiliary">Primary</button>
+<button class="c-button--secondary c-button--auxiliary">Secondary</button>
+<button class="c-button--tertiary c-button--auxiliary">Tertiary</button> 
+                    </textarea>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">Disable</div>
+                <div class="c-card__icon" id="card-button-disable-icon" onclick="ShowCard('card-button-disable')">
+                      <i class="i-arrow-circle-down"></i>
+                </div>
+                <div class="c-card__body" id="card-button-disable">
+                    <button class="c-button--primary c-button--disable ">Primary</button>
+                    <button class="c-button--secondary c-button--disable">Secondary</button>
+                    <button class="c-button--tertiary c-button--disable">Tertiary</button>
+                    <div class="c-card__copy" onclick="Copy('copy-button-disable');">
+                        <i class=" i-copy"></i>
+                    </div>
+                    <textarea readonly="readonly" rows="3" id="copy-button-disable" class="c-card__code">
+<button class="c-button--primary c-button--disable ">Primary</button>
+<button class="c-button--secondary c-button--disable">Secondary</button>
+<button class="c-button--tertiary c-button--disable">Tertiary</button>
+                    </textarea>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">With Icons</div>
+                <div class="c-card__icon" id="card-button-icons-icon" onclick="ShowCard('card-button-icons')">
+                   <i class="i-arrow-circle-down"></i>
+                </div>
+                <div class="c-card__body" id="card-button-icons">
+                    <button class="c-button--primary">
+                        <i class="c-button__icon  i-home-two"></i>
+                        Primary
+                    </button>
+                    <button class="c-button--secondary">
+                        <i class="c-button__icon  i-home-two"></i>
+                        Secondary
+                    </button>
+                    <button class="c-button--tertiary">
+                        <i class="c-button__icon  i-home-two"></i>
+                        Tertiary
+                    </button>
+                    <div class="c-card__copy" onclick="Copy('copy-button-icons');">
+                        <i class=" i-copy"></i>
+                    </div>
+                    <textarea readonly="readonly" rows="10" class="c-card__code" id="copy-button-icons">
+<button class="c-button--primary">
+    <i class="c-button__icon  i-home-two"></i>
+    Primary
+</button>
+<button class="c-button--secondary">
+    <i class="c-button__icon  i-home-two"></i>
+    Secondary
+</button>
+<button class="c-button--tertiary">
+    <i class="c-button__icon  i-home-two"></i>
+    Tertiary
+</button>
+                    </textarea>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">Helps</div>
+                <div class="c-card__icon" id="card-button-helps-icon" onclick="ShowCard('card-button-helps')">
+                     <i class="i-arrow-circle-down"></i>
+                </div>
+                <div class="c-card__body" id="card-button-helps">
+                    <button class="c-button--success">
+                        <i class="c-button__icon  i-success"></i>
+                        Sucesso
+                    </button>
+                    <button class="c-button--info">
+                        <i class="c-button__icon  i-info"></i>
+                        Informação
+                    </button>
+                    <button class="c-button--error">
+                        <i class="c-button__icon  i-error"></i>
+                        Erro
+                    </button>
+                    <button class="c-button--warning">
+                        <i class="c-button__icon  i-attention"></i>
+                        Alerta
+                    </button>
+                    <div class="c-card__copy" onclick="Copy('copy-button-helps');">
+                        <i class=" i-copy"></i>
+                    </div>
+                    <textarea readonly="readonly" rows="10" class="c-card__code" id="copy-button-helps">
+<button class="c-button--success">
+<i class="c-button__icon  i-success"></i>
+    Sucesso
+</button>
+<button class="c-button--info">
+<i class="c-button__icon  i-info"></i>
+    Informação
+</button>
+<button class="c-button--error">
+<i class="c-button__icon  i-error"></i>
+    Erro
+</button>
+<button class="c-button--warning">
+<i class="c-button__icon  i-attention"></i>
+    Alerta
+</button>
+                    </textarea>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">Actions</div>
+                <div class="c-card__icon" id="card-button-actions-icon" onclick="ShowCard('card-button-actions')">
+                     <i class="i-arrow-circle-down"></i>
+                </div>
+                <div class="c-card__body" id="card-button-actions">
+                    <button class="c-button--primary c-button--action">
+                        <i class="c-button__icon  i-add-user"></i>
+                    </button>
+                    <button class="c-button--secondary c-button--action">
+                        <i class="c-button__icon  i-add-user"></i>
+                    </button>
+                    <div class="c-card__copy" onclick="Copy('copy-button-actions');">
+                        <i class=" i-copy"></i>
+                    </div>
+                    <textarea readonly="readonly" rows="10" class="c-card__code" id="copy-button-actions">
+<button class="c-button--primary c-button--action">
+    <i class="c-button__icon  i-add-user"></i>
+</button>
+<button class="c-button--secondary c-button--action">
+    <i class="c-button__icon  i-add-user"></i>
+</button>
+                     </textarea>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">Notifications</div>
+                <div class="c-card__icon" id="card-button-notifications-icon"
+                     onclick="ShowCard('card-button-notifications')">
+                    <i class="i-arrow-circle-down"></i>
+                </div>
+                <div class="c-card__body" id="card-button-notifications">
+                    <button class="c-button--primary c-button--notification">
+                        <i class="c-button__icon  i-add-user"></i>
+                        <div class="c-button__notification">
+                            <i class="  i-star"></i>
+                        </div>
+                    </button>
+                    <button class="c-button--secondary c-button--notification">
+                        <i class="c-button__icon  i-add-user"></i>
+                        <div class="c-button__notification">
+                            <i class="  i-star"></i>
+                        </div>
+                    </button>
+                    <div class="c-card__copy" onclick="Copy('copy-button-notifications');">
+                        <i class=" i-copy"></i>
+                    </div>
+                    <textarea readonly="readonly" rows="10" class="c-card__code" id="copy-button-notifications">
+<button class="c-button--primary c-button--notification">
+<i class="c-button__icon  i-add-user"></i>
+<div class="c-button__notification">
+<i class="  i-star"></i>
+    </div>
+</button>
+<button class="c-button--secondary c-button--notification">
+<i class="c-button__icon  i-add-user"></i>
+<div class="c-button__notification">
+<i class="  i-star"></i>
+    </div>
+</button>                 
+                    </textarea>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">Toggle</div>
+                <div class="c-card__icon" id="card-button-toggle-icon" onclick="ShowCard('card-button-toggle')">
+                     <i class="i-arrow-circle-down"></i>
+                </div>
+                <div class="c-card__body" id="card-button-toggle">
+                    <label class="c-switch">
+                        <input class="c-switch__input" type="checkbox">
+                        <div class="c-switch__slider">
+                            <span class="c-switch__toggle"></span>
+                            <span class="c-switch__icon--active">
+                                <i class="i-check"></i>
+                            </span>
+                            <span class="c-switch__icon--inactive">
+                                <i class="i-error"></i>
+                            </span>
+                        </div>
+                    </label>
+                    <textarea readonly="readonly" rows="3" id="copy-button-toggle" class="c-card__code">
+<label class="c-switch">
+    <input class="c-switch__input" type="checkbox">
+    <div class="c-switch__slider">
+        <span class="c-switch__toggle"></span>
+        <span class="c-switch__icon--active">
+            <i class="i-check"></i>
+        </span>
+        <span class="c-switch__icon--inactive">
+            <i class="i-error"></i>
+        </span>
+    </div>
+</label>
+                    </textarea>
+                </div>
+            </div>
+        </div>
+        <!-- Tables -->
+        <div class="c-wrapper-cards">
+            <h2 class="c-wrapper-cards__title">Tables</h2>
+            <div class="c-card">
+                <div class="c-card__title">Normal</div>
+                <div class="c-card__icon" id="card-table-icon" onclick="ShowCard('card-table')">
+                    <i class="i-arrow-circle-down"></i>
+                </div>
+                <div class="c-card__body" id="card-table">
+                    <table class="c-table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <i class="i-home c-table__header-icon"></i>
+                                    <label class="c-table__label">
+                                        Column 1
+                                    </label>
+                                </th>
+                                <th>
+                                    <i class="i-home c-table__header-icon"></i>
+                                    <label class="c-table__label">
+                                        Column 2
+                                    </label>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 3 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="c-card__copy" onclick="Copy('copy-table');">
+                        <i class=" i-copy"></i>
+
+                    </div>
+                    <textarea readonly="readonly" rows="10" class="c-card__code" id="copy-table">
+                    <table class="c-table">
+                    <thead>
+                    <tr>
+                    <th>
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.2163 11C10.2163 8.51472 8.20158 6.5 5.71631 6.5C3.23103 6.5 1.21631 8.51472 1.21631 11M7.71631 3C7.71631 4.10457 6.82088 5 5.71631 5C4.61174 5 3.71631 4.10457 3.71631 3C3.71631 1.89543 4.61174 1 5.71631 1C6.82088 1 7.71631 1.89543 7.71631 3Z"
+                          stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                    <label class="c-table__label">
+                                            Column 1
+                                        </label>
+                                    </th>
+                    <th>
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.2163 11C10.2163 8.51472 8.20158 6.5 5.71631 6.5C3.23103 6.5 1.21631 8.51472 1.21631 11M7.71631 3C7.71631 4.10457 6.82088 5 5.71631 5C4.61174 5 3.71631 4.10457 3.71631 3C3.71631 1.89543 4.61174 1 5.71631 1C6.82088 1 7.71631 1.89543 7.71631 3Z"
+                          stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                    <label class="c-table__label">
+                                            Column 2
+                                        </label>
+                                    </th>
+                                </tr>
+                            </thead>
+                    <tbody>
+                    <tr>
+                    <td>Row 1 Data 1</td>
+                    <td>Column</td>
+                                </tr>
+                    <tr>
+                    <td>Row 2 Data 1</td>
+                    <td>Column</td>
+                                </tr>
+                    <tr>
+                    <td>Row 3 Data 1</td>
+                    <td>Column</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                
+                    </textarea>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">Data Table</div>
+                <div class="c-card__icon" id="card-datatable-icon" onclick="ShowCard('card-datatable')">
+                                        <i class="i-arrow-circle-down"></i>
+
+                </div>
+                <div class="c-card__body" id="card-datatable">
+                    <table id="table_id" class="c-table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <i class="i-home c-table__header-icon"></i>
+                                    <label class="c-table__label">
+                                        Column 1
+                                    </label>
+                                </th>
+                                <th>
+                                    <i class="i-home c-table__header-icon"></i>
+                                    <label class="c-table__label">
+                                        Column 2
+                                    </label>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Row 3 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 3 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 3 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 3 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 3 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 3 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 3 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 3 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 3 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 3 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 3 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 2 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 3 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                            <tr>
+                                <td>Row 1 Data 1</td>
+                                <td>Column</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="c-card__copy" onclick="Copy('copy-datatable');">
+                        <i class=" i-copy"></i>
+
+                    </div>
+                    <textarea readonly="readonly" rows="10" class="c-card__code" id="copy-datatable">
+                    <table id="table_id" class="c-table">
+                    <thead>
+                    <tr>
+                    <th>
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.2163 11C10.2163 8.51472 8.20158 6.5 5.71631 6.5C3.23103 6.5 1.21631 8.51472 1.21631 11M7.71631 3C7.71631 4.10457 6.82088 5 5.71631 5C4.61174 5 3.71631 4.10457 3.71631 3C3.71631 1.89543 4.61174 1 5.71631 1C6.82088 1 7.71631 1.89543 7.71631 3Z"
+                          stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                    <label class="c-table__label">
+                                            Column 1
+                                        </label>
+                                    </th>
+                    <th>
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.2163 11C10.2163 8.51472 8.20158 6.5 5.71631 6.5C3.23103 6.5 1.21631 8.51472 1.21631 11M7.71631 3C7.71631 4.10457 6.82088 5 5.71631 5C4.61174 5 3.71631 4.10457 3.71631 3C3.71631 1.89543 4.61174 1 5.71631 1C6.82088 1 7.71631 1.89543 7.71631 3Z"
+                          stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                    <label class="c-table__label">
+                                            Column 2
+                                        </label>
+                                    </th>
+                                </tr>
+                            </thead>
+                    <tbody>
+                    <tr>
+                    <td>Row 3 Data 1</td>
+                    <td>Column</td>
+                                </tr>
+                    <tr>
+                    <td>Row 1 Data 1</td>
+                    <td>Column</td>
+                                </tr>
+                    <tr>
+                    <td>Row 2 Data 1</td>
+                    <td>Column</td>
+                                </tr>
+                    <tr>
+                    <td>Row 3 Data 1</td>
+                    <td>Column</td>
+                                </tr>
+                    <tr>
+                    <td>Row 1 Data 1</td>
+                    <td>Column</td>
+                                </tr>
+                    <tr>
+                    <td>Row 2 Data 1</td>
+                    <td>Column</td>
+                                </tr>
+                    <tr>
+                    <td>Row 3 Data 1</td>
+                    <td>Column</td>
+                                </tr>
+                    <tr>
+                    <td>Row 1 Data 1</td>
+                    <td>Column</td>
+                                </tr>
+                    <tr>
+                    <td>Row 2 Data 1</td>
+                    <td>Column</td>
+                                </tr>
+                    <tr>
+                    <td>Row 3 Data 1</td>
+                    <td>Column</td>
+                                </tr>
+                    <tr>
+                    <td>Row 1 Data 1</td>
+                    <td>Column</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </textarea>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">Actions</div>
+                <div class="c-card__icon" id="card-tableActions-icon" onclick="ShowCard('card-tableActions')">
+                    <i class="i-arrow-circle-down"></i>
+                </div>
+                <div class="c-card__body" id="card-tableActions">
+                    <table id="table_id" class="c-table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <i class="i-home c-table__header-icon"></i>
+                                    <label class="c-table__label">
+                                        Column 1
+                                    </label>
+                                </th>
+                                <th style="width: 150px;">
+                                    <i class="i-home c-table__header-icon"></i>
+                                    <label class="c-table__label">
+                                        Column 2
+                                    </label>
+                                </th>
+                                <th style="width: 150px;">
+                                    <i class="i-home c-table__header-icon"></i>
+                                    <label class="c-table__label">
+                                        Action
+                                    </label>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Column 1</td>
+                                <td>
+                                    <div class="c-table__status c-table__status--inative">
+                                        <div class="c-table__statusIcon"></div>
+                                        Inativo
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="c-table__actions">
+                                        <i class="c-table__action c-table__action--primary i-home"></i>
+                                        <i class="c-table__action c-table__action--secondary i-home"></i>
+                                        <i class="c-table__action c-table__action--tertiary i-more"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Column 1</td>
+                                <td>
+                                    <div class="c-table__status c-table__status--active">
+                                        <div class="c-table__statusIcon"></div>
+                                        ativo
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="c-table__actions">
+                                        <i class="c-table__action c-table__action--primary i-home"></i>
+                                        <i class="c-table__action c-table__action--secondary i-home"></i>
+                                        <i class="c-table__action c-table__action--tertiary i-more"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Column 1</td>
+                                <td>
+                                    <div class="c-table__status c-table__status--inative">
+                                        <div class="c-table__statusIcon"></div>
+                                        Inativo
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="c-table__actions">
+                                        <i class="c-table__action c-table__action--primary i-home"></i>
+                                        <i class="c-table__action c-table__action--secondary i-home"></i>
+                                        <i class="c-table__action c-table__action--tertiary i-more"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Column 1</td>
+                                <td>
+                                    <div class="c-table__status c-table__status--active">
+                                        <div class="c-table__statusIcon"></div>
+                                        ativo
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="c-table__actions">
+                                        <i class="c-table__action c-table__action--primary i-home"></i>
+                                        <i class="c-table__action c-table__action--secondary i-home"></i>
+                                        <i class="c-table__action c-table__action--tertiary i-more"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                    <div class="c-card__copy" onclick="Copy('copy-tableActions');">
+                        <i class=" i-copy"></i>
+                    </div>
+                    <textarea readonly="readonly" rows="10" class="c-card__code" id="copy-tableActions">
+                    <table id="table_id" class="c-table">
+                    <thead>
+                    <tr>
+                    <th>
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.2163 11C10.2163 8.51472 8.20158 6.5 5.71631 6.5C3.23103 6.5 1.21631 8.51472 1.21631 11M7.71631 3C7.71631 4.10457 6.82088 5 5.71631 5C4.61174 5 3.71631 4.10457 3.71631 3C3.71631 1.89543 4.61174 1 5.71631 1C6.82088 1 7.71631 1.89543 7.71631 3Z"
+                          stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                    <label class="c-table__label">
+                                            Column 1
+                                        </label>
+                                    </th>
+                    <th style="width: 150px;">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.2163 11C10.2163 8.51472 8.20158 6.5 5.71631 6.5C3.23103 6.5 1.21631 8.51472 1.21631 11M7.71631 3C7.71631 4.10457 6.82088 5 5.71631 5C4.61174 5 3.71631 4.10457 3.71631 3C3.71631 1.89543 4.61174 1 5.71631 1C6.82088 1 7.71631 1.89543 7.71631 3Z"
+                          stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                    <label class="c-table__label">
+                                            Column 2
+                                        </label>
+                                    </th>
+                    <th style="width: 150px;">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.2163 11C10.2163 8.51472 8.20158 6.5 5.71631 6.5C3.23103 6.5 1.21631 8.51472 1.21631 11M7.71631 3C7.71631 4.10457 6.82088 5 5.71631 5C4.61174 5 3.71631 4.10457 3.71631 3C3.71631 1.89543 4.61174 1 5.71631 1C6.82088 1 7.71631 1.89543 7.71631 3Z"
+                          stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                    <label class="c-table__label">
+                                            Action
+                                        </label>
+                                    </th>
+                                </tr>
+                            </thead>
+                    <tbody>
+                    <tr>
+                    <td>Column 1</td>
+                    <td>
+                    <div class="c-table__status c-table__status--inative">
+                    <div class="c-table__statusIcon"></div>
+                                       Inativo
+                                    </div>
+                                </td>
+                    <td>
+                    <div class="c-table__actions">
+                    <i class="c-table__action c-table__action--primary i-home"></i>
+                    <i class="c-table__action c-table__action--secondary i-home"></i>
+                    <i class="c-table__action c-table__action--tertiary i-more"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                    <tr>
+                    <td>Column 1</td>
+                    <td>
+                    <div class="c-table__status c-table__status--active">
+                    <div class="c-table__statusIcon"></div>
+                                       ativo
+                                    </div>
+                                </td>
+                    <td>
+                    <div class="c-table__actions">
+                    <i class="c-table__action c-table__action--primary i-home"></i>
+                    <i class="c-table__action c-table__action--secondary i-home"></i>
+                    <i class="c-table__action c-table__action--tertiary i-more"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                    <tr>
+                    <td>Column 1</td>
+                    <td>
+                    <div class="c-table__status c-table__status--inative">
+                    <div class="c-table__statusIcon"></div>
+                                       Inativo
+                                    </div>
+                                </td>
+                    <td>
+                    <div class="c-table__actions">
+                    <i class="c-table__action c-table__action--primary i-home"></i>
+                    <i class="c-table__action c-table__action--secondary i-home"></i>
+                    <i class="c-table__action c-table__action--tertiary i-more"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                    <tr>
+                    <td>Column 1</td>
+                    <td>
+                    <div class="c-table__status c-table__status--active">
+                    <div class="c-table__statusIcon"></div>
+                                       ativo
+                                    </div>
+                                </td>
+                    <td>
+                    <div class="c-table__actions">
+                    <i class="c-table__action c-table__action--primary i-home"></i>
+                    <i class="c-table__action c-table__action--secondary i-home"></i>
+                    <i class="c-table__action c-table__action--tertiary i-more"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </textarea>
+                </div>
+            </div>
+        </div>
+        <!-- Selects -->
+        <div class="c-wrapper-cards">
+            <h2 class="c-wrapper-cards__title">Selects</h2>
+            <div class="c-card">
+                <div class="c-card__title">Multiple</div>
+                <div class="c-card__icon" id="card-multiple-icon" onclick="ShowCard('card-multiple')">
+                     <i class="i-arrow-circle-down"></i>
+                </div>
+                <div class="c-card__body" id="card-multiple">
+                    <div class="c-select">
+                        <label class="c-select__label">Client</label>
+                        <select class="selectpicker" title="Selecione" multiple data-live-search="true" data-size="6">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                            <option>Option 4</option>
+                            <option>Option 5</option>
+                            <option>Option 6</option>
+                            <option>Option 7</option>
+                            <option>Option 8</option>
+                        </select>
+                    </div>
+                    <div class="c-card__copy" onclick="Copy('copy-multiple');">
+                        <i class=" i-copy"></i>
+
+                    </div>
+                    <textarea readonly="readonly" rows="10" class="c-card__code" id="copy-multiple">
+<div class="c-select">
+                    <label class="c-select__label">Client</label>
+                    <select class="selectpicker" title="Selecione" multiple data-live-search="true" data-size="6">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                    <option>Option 4</option>
+                    <option>Option 5</option>
+                    <option>Option 6</option>
+                    <option>Option 7</option>
+                    <option>Option 8</option>
+        </select>
+</div>
+                    </textarea>
+                </div>
+            </div>
+            <div class="c-card">
+                <div class="c-card__title">Normal</div>
+                <div class="c-card__icon" id="card-select-icon" onclick="ShowCard('card-select')">
+                                        <i class="i-arrow-circle-down"></i>
+                </div>
+                <div class="c-card__body" id="card-select">
+                    <div class="c-select">
+                        <label class="c-select__label">Client</label>
+                        <select class="selectpicker" title="Selecione" data-live-search="true" data-size="6">
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                            <option>Option 4</option>
+                            <option>Option 5</option>
+                            <option>Option 6</option>
+                            <option>Option 7</option>
+                            <option>Option 8</option>
+                        </select>
+                    </div>
+                    <div class="c-card__copy" onclick="Copy('copy-select');">
+                        <i class=" i-copy"></i>
+
+                    </div>
+                    <textarea readonly="readonly" rows="10" class="c-card__code" id="copy-select">
+<div class="c-select">
+                    <label class="c-select__label">Client</label>
+                    <select class="selectpicker" title="Selecione" data-live-search="true" data-size="6">
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                    <option>Option 4</option>
+                    <option>Option 5</option>
+                    <option>Option 6</option>
+                    <option>Option 7</option>
+                    <option>Option 8</option>
+        </select>
+</div>
+                    </textarea>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/js/bootstrap-select.min.js"></script>
+    <script src="//cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
