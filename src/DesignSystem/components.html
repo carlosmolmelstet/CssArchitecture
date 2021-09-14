@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/css/bootstrap-select.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.1/css/jquery.dataTables.min.css">
@@ -488,6 +487,9 @@
                             </span>
                         </div>
                     </label>
+                    <div class="c-card__copy" onclick="Copy('copy-button-toggle');">
+                        <i class=" i-copy"></i>
+                    </div>
                     <textarea readonly="readonly" rows="3" id="copy-button-toggle" class="c-card__code">
 <label class="c-switch">
     <input class="c-switch__input" type="checkbox">
@@ -551,55 +553,45 @@
 
                     </div>
                     <textarea readonly="readonly" rows="10" class="c-card__code" id="copy-table">
-                    <table class="c-table">
-                    <thead>
-                    <tr>
-                    <th>
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.2163 11C10.2163 8.51472 8.20158 6.5 5.71631 6.5C3.23103 6.5 1.21631 8.51472 1.21631 11M7.71631 3C7.71631 4.10457 6.82088 5 5.71631 5C4.61174 5 3.71631 4.10457 3.71631 3C3.71631 1.89543 4.61174 1 5.71631 1C6.82088 1 7.71631 1.89543 7.71631 3Z"
-                          stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                    <label class="c-table__label">
-                                            Column 1
-                                        </label>
-                                    </th>
-                    <th>
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.2163 11C10.2163 8.51472 8.20158 6.5 5.71631 6.5C3.23103 6.5 1.21631 8.51472 1.21631 11M7.71631 3C7.71631 4.10457 6.82088 5 5.71631 5C4.61174 5 3.71631 4.10457 3.71631 3C3.71631 1.89543 4.61174 1 5.71631 1C6.82088 1 7.71631 1.89543 7.71631 3Z"
-                          stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                    <label class="c-table__label">
-                                            Column 2
-                                        </label>
-                                    </th>
-                                </tr>
-                            </thead>
-                    <tbody>
-                    <tr>
-                    <td>Row 1 Data 1</td>
-                    <td>Column</td>
-                                </tr>
-                    <tr>
-                    <td>Row 2 Data 1</td>
-                    <td>Column</td>
-                                </tr>
-                    <tr>
-                    <td>Row 3 Data 1</td>
-                    <td>Column</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                
+<table class="c-table">
+    <thead>
+        <tr>
+            <th>
+                <i class="i-home c-table__header-icon"></i>
+                <label class="c-table__label">
+                    Column 1
+                </label>
+            </th>
+            <th>
+                <i class="i-home c-table__header-icon"></i>
+                <label class="c-table__label">
+                    Column 2
+                </label>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Row 1 Data 1</td>
+            <td>Column</td>
+        </tr>
+        <tr>
+            <td>Row 2 Data 1</td>
+            <td>Column</td>
+        </tr>
+        <tr>
+            <td>Row 3 Data 1</td>
+            <td>Column</td>
+        </tr>
+    </tbody>
+</table>                 
                     </textarea>
                 </div>
             </div>
             <div class="c-card">
                 <div class="c-card__title">Data Table</div>
                 <div class="c-card__icon" id="card-datatable-icon" onclick="ShowCard('card-datatable')">
-                                        <i class="i-arrow-circle-down"></i>
-
+                    <i class="i-arrow-circle-down"></i>
                 </div>
                 <div class="c-card__body" id="card-datatable">
                     <table id="table_id" class="c-table">
@@ -831,78 +823,46 @@
 
                     </div>
                     <textarea readonly="readonly" rows="10" class="c-card__code" id="copy-datatable">
-                    <table id="table_id" class="c-table">
-                    <thead>
-                    <tr>
-                    <th>
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.2163 11C10.2163 8.51472 8.20158 6.5 5.71631 6.5C3.23103 6.5 1.21631 8.51472 1.21631 11M7.71631 3C7.71631 4.10457 6.82088 5 5.71631 5C4.61174 5 3.71631 4.10457 3.71631 3C3.71631 1.89543 4.61174 1 5.71631 1C6.82088 1 7.71631 1.89543 7.71631 3Z"
-                          stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                    <label class="c-table__label">
-                                            Column 1
-                                        </label>
-                                    </th>
-                    <th>
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.2163 11C10.2163 8.51472 8.20158 6.5 5.71631 6.5C3.23103 6.5 1.21631 8.51472 1.21631 11M7.71631 3C7.71631 4.10457 6.82088 5 5.71631 5C4.61174 5 3.71631 4.10457 3.71631 3C3.71631 1.89543 4.61174 1 5.71631 1C6.82088 1 7.71631 1.89543 7.71631 3Z"
-                          stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                    <label class="c-table__label">
-                                            Column 2
-                                        </label>
-                                    </th>
-                                </tr>
-                            </thead>
-                    <tbody>
-                    <tr>
-                    <td>Row 3 Data 1</td>
-                    <td>Column</td>
-                                </tr>
-                    <tr>
-                    <td>Row 1 Data 1</td>
-                    <td>Column</td>
-                                </tr>
-                    <tr>
-                    <td>Row 2 Data 1</td>
-                    <td>Column</td>
-                                </tr>
-                    <tr>
-                    <td>Row 3 Data 1</td>
-                    <td>Column</td>
-                                </tr>
-                    <tr>
-                    <td>Row 1 Data 1</td>
-                    <td>Column</td>
-                                </tr>
-                    <tr>
-                    <td>Row 2 Data 1</td>
-                    <td>Column</td>
-                                </tr>
-                    <tr>
-                    <td>Row 3 Data 1</td>
-                    <td>Column</td>
-                                </tr>
-                    <tr>
-                    <td>Row 1 Data 1</td>
-                    <td>Column</td>
-                                </tr>
-                    <tr>
-                    <td>Row 2 Data 1</td>
-                    <td>Column</td>
-                                </tr>
-                    <tr>
-                    <td>Row 3 Data 1</td>
-                    <td>Column</td>
-                                </tr>
-                    <tr>
-                    <td>Row 1 Data 1</td>
-                    <td>Column</td>
-                                </tr>
-                            </tbody>
-                        </table>
+<table id="table_id" class="c-table">
+    <thead>
+        <tr>
+            <th>
+                <i class="i-home c-table__header-icon"></i>
+                <label class="c-table__label">
+                    Column 1
+                </label>
+            </th>
+            <th>
+                <i class="i-home c-table__header-icon"></i>
+                <label class="c-table__label">
+                    Column 2
+                </label>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Row 3 Data 1</td>
+            <td>Column</td>
+        </tr>
+        <tr>
+            <td>Row 1 Data 1</td>
+            <td>Column</td>
+        </tr>
+        <tr>
+            <td>Row 2 Data 1</td>
+            <td>Column</td>
+        </tr>
+        <tr>
+            <td>Row 3 Data 1</td>
+            <td>Column</td>
+        </tr>
+        <tr>
+            <td>Row 1 Data 1</td>
+            <td>Column</td>
+        </tr>
+    </tbody>
+</table>                  
                     </textarea>
                 </div>
             </div>
@@ -1007,112 +967,102 @@
                         <i class=" i-copy"></i>
                     </div>
                     <textarea readonly="readonly" rows="10" class="c-card__code" id="copy-tableActions">
-                    <table id="table_id" class="c-table">
-                    <thead>
-                    <tr>
-                    <th>
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.2163 11C10.2163 8.51472 8.20158 6.5 5.71631 6.5C3.23103 6.5 1.21631 8.51472 1.21631 11M7.71631 3C7.71631 4.10457 6.82088 5 5.71631 5C4.61174 5 3.71631 4.10457 3.71631 3C3.71631 1.89543 4.61174 1 5.71631 1C6.82088 1 7.71631 1.89543 7.71631 3Z"
-                          stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                    <label class="c-table__label">
-                                            Column 1
-                                        </label>
-                                    </th>
-                    <th style="width: 150px;">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.2163 11C10.2163 8.51472 8.20158 6.5 5.71631 6.5C3.23103 6.5 1.21631 8.51472 1.21631 11M7.71631 3C7.71631 4.10457 6.82088 5 5.71631 5C4.61174 5 3.71631 4.10457 3.71631 3C3.71631 1.89543 4.61174 1 5.71631 1C6.82088 1 7.71631 1.89543 7.71631 3Z"
-                          stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                    <label class="c-table__label">
-                                            Column 2
-                                        </label>
-                                    </th>
-                    <th style="width: 150px;">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.2163 11C10.2163 8.51472 8.20158 6.5 5.71631 6.5C3.23103 6.5 1.21631 8.51472 1.21631 11M7.71631 3C7.71631 4.10457 6.82088 5 5.71631 5C4.61174 5 3.71631 4.10457 3.71631 3C3.71631 1.89543 4.61174 1 5.71631 1C6.82088 1 7.71631 1.89543 7.71631 3Z"
-                          stroke="#4F4F4F" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                    <label class="c-table__label">
-                                            Action
-                                        </label>
-                                    </th>
-                                </tr>
-                            </thead>
-                    <tbody>
-                    <tr>
-                    <td>Column 1</td>
-                    <td>
-                    <div class="c-table__status c-table__status--inative">
+<table id="table_id" class="c-table">
+    <thead>
+        <tr>
+            <th>
+                <i class="i-home c-table__header-icon"></i>
+                <label class="c-table__label">
+                    Column 1
+                </label>
+            </th>
+            <th style="width: 150px;">
+                <i class="i-home c-table__header-icon"></i>
+                <label class="c-table__label">
+                    Column 2
+                </label>
+            </th>
+            <th style="width: 150px;">
+                <i class="i-home c-table__header-icon"></i>
+                <label class="c-table__label">
+                    Action
+                </label>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Column 1</td>
+            <td>
+                <div class="c-table__status c-table__status--inative">
                     <div class="c-table__statusIcon"></div>
-                                       Inativo
-                                    </div>
-                                </td>
-                    <td>
-                    <div class="c-table__actions">
+                    Inativo
+                </div>
+            </td>
+            <td>
+                <div class="c-table__actions">
                     <i class="c-table__action c-table__action--primary i-home"></i>
                     <i class="c-table__action c-table__action--secondary i-home"></i>
                     <i class="c-table__action c-table__action--tertiary i-more"></i>
-                                    </div>
-                                </td>
-                            </tr>
-                    <tr>
-                    <td>Column 1</td>
-                    <td>
-                    <div class="c-table__status c-table__status--active">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Column 1</td>
+            <td>
+                <div class="c-table__status c-table__status--active">
                     <div class="c-table__statusIcon"></div>
-                                       ativo
-                                    </div>
-                                </td>
-                    <td>
-                    <div class="c-table__actions">
+                    ativo
+                </div>
+            </td>
+            <td>
+                <div class="c-table__actions">
                     <i class="c-table__action c-table__action--primary i-home"></i>
                     <i class="c-table__action c-table__action--secondary i-home"></i>
                     <i class="c-table__action c-table__action--tertiary i-more"></i>
-                                    </div>
-                                </td>
-                            </tr>
-                    <tr>
-                    <td>Column 1</td>
-                    <td>
-                    <div class="c-table__status c-table__status--inative">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Column 1</td>
+            <td>
+                <div class="c-table__status c-table__status--inative">
                     <div class="c-table__statusIcon"></div>
-                                       Inativo
-                                    </div>
-                                </td>
-                    <td>
-                    <div class="c-table__actions">
+                    Inativo
+                </div>
+            </td>
+            <td>
+                <div class="c-table__actions">
                     <i class="c-table__action c-table__action--primary i-home"></i>
                     <i class="c-table__action c-table__action--secondary i-home"></i>
                     <i class="c-table__action c-table__action--tertiary i-more"></i>
-                                    </div>
-                                </td>
-                            </tr>
-                    <tr>
-                    <td>Column 1</td>
-                    <td>
-                    <div class="c-table__status c-table__status--active">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Column 1</td>
+            <td>
+                <div class="c-table__status c-table__status--active">
                     <div class="c-table__statusIcon"></div>
-                                       ativo
-                                    </div>
-                                </td>
-                    <td>
-                    <div class="c-table__actions">
+                    ativo
+                </div>
+            </td>
+            <td>
+                <div class="c-table__actions">
                     <i class="c-table__action c-table__action--primary i-home"></i>
                     <i class="c-table__action c-table__action--secondary i-home"></i>
                     <i class="c-table__action c-table__action--tertiary i-more"></i>
-                                    </div>
-                                </td>
-                            </tr>
-                          </tbody>
-                        </table>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>                 
                     </textarea>
                 </div>
             </div>
         </div>
+
+        
         <!-- Selects -->
         <div class="c-wrapper-cards">
             <h2 class="c-wrapper-cards__title">Selects</h2>
@@ -1137,21 +1087,15 @@
                     </div>
                     <div class="c-card__copy" onclick="Copy('copy-multiple');">
                         <i class=" i-copy"></i>
-
                     </div>
-                    <textarea readonly="readonly" rows="10" class="c-card__code" id="copy-multiple">
+                    <textarea readonly="readonly" rows="8" class="c-card__code" id="copy-multiple">
 <div class="c-select">
-                    <label class="c-select__label">Client</label>
-                    <select class="selectpicker" title="Selecione" multiple data-live-search="true" data-size="6">
-                    <option>Option 1</option>
-                    <option>Option 2</option>
-                    <option>Option 3</option>
-                    <option>Option 4</option>
-                    <option>Option 5</option>
-                    <option>Option 6</option>
-                    <option>Option 7</option>
-                    <option>Option 8</option>
-        </select>
+    <label class="c-select__label">Client</label>
+    <select class="selectpicker" title="Selecione" multiple data-live-search="true" data-size="6">
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+    </select>
 </div>
                     </textarea>
                 </div>
@@ -1179,19 +1123,14 @@
                         <i class=" i-copy"></i>
 
                     </div>
-                    <textarea readonly="readonly" rows="10" class="c-card__code" id="copy-select">
+                    <textarea readonly="readonly" rows="8" class="c-card__code" id="copy-select">
 <div class="c-select">
-                    <label class="c-select__label">Client</label>
-                    <select class="selectpicker" title="Selecione" data-live-search="true" data-size="6">
-                    <option>Option 1</option>
-                    <option>Option 2</option>
-                    <option>Option 3</option>
-                    <option>Option 4</option>
-                    <option>Option 5</option>
-                    <option>Option 6</option>
-                    <option>Option 7</option>
-                    <option>Option 8</option>
-        </select>
+    <label class="c-select__label">Client</label>
+    <select class="selectpicker" title="Selecione"  data-live-search="true" data-size="6">
+        <option>Option 1</option>
+        <option>Option 2</option>
+        <option>Option 3</option>
+    </select>
 </div>
                     </textarea>
                 </div>
